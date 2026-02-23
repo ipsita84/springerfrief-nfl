@@ -1,0 +1,999 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Non-Fermi liquid behaviour induced by transverse gauge fields}
+\label{chap-u1}
+
+\section{Introduction}
+
+In this chapter, we consider the case when Fermi surfaces (FSc) are coupled with emergent
+gauge fields of tranverse nature \cite{Chakravarty, MOTRUNICH,LEE_U1, PALEE,MotrunichFisher, nayak1, mross, ips-sudip1, ips-sudip2}, leading to non-Fermi-liquid (NFL) behaviour. Like the Ising-nematic quantum critical point (QCP) \cite{Lee-Dalid, ips-uv-ir2, 
+ips-sc}, studied in the preceding two chapters, this scenario belongs to the broader family
+of problems in  which the bosonic field's momentum is centred at zero. Nevertheless, 
+the two cases are  physically distinct in an important way: At the Ising-nematic transition, 
+the order-parameter boson couples to antipodal patches of the FS with the \textit{same} sign of the coupling strength 
+\cite{max-isn}, whereas a transverse gauge field couples to the two 
+antipodal patches with \textit{opposite} signs \cite{Lee-Dalid}. This 
+sign difference has profound consequences for the low-energy physics, 
+and motivates a separate treatment. We apply the dimensional 
+regularization procedure to determine the low-energy scaling behavior 
+of an $m$-dimensional FS (with $m \geq 1$) interacting with 
+one or more transverse gauge fields. The analysis is developed first 
+for a single $U(1)$ gauge field and, subsequently, generalized to the 
+$U(1) \times U(1)$ case. The two scenarios are intended to capture 
+two distinct physical situations: a quantum phase transition between a 
+Fermi-liquid (FL) metal and an electrically insulating state devoid of any 
+FS --- the deconfined Mott transition --- and a transition 
+between two metallic phases whose FSs differ in size on 
+either side of the critical point \cite{debanjan}.
+
+
+%%%%%%%%%%%%%%%%
+
+\section{Model involving a single $U(1)$ transverse gauge field}
+\label{secmodelu1}
+
+%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[t!]
+\centering
+\subfigure[]{\includegraphics[width=0.3 \textwidth]{bos}}
+\subfigure[]{\includegraphics[width=0.33 \textwidth]{fermi}} 
+\subfigure[]{\includegraphics[width=0.3 \textwidth]{vert}} 
+\caption{One-loop diagrams for the (a) bosonic self-energy, (b) fermionic 
+self-energy, and (c) vertex correction. In (a), the bare bosonic 
+propagator is represented by a gray wiggly curve. In (b) and (c), 
+solid arrowed lines denote bare fermionic propagators, while the wiggly 
+curves depict dressed bosonic propagators that incorporate the one-loop 
+self-energy shown in (a).}\label{fig1loop}
+\end{figure}
+%%%%%%%%%%%%%%%%
+
+We first consider an $m$-dimensional FS, 
+which is coupled to a $U(1)$ transverse gauge field $a $
+in $d=(m+1)$ spatial dimensions. The set-up is identical to 
+Ref.~\cite{ips-uv-ir1} discussed in Chapter 1. Using the same 
+patch coordinates, the minimal Euclidean action (in the Matsubara space)
+is given by \cite{Lee-Dalid, ips-u1}
+%%%%%%%%%%%%%%%%
+\begin{align}
+S & =   \sum_{j} \int dk\, \bar \Psi_j(k) \, i 
+\left[  \vec \Gamma \cdot \vec K  +  \gamma_{d-m} \, \delta_k \right ]
+ \Psi_{j}(k) \, \exp \Big \lbrace \frac {{\vec{L}}_{(k)}^2}  { \mu \, {\tilde{k}}_F } \Big \rbrace
+\nn & +
+\frac{1}{2} \int  dk \,
+  {\vec{L}}_{(k)}^2\,  a^\dagger(k) \, a(k) +   \frac{  e \, \mu^{\frac{x} {2}} } {\sqrt{N}}  \sum_{j} +
+\int dk \,dq  \,a(q) \, \bar \Psi_{j}(k+q)\,  \gamma_{0}\, 
+\Psi_{j}(k) .\nonumber
+\end{align}
+%%%%%%%%%%%%%%%%%%%%%%%%
+Incorporating the one-loop self-energy into the bare bosonic propagator, 
+the dressed propagator takes the form,
+%%%%%%%%%%%%%%%%%%%%
+\begin{align}
+& \Pi_1 (k) = - e^2 \, \mu^x
+\int  dq\, \text{Tr}
+\left[ \gamma_{0}\, G_0 (k+q)\,\gamma_{0}\, G_0 (q) \right ]
+%%%%%%%%%%%%%%%%%%%%
+\nn & =
+\frac{ -\, \beta(d,m)\,  e^2 \, \mu^{x} \left(  \mu \, {\tilde{k}}_F  \right )^{\frac{m-1}{2}} 
+\left[ k_0^2 + ( m+1-d)\,{\tilde {\vec K}}^2 \right] } 
+{   |\vec{L}_{(k)}| \, |\vec K|^{2-d+m }}  \, ,
+%%%%%%%%%%%%%%
+\nn & \text{where }
+\beta(d,m) = \frac{ \pi ^{\frac{4-d}{2}} 
+\,\Gamma (d-m) \,\Gamma (m+1-d) }
+ {2^{\frac{4d-m-1}{2} }\,\Gamma ^2 \left(\frac{ d-m+2} {2}\right) \Gamma \left(\frac{m+1-d}{2} \right)} \,.
+ \end{align}
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+We now turn to the computation of the one-loop fermionic self-energy, 
+$\Sigma_1(k)$. The final expressions turns out to be
+\begin{align}
+\label{eqsigmau1}
+\Sigma_1(k) = -\frac{i\,e^{\frac{2(m+1)}{3}}
+\left[u_0\,\gamma_0\,k_0 + u_1
+\left(\tilde{\vec{\Gamma}}\cdot\tilde{\vec{K}}\right)\right]}
+{N\,\tilde{k}_F^{\frac{(m-1)(2-m)}{6}}\,\epsilon}
++ \text{finite terms}\,,
+\end{align}
+where $u_0, u_1 \geq 0$. This diverges logarithmically in $\Lambda$ at 
+the upper critical dimension, $d_c(m) = m + 3/(m+1)$. Within dimensional 
+regularization, this logarithmic divergence in $\Lambda$ manifests as 
+a $1/\epsilon$ pole. For the cases of interest, the numerical values 
+are:
+\begin{align}
+\label{eqvalu}
+\begin{cases}
+u_0 = 0.0201044\,, \quad u_1 = 1.85988 & \text{for } m = 1 \\
+u_0 = u_1 = 0.0229392 & \text{for } m = 2
+\end{cases}.
+\end{align}
+The one-loop vertex correction is found to be
+\begin{align}
+\label{eqvertcor}
+\Gamma_1(k,0) = -\frac{e^{\frac{2(m+1)}{3}}\,u_4\,\gamma_0}
+{N\,\tilde{k}_F^{(m-1)(2-m)/6}\,\epsilon}
+\left(\frac{\mu}{|\tilde{\vec{K}}|}\right)^{\frac{(m+1)\epsilon}{3}}
+\left[\mathcal{F}\!\left(\frac{|k_0|}{|\tilde{\vec{K}}|}\right)
+\right]^\epsilon + \text{finite terms}\,,
+\end{align}
+where $u_4 \geq 0$ and $\mathcal{F}$ is a dimensionless function of 
+$|k_0|/|\tilde{\vec{K}}|$. The explicit values are
+\begin{align}
+u_4 = \begin{cases}
+0.0000706373 & \text{for } m = 1 \\
+0 & \text{for } m = 2
+\end{cases}.
+\end{align}
+This stands in contrast to the Ising-nematic case, where the vertex 
+correction is guaranteed to vanish by a Ward identity 
+\cite{Lee-Dalid, ips-uv-ir1}.
+
+We vary the dimension of the FS from $m = 1$ to $m = 2$ while keeping 
+$\epsilon$ small, thereby obtaining a controlled description for any 
+$m$ in this range. For a given $m$, we tune $d$ so that 
+$\epsilon = d_c(m) - d$ remains small. To absorb the UV divergences 
+arising in the $\epsilon \rightarrow 0$ limit, we introduce the 
+following counterterm action:
+\begin{align}
+S_{CT} &= \sum_j \int dk\,\bar{\Psi}_j(k)\,i\Bigl[
+A_0\,\gamma_0\,k_0 + A_1\,\tilde{\vec{\Gamma}}\cdot\tilde{\vec{K}}
++ A_2\,\gamma_{d-m}\,\delta_k\Bigr]\Psi_j(k)\,
+\exp\!\left\{\frac{\vec{L}_{(k)}^2}{\mu\,\tilde{k}_F}\right\}
+\nonumber \\
+& + \frac{A_3}{2}\int dk\,\vec{L}_{(k)}^2\,a^\dagger(k)\,a(k)
++ \frac{A_4\,e\,\mu^{x/2}}{\sqrt{N}}\sum_j\int dk\,dq\,
+a(q)\,\bar{\Psi}_j(k+q)\,\gamma_0\,\Psi_j(k)\,, \nonumber \\
+\text{where} \quad & A_\zeta = \sum_{\lambda=1}^\infty
+\frac{Z_\zeta^{(\lambda)}(e,\tilde{k}_F)}{\epsilon^\lambda}
+\quad \text{with} \quad \zeta = 0, 1, 2, 3, 4\,.
+\end{align}
+The $(d-m-1)$-dimensional rotational invariance in the space 
+perpendicular to the FS guarantees that each term in 
+$\tilde{\vec{\Gamma}}\cdot\tilde{\vec{K}}$ is renormalized identically, 
+while the sliding symmetry along the FS ensures that the form of 
+$\delta_k$ is preserved under renormalization. The counterterm 
+coefficients $A_0$, $A_1$, and $A_2$ are in general distinct, owing 
+to the absence of full rotational symmetry in the $(d+1)$-dimensional 
+spacetime. This contrasts with the Ising-nematic case, where 
+$A_0 = A_1$ was enforced by a rotational symmetry acting on the full 
+$(d-m)$-dimensional subspace.
+
+The renormalized action is defined as the physical action free of UV 
+divergences, obtained by subtracting the counterterm action from the 
+bare action, which reads
+\begin{align}
+\label{act7}
+S_{\text{bare}} &= \sum_j \int dk^B\,\bar{\Psi}_j^B(k^B)\,i\left[
+\gamma_0\,k_0^B + \tilde{\vec{\Gamma}}\cdot\tilde{\vec{K}}^B
++ \gamma_{d-m}\,\delta_{k^B}\right]\Psi_j^B(k^B)\,
+\exp\!\left\{\frac{\vec{L}_{(k^B)}^2}{k_{F^B}}\right\} \nonumber \\
+& \quad + \frac{1}{2}\int dk^B\,\vec{L}_{(k^B)}^2\,
+{a^B}^\dagger(k^B)\,a^B(k^B) \nonumber \\
+& \quad + \frac{e^B}{\sqrt{N}}\sum_j\int dk^B\,dq^B\,
+a^B(q^B)\,\bar{\Psi}_j^B(k^B+q^B)\,\gamma_0\,\Psi_j^B(k^B)\,,
+\end{align}
+where
+\begin{align}
+& k_0^B = \frac{Z_0}{Z_2}\,k_0\,, \quad
+\tilde{\vec{K}}^B = \frac{Z_1}{Z_2}\,\tilde{\vec{K}}\,, \quad
+k_{d-m}^B = k_{d-m}\,, \quad
+\vec{L}_{(k^B)} = \vec{L}_{(k)}\,, \nonumber \\
+& \Psi_j^B(k^B) = Z_\Psi^{1/2}\,\Psi_j(k)\,, \quad
+a^B(k^B) = Z_a^{1/2}\,a(k)\,, \quad
+k_F^B = k_F = \mu\,\tilde{k}_F\,, \nonumber \\
+& Z_\Psi = \frac{Z_2^{d-m+1}}{Z_0\,Z_1^{d-m-1}}\,, \quad
+Z_a = \frac{Z_3\,Z_2^{d-m}}{Z_0\,Z_1^{d-m-1}}\,, \quad
+e^B = Z_e\,e\,\mu^{x/2}\,, \nonumber \\
+& Z_e = \frac{Z_4\,Z_2^{\frac{d-m}{2}-1}}
+{\sqrt{Z_0\,Z_3}\,Z_1^{\frac{d-m-1}{2}}}\,.
+\end{align}
+The superscript ``$B$'' labels bare fields, couplings, and momenta 
+throughout. The bare action in Eq.~\eqref{act7} admits a freedom to 
+rescale fields and momenta independently without affecting the physics, 
+and we fix this freedom by requiring $\delta_{k^B} = \delta_k$, which 
+amounts to measuring the scaling dimensions of all other quantities 
+relative to that of $\delta_k$.
+
+The dynamical critical exponent $z$, the critical exponent $\tilde{z}$ 
+along the extra spatial dimensions, the beta-functions $\beta_e$ and 
+$\beta_{k_F}$ for the couplings $e$ and $\tilde{k}_F$, and the anomalous 
+dimensions $\eta_\Psi$ and $\eta_a$ for the fermions and the gauge boson, 
+respectively, are defined by
+\begin{align}
+& z = 1 + \frac{\partial\ln(Z_0/Z_2)}{\partial\ln\mu}\,, \quad
+\tilde{z} = 1 + \frac{\partial\ln(Z_1/Z_2)}{\partial\ln\mu}\,, \quad
+\eta_\Psi = \frac{1}{2}\frac{\partial\ln Z_\Psi}{\partial\ln\mu}\,, 
+\nonumber \\
+& \eta_a = \frac{1}{2}\frac{\partial\ln Z_a}{\partial\ln\mu}\,, \quad
+\beta_{k_F}(\tilde{k}_F) = \frac{\partial\tilde{k}_F}{\partial\ln\mu}\,, 
+\quad
+\beta_e = \frac{\partial e}{\partial\ln\mu}\,.
+\end{align}
+In the $\epsilon \rightarrow 0$ limit, we seek solutions of the form
+\begin{align}
+& z = z^{(0)}\,, \quad \tilde{z} = \tilde{z}^{(0)}\,, \quad
+\eta_\Psi = \eta_\Psi^{(0)} + \eta_\Psi^{(1)}\,\epsilon\,, \quad
+\eta_a = \eta_a^{(0)} + \eta_a^{(1)}\,\epsilon\,, \quad
+\beta_e = \beta_e^{(0)} + \beta_e^{(1)}\,\epsilon\,.
+\end{align}
+
+%%%%%%%%%%%%%%%%%%%%
+\subsection{RG flows at one-loop order}
+
+Limiting ourselves to one-loop order, the counterterms are parametrised by $Z_\zeta = 1 + \frac{Z_{\zeta}^{(1)}} {\epsilon}$. 
+Collecting all the results, we find that only
+$Z_{0}^{(1)}   =  -\frac{  u_0\, \tilde{e}} {N} $,
+$Z_{1}^{(1)}  = - \frac{  u_1 \, \tilde{e} } {N} $, and
+$ Z_{4}^{(1)}   = -\frac{  u_4 \, \tilde{e} } {N} $
+are nonzero, where
+%%%%%%%%%%%%%%%%%%%%%%
+$\tilde{e}  = {e^{ \frac{2 \,(m+1) } {3} }} /
+{  {\tilde{k}}_F ^{ \frac{(m-1) (2-m)}{6}   }}$.
+The beta-function for $ \tilde{e} $ is given by
+\begin{align}
+& - \frac{\beta_{\tilde e} }  {\tilde e}
+ = \frac{(m+1) \,\epsilon}{3} 
+- \frac{ \left (m+1 \right ) 
+\left[\, \left (m+1 \right ) \left (  u_0  - 2 \,u_4 \right )
++ \left ( 2-m\right ) u_ 1 \, \right ]}
+{9 \, N} \,{\tilde e}\,.
+\end{align}
+The interacting fixed point is obtained from $\beta_{\tilde e} = 0$ and $\tilde e  \neq  0$, leading to
+\begin{align}
+{\tilde{e}}^*   = \frac{3 \,N\, \epsilon }
+{  \left (m+1 \right ) \left( u_0 - 2\,u_4 \right) +(2-m)\, u_1 } 
++\mathcal{O} \left( \epsilon^2 \right) .
+\end{align}
+It can be checked that this is an IR stable fixed point by computing the first derivative of $\beta_{\tilde e}\,.$
+The critical exponents at this stable fixed point are given by
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{align} 
+\label{critex}
+& z^*= 1+\frac{(m+1) \,u_0 \,\epsilon }
+{\left (m+1 \right ) \left( u_0 - 2\,u_4 \right)  
++ (2-m) \,u_1}\,, \nn &
+%%%%%%%%%%%%%%%%%%%%%%
+ {\tilde z}^*= 1+\frac{(m+1) \,u_1 \,\epsilon }
+{ \left (m+1 \right ) \left( u_0 - 2\,u_4 \right) + (2-m) \,u_1} \,,
+\nn &
+ \eta_\Psi^* = \eta_a^* = - \frac{(m+1) \,u_0 + (2-m) \,u_1}
+{ (m+1) \left(u_0 - 2 \, u_4 \right)+ (2-m) \, u_1}
+\, \frac{\epsilon}{2}\,.
+\end{align}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Higher-loop corrections}
+
+Let us discuss the implications of the higher-loop corrections, without actually computing the Feynman diagrams. For $m>1 $, we expect a nontrivial UV/IR mixing to be present, as was found in Ref.~\cite{ips-uv-ir1,ips-uv-ir2}, which makes the results one-loop exact. In other words, all higher-loop
+corrections would vanish for $m>1$ in the limit $k_F \rightarrow 0\,,$ due to suppression of the results by
+positive powers of $k_F\,.$
+For $m=1$, we will use the arguments and results of Ref.~\cite{Lee-Dalid} to assume a generic form of the corrections coming from two-loop diagrams. Henceforth, we will just focus on $m=1$ in this subsection.
+
+The two-loop diagrams for the boson self-energy turn out to be UV finite and hence, renormalize, the factor $\beta(\frac{5}{2},1)$ by a finite amount $\beta_2 = {\kappa\,  {\tilde e}} / {N}$, where $\kappa$ is a finite number. Consequently, the bosonic propagator at this order will takes the form of
+$ D_2 (q) = \left [ {\vec{L}}_{(q)}^2 
++ \frac{\left[  \beta \big(\frac{5} {2},2 \big) + \frac{\kappa\, \tilde e } 
+{N}\right]  e^2  \mu^\epsilon   } 
+{   |\vec{L}_{(q)}|}  
+\times \frac{  k_0^2 + \left ( \epsilon- \frac{1}{2} \right)\,{\tilde {\vec K}}^2  }
+{|\vec K|^{ \frac{1 }  {2}+\epsilon }} \right ]^{-1} $.
+From this, the fermion self-energy now receives a correction of
+ $\Sigma_{2}^{(1)}(k) = \left [
+\left \lbrace \frac{ \beta \big(\frac{5} {2},2 \big)} 
+{\beta \big(\frac{5} {2},2 \big) +\frac{  \kappa \, \tilde e}
+{N} }\right \rbrace ^{ {1}/{3}} - 1 \right ] \Sigma_1(k) 
+=  { -\, \kappa \, \tilde e \,\Sigma_1(k) } /
+[ 3 \,N\, \beta \big(\frac{5} {2},2 \big) ] + \text{ finite terms} $. Now the two-loop fermion self-energy diagrams, after taking into account the counterterms obtained from one-loop
+corrections, take the form of
+$ \Sigma_{2}^{(2)}(k) = { - \,  i  \,{\tilde e}^2 
+\Big[ \tilde v_{0} \,\gamma_0\,q_0 +
+\tilde v_1 \, \left( \tilde{\vec \Gamma } \cdot \tilde{\vec Q } \right) 
+ + w\, \gamma_{d-1}\,\delta_k \,\Big ]    } /
+( N^2 \epsilon )$ + finite terms.
+Adding the two parts, the generic form of the total two-loop fermion self-energy can be written as
+$\Sigma_{2}^{tot}(k) = { -i  \tilde e^{2} 
+\Big[\,v_{0} \,\gamma_0\,q_0 + v_1   \tilde{\vec \Gamma } \cdot \tilde{\vec Q }  + w\, \gamma_{d-1}\,\delta_k \,\Big ] } / ( N^2 \epsilon )  $ + finite terms,
+where $v_0 = u_0 +\tilde{v}_0 $ and $v_1 = u_1 +\tilde{v}_1 $.
+
+There will also be a divergent vertex correction [see Fig.~\ref{fig1loop}(c)] which will lead to a nonzero $Z_4^{(1)}$
+of the form $-\frac{\tilde e^{2}  \,y}{N^2}\,.$
+All these now lead to the nonzero coefficients,
+\begin{align}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+& Z_{0}^{(1)} =  
+-\frac{  u_0\, \tilde{e}} {N}
+-\frac{  v_0\, \tilde{e}^2  } {N^2 } \,,\quad
+ Z_{1}^{(1)}  = 
+ - \frac{  u_1 \, \tilde{e} } {N} 
+-\frac{ v_1 \, \tilde{e}^2  } {N^2 } \,,\nn
+ & Z_{2}^{(1)}  = 
+-\frac{ w\, \tilde{e}^2  } {N^2 } \,,\quad
+Z_{4}^{(1)}  =
+-\frac{  u_4 \, \tilde{e} } {N}
+-\frac{  y\,\tilde{e}^2  } {N^2 }\,,
+\end{align}
+resulting in
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{align}
+\frac{ \beta_{\tilde e}}  {\tilde e} 
+&=  -\frac{2  \left(2 \,u_1 \tilde{e} + 3 \,N\right)  \epsilon} {9 \,N}
+-\frac{2 \left(2 \,u_0+u_1-4 \, u_4\right) \tilde{e}}
+{9 N} \nn & \quad
++ \frac{4 \left[ 
+-u_1^2-2 \,u_0 \,u_1 + 4 \,u_4 \,u_1
+-3 \left(2 \, v_0 +  v_1 -3\, w \right)
++ 12 \,y \right ]
+ \tilde{e}^2 }
+{27\, N^2}  \,.
+\end{align}
+At the fixed point, we now have
+\begin{align}
+ \frac{\tilde e^*} {N} 
+& = 
+\frac{3 \,\epsilon }{2\, u_0 + u_1-4 \,u_4}
+-\frac{18
+ \left(2 \,v_0+ v_1-3 \,w-4 \,y\right)
+ \epsilon ^2 }
+{\left(2 \,u_0+ u_1-4 \,u_4\right)^3} +
+\mathcal{O} \big(\epsilon^3 \big) \,.
+\end{align}
+This shows that the nature of the stable non-Fermi liquid fixed point remains unchanged, although
+its location (as well as any critical scaling) gets corrected by one higher power of $\epsilon$.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Renormalization of the $2k_F$ scattering amplitude}
+\label{secscatter2kf}
+
+
+
+In order to examine how the back-scattering is affected by the interactions with the gauge bosons in the non-Fermi liquid state, we consider an operator which carries momentum $2 k_F$ as follows:
+\begin{align}
+\label{scat2k1}
+S_{2k_F}  & =  -2\, g_{2k_F} \, \mu
+ \sum_j \int dk \left[ 
+(\psi_{+,j}^\dagger (k) \psi_{-,j} (k) + \psi_{-,j}^\dagger (k) \psi_{+,j} (k) \right]\nn
+%%%%%
+& =  i\, g_{2k_F} \, \mu \int dk \left[ 
+\Psi^T (k) \gamma_0 \Psi (-k) + \bar{\Psi} (k) \gamma_0 \bar{\Psi}^T (-k) \right] ,
+\end{align}
+where $g_{2k_F}$ is the source. 
+%%%%%%%%%%%5
+To cancel UV divergences, we need to add a counterterm of the form
+\begin{align} 
+S_{2k_F}^{CT}  & =  i\,
+ g_{2k_F} \, \mu  \left (Z_{2k_F} - 1 \right )
+  \int dk
+\Big[  \Psi^T (k) \,\gamma_0 \Psi (-k) 
++ 
+\bar{\Psi} (k) \,\gamma_0 \bar{\Psi}^T (-k) \Big ] \,,
+\end{align}
+which renormalizes the insertion starting from the bare one,
+$$ S_{2k_F}^{bare} 
+ =  i\, g_{2k_F}^B
+\int dk^B \Big[  
+\left( \Psi^B (k) \right )^T  \gamma_0 \,\Psi^B (-k) 
++ {\bar{\Psi}}^B  (k)\, \gamma_0 \,
+\left( {\bar{\Psi}}^B (-k) \right) ^T 
+ \Big ] \,.$$
+Here,
+$ g_{2k_F}^B=  Z_{g}\,g_{2k_F} $, $ Z_{2k_F}=  Z_g\,Z_2  $, and
+$ Z_{2k_F} =  1+ {Z_{2k_F}^{(1)}} / {\epsilon} $ to one-loop order.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[t!]
+\centering
+\subfigure[]{\includegraphics[scale=0.11]{2kF1}}\hspace{ 1 cm }
+\subfigure[]{\includegraphics[scale=0.11]{2kF2}}
+\caption{The one-loop diagrams contributing to the $2k_F$ scattering amplitude.}\label{fig:2kf}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+The loop calculations, involving the diagrams as shown in Fig.~\ref{fig:2kf}, lead to
+\begin{align}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+& Z_{2k_F}^{(1)} =  \begin{cases}
+- \frac{  0.0774559 \, \tilde e }  {N}   
+& \text{ for } m=1 \\
+%%%
+0
+& \text{ for } m=2
+\end{cases} .
+\end{align}
+This gives the beta-function for $ g_{2k_F}$ as
+\begin{align}
+\beta_g  =  - g_{2k_F} \left( 1 - \eta_g \right),
+\end{align}
+with anomalous dimension $\eta_g =- \frac{2 \,\tilde e\, u_g }{3 N} $, where $u_g= 0.0774559$ for $m=1$. The negative value of $\eta_g$ shows that the $2 k_F$ scattering amplitude is enhanced by fluctuations of the transverse gauge field. This is in contrast with the behaviour computed in the case of  in  the  Ising-nematic
+quantum criticality, where the $2\,k_F$ scattering amplitude is suppressed \cite{Lee-Dalid} in the presence of the Ising-nematic critical bosons in $d_p=2$.
+Note that this scattering amplitude can also be interpreted as an instability in the charge density wave (CDW) channel, which therefore (due to its negative anomalous dimension) turns out to be a serious competitor for the transverse gauge field  criticality for $m=1$.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Thermodynamic quantities }
+
+The scaling of thermodynamic quantities are different 
+from observables which are local in momentum space.
+This is because all low energy modes near the FS contribute
+to the thermodynamic responses. Here, we will outline the expectations of a general scaling analysis. For the critical FS, the momentum components, $ k_{d-m}$ and $\mathbf L_{(k)}$, each has scaling-dimension one, $k_0$ has scaling dimension $z$, and the remaining momentum components with linear dispersion have scaling dimension $\tilde z$.
+Note that for the Ising-nematic critical point \cite{Lee-Dalid, ips-uv-ir1}, $\tilde z = z$.
+
+In order to examine the scaling behavior of thermodynamic quantities,
+we consider the free energy density at finite temperature $T$.
+In a system with $d_p= m+1$ spatial dimensions, fermionic dynamical critical exponent $z$, and $ \frac{2-m}{m+1} - \epsilon $ auxiliary dimensions with critical exponent $\tilde z$, the free energy density $F(T)$ has the scaling dimension $ [F(T)] 
+= d_p+z + \left( \frac{2-m}{m+1} - \epsilon  \right) \tilde{z} $, if it were independent of any UV cut-off scale. However, when a critical boson couples with fermions on all parts of the FS, the entire FS becomes hot. As a result, we expect a hyperscaling violation, such that the the singular part of the free energy density depends on the size of the FS \cite{LEE2008,ips-subir}. The largest momentum along the $\mathbf L_{(k)}$ direction is set by the Fermi momentum $k_F$, and hence the free energy density should have the following scaling form:
+\begin{align}
+F(T) & \sim   k_F^{m/2}\,
+T^{1+ \frac{d_p-m} {z} 
++ \frac{\left( \frac{2-m}{m+1} - \epsilon  \right) \tilde{z}} {z}} 
+ \sim k_F^{m/2}\,
+T^{1+ \frac{ 1+\left( \frac{2-m}{m+1} - \epsilon  \right) \tilde{z}} {z}}
+\end{align}
+in the presence of an $m$-dimensional FS, with an effective scaling dimension, $ [F(T)]_{\text{eff}} =  1+  z + \left( \frac{2-m}{m+1} - \epsilon  \right) \tilde{z} $. 
+From this scaling form, we can extract the temperature dependence of various observables within the quantum critical region. For example, the specific heat should scales as
+$ C  \propto T^{ \frac{ 1+\left( \frac{2-m}{m+1} - \epsilon  \right) \tilde{z}} {z}}$.
+
+The current operator is given by $J(T)=\frac{\delta F(T)}{\delta A}$, where $A $ is the vector potential with scaling dimension one. Hence, it should have the scaling form:
+\begin{align}
+J(T)   
+\sim k_F^{m/2}\,\,
+T^{ 1 +\frac{ \left( \frac{2-m}{m+1} - \epsilon  \right) \tilde{z}} {z}}\,,
+\end{align}
+with an effective scaling dimension $ 
+[J(T)]_{\text{eff}} =   z + \left( \frac{2-m}{m+1} - \epsilon  \right) \tilde{z} $.
+Then using the Kubo formula, we can infer that the effective scaling dimension of the optical conductivity is
+\begin{align}
+&[\sigma(\omega) ]_{\text{eff}}  
+= 2\,[J(T)]_{\text{eff}}- z-[\text{volume in } k\text{-space}]_{\text{eff}} \nn
+%%%
+& = 2\,z +2\left( \frac{2-m}{m+1} - \epsilon  \right) \tilde{z}
+- z- z- 1
+-  \left( \frac{2-m}{m+1} - \epsilon  \right) \tilde{z} \nn
+%%%
+& = -1 +\left( \frac{2-m}{m+1} - \epsilon  \right) \tilde{z}\,,
+\end{align}
+leading to the scaling form:
+\begin{align}
+&[\sigma(\omega \gg T) ] 
+\propto \omega^{-\frac{1}{z}+\frac{ \left( \frac{2-m}{m+1} - \epsilon  \right) \tilde{z}} {z}}\,,
+\end{align}
+where $\omega $ is the frequency of the applied AC electric field.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Model involving two $U(1)$ transverse gauge fields}
+\label{secmodelu2}
+
+In this section, we consider the $m$-dimensional FSs of two different kinds of fermions (denoted by subscripts $1$ and $2$) coupled to two U(1) gauge
+fields, $a_c$ and $a_s$, in the context of deconfined Mott transition and deconfined metal-metal transition studied in Ref.~\cite{debanjan} (for $m=1$).
+The theoretical motivation of Ref.~\cite{debanjan} was to study a distinct class of quantum phase transitions between a Fermi liquid and a Mott insulator \cite{sachdev_2011}, or between two metals that have FSs with finite but different sizes on either side of the transition \cite{keimer,vojta}. These have been dubbed by the authors as deconfined Mott transition (DMT), and deconfined metal-metal transition (DM$^2$T), respectively. These problems can be formulated using a fictitious / emergent $U(2)$ gauge field, but the authors showed that this non-abelian gauge field is `quasi-abelianized' such that a related $U(1) \times U(1)$ gauge theory can capture many essential features.
+In this $U(1) \times U(1)$ gauge theory, the fermion fields $\psi_{1,\pm,j}$ and $\psi_{2,\pm,j}$ carry negative charges under the
+even ($a_c + a_s$) and odd ($a_c - a_s$) combinations of the gauge fields.
+We revisit this problem using our dimensional regularization scheme because using this technique, we can study this system in generic dimensions, and also perform higher-loop diagrams giving order by order corrections in $\epsilon$.
+
+
+The action takes the form of
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{align}
+\label{actu2}
+S & = \sum \limits_{\alpha=1,2}  \sum \limits_{p=\pm} \sum_{j=1}^N \int dk\,
+\psi_{\alpha,p,j}^\dagger (k)
+\Bigl[ i\, k_0   +  p  \,k_{d-m} +  {\vec L}_{(k)}^2  \Bigr] \psi_{\alpha,p,j}(k)
+\nn & \quad
++ \frac{1}{2} \int  dk \, {\vec L}_{(k)}^2 \left[ 
+  a_c^\dagger(k) \, a_c(k) +  a_s^\dagger(k) \, a_s(k) \right ] \nonumber \\
+ & \quad
++\sum_{\alpha=1,2} \sum_{p=\pm} p\sum_{j=1}^N \int dk  \, dq
+\Big[
+\frac{ (-1)^\alpha \, e_s}{\sqrt{N}}  \,  a_s(q) \,  \psi^\dagger_{\alpha,p,j}(k+q)  \, \psi_{\alpha, p,j}(k) 
+\nn & \hspace{ 4 cm}
+-  \frac{e_c}{\sqrt{N}} \, a_c(q) \,  \psi^\dagger_{\alpha,p,j}(k+q) 
+\, \psi_{\alpha, p,j}(k)\Big ] \, ,
+\end{align}
+where $e_c $ and $e_s $ denote the gauge couplings for the gauge fields $a_c $ and $a_s $ respectively.
+We will perform dimensional regularization on this action and determine the RG fixed points.
+Our formalism allows us to extend the discussion beyond $m=1$, and also to easily compute higher-loop corrections.
+
+\subsection{Dimensional regularization}
+
+Proceeding as in the single transverse gauge field case, we add artificial co-dimensions for dimensional regularization after introducing the two-component spinors,
+\begin{align}
+& \Psi_{\alpha,j}^T(k) = \left( 
+\psi_{\alpha,+,j}(k),
+\psi_{\alpha,-,j}^\dagger(-k)
+\right) \text{ and } \bar \Psi_{\alpha,j} \equiv \Psi_{\alpha, j}^\dagger \,\gamma_0\,,
+% \nn & 
+\text{ with } \alpha =1,2 \,.
+\end{align} 
+%%%%%%%%%%%%%%%%%%%%%%%
+The dressed gauge boson propagators include the one-loop self-energies given by:
+\begin{align}
+\label{babos2}
+& \Pi^c_1 (k)  =
+- \, \frac{ \beta(d,m)\,  e_c^2 \, \mu^x \left(  \mu \, {\tilde{k}}_F  \right )^{\frac{m-1}{2}} }  {  |\vec{L}_{(q)}|}  
+ \,
+ \left[ k_0^2 + ( m+1-d)\,{\tilde {\vec K}}^2 \right] 
+|\vec K|^{d-m-2} \text{ and} \nn
+%%%%%%%%%%%%%%%%%%%%%%%%%
+& \Pi^s_1 (k)  =
+- \, \frac{ \beta(d,m)\,  e_s^2 \, \mu^x \left(  \mu \, {\tilde{k}}_F  \right )^{\frac{m-1}{2}} }  {  |\vec{L}_{(q)}|}  
+\, \left[ k_0^2 + ( m+1-d)\,{\tilde {\vec K}}^2 \right] 
+|\vec K|^{d-m-2} \,,
+\end{align}
+for the $a_c$ and $a_s$ gauge fields, respectively.
+This implies that the one-loop fermion self-energy for both $\Psi_{1,j}$ and $\Psi_{2,j}$ now takes the form,
+\begin{align}
+\label{sigmau2eq}
+\Sigma_1(q) = &
+-\frac{ i \left( e_c^{\frac{2\,(m+1)} {3} } + e_s^{\frac{2\,(m+1)} {3} } \, 
+\right)   }
+{ N \, {\tilde{k}}_F ^{ \frac{(m-1)(2-m) } {6}}}
+\frac{u_0\,\gamma_0\,q_0 + u_1  \left( \tilde{\vec \Gamma } \cdot \tilde{\vec Q } \right) } {\epsilon}  + \text{ finite terms} \,,
+%%%%%%%
+\end{align}
+with the critical dimension $d_c = \left(  m+\frac{3}{m+1}\right)$, $u_0$ and $u_1$ having the same values as for the $U(1)$ case.
+
+The counterterms take the same form 
+as the original local action, viz.
+\begin{align}
+S_{CT}  = &  \sum_{\alpha,j} \int dk \, \bar \Psi_{\alpha,j}(k)
+\, i \,\Bigl[ 
+A_{0} \,  \gamma_0 \,k_0 + A_{1} \,\tilde{\vec \Gamma} \cdot \tilde{ \vec K} 
++   A_2 \, \gamma_{d-m} \, \delta_k 
+ \Bigr] \Psi_{\alpha,j}(k) \,  \exp \Big \lbrace \frac {{\vec{L}}_{(k)}^2}  { \mu \, {\tilde{k}}_F } \Big \rbrace
+ %%%%%%%%%%%%%%%%%%%%
+\nn & + \frac{A_{3_s}}{2} \int  dk\,
+ {\vec{L}}_{(k)}^2\,   a_s^\dagger(k) \, a_s(k)
+ +  \frac{A_{3_c}}{2} \int  dk \,
+ {\vec{L}}_{(k)}^2\,  a_c^\dagger(k) \, a_c(k)  
+\nn &
+-  A_{4_c} \frac{  e_c \, \mu^{x/2} }{\sqrt{N}} \sum_{\alpha,j}  
+\int dk \, dq  \,
+a_c(q) \,  \bar \Psi_{\alpha, j}(k+q) \,\gamma_{0} \, \Psi_{\alpha,j}(k) 
+\nn & +  A_{4_s} \frac{ e_s \, \mu^{x/2} }{\sqrt{N}} \sum_{\alpha,j}  (-1)^\alpha
+\int \frac{d^{d+1}k \, d^{d+1}q}{(2\pi)^{2d+2}}  \,
+a_s (q) \,  \bar \Psi_{\alpha, j}(k+q) \,\gamma_{0} \, \Psi_{\alpha,j}(k) \, ,
+\end{align}
+where 
+\begin{align}
+A_{\zeta} = 
+\sum_{\lambda=1}^\infty \frac{Z^{(\lambda)}_{ \zeta}
+(e_,\tilde{k}_F)}{\epsilon^\lambda}  \text{  with }  \zeta=0,1,2,3_c,3_s , 4_c,4_s\,.
+\end{align}
+We have taken into account the exchange symmetry: $ \Psi_{1,j} \leftrightarrow \Psi_{2,j}\,,\,\,
+a_s \rightarrow - a_s \,,$ which was assumed in Ref.~\cite{debanjan}, and here it means that
+both $\Psi_{1,j}$ and $\Psi_{2,j}$ have the same wavefunction renormalization $ Z_{\Psi}^{1/2}$.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+To obtain the renormalized action, not containing any divergences, we subtract the counterterms from the bare action,
+\begin{align}
+\label{act8}
+S_{bare}  = & \sum_{\alpha,j} \int dk^B  \bar \Psi^B_{\alpha,j}(k^B)
+\, i \left[   \gamma_0 \,k_0^B + \tilde{\vec \Gamma} \cdot \tilde{ \vec K}^B 
++   \gamma_{d-m} \, \delta_k \right ] \Psi^B_{\alpha,j}(k^B)
+ \,  \exp \Big \lbrace \frac {{\vec{L}}_{(k^B)}^2}  { \mu \, {\tilde{k}}_F^B } \Big \rbrace
+\nn & + \frac{1}{2} \int  dk^B\,
+ {\vec{L}}_{(k^B)}^2\,  {a^B_c }^\dagger(k^B) \, \,\,a^B_c(k^B)
++  \frac{1}{2} \int  dk^B \,
+ {\vec{L}}_{(k^B)}^2\, { a^B_s }^\dagger(k^B) \,\,\, a_s^B(k^B)  
+\nn &
+-   \frac{ e_c^B  }{\sqrt{N}} \sum_{\alpha,j}  
+\int dk^B \, dq^B  \,
+a^B_c (q^B) \,  \bar \Psi^B_{\alpha, j}(k^B+q^B) \,\gamma_{0} \, \Psi^B_{\alpha,j}(k^B) 
+\nn & +    \frac{ e_s^B  }
+{\sqrt{N}} \sum_{\alpha,j}  (-1)^\alpha
+\int dk^B \, dq^B  \,
+a_s^B (q^B) \,  \bar \Psi^B_{\alpha, j}(k^B+q^B) \,\gamma_{0} \, \Psi^B_{\alpha,j}(k^B)  \, ,
+\end{align}
+remembering that $\delta_{k^B} =\delta_k$.
+Here,
+\begin{align}
+& k_{0}^B = \frac{Z_0} {Z_2}\,k_0\,,\quad
+\tilde{\vec K}^B =   \frac{Z_1} {Z_2} \, \tilde{\vec K} \, , \quad
+k_{d-m}^B =  k_{d-m} \, , 
+\quad {\vec{L}}_{(k^B)}  =  {\vec{L}}_{(k)} \,, \quad
+k_{F}^B  =  k_F =\mu \, {\tilde{k}}_F \,, \nn &
+%%%%%%%%%%%%%%%%%%%%%%
+\Psi_j^B(k^B)  =   Z_{\Psi}^{\frac{1}{2}}\, \Psi_j(k)\,,\quad
+ a_c^B(k^B) =  Z_{a_c}^{\frac{1}{2}}\, a_c(k)\,, \quad
+ a_s^B(k^B) =  Z_{a_s}^{\frac{1}{2}}\, a_s(k)\,, \nn &
+  Z_{\Psi}  = \frac{Z_2^{d-m+1} } { Z_0\, {Z_1 }^{d-m-1}}\,,\quad
+%%%%%%%%%%
+ Z_{a_c}  = \frac{Z_{3_s}\, Z_2^{d-m}} {Z_0\, {Z_1 }^{d-m-1}}\,,\quad
+Z_{a_s}  = \frac{Z_{3_c}\, Z_2^{d-m}} {Z_0\, {Z_1 }^{d-m-1}}\,,\quad
+%%%%%%%
+ e_c^B=  Z_{e_c}\,e_c\,\mu^{\frac{x}{2}}\,, \nn &
+ Z_{e_c}= \frac{  Z_{4} \, Z_2^{\frac{d-m} {2} -1}} 
+ {\sqrt{ Z_0\, Z_{3_c}} \, {Z_1 }^{\frac{d-m-1} {2}} }\,,\quad
+  e_s^B=  Z_{e_s}\,e_s\,\mu^{\frac{x}{2}}\,, \quad
+ Z_{e_s}= \frac{  Z_{4} \, Z_2^{\frac{d-m} {2} -1}} 
+ {\sqrt{ Z_0\, Z_{3_s}} \, {Z_1 }^{\frac{d-m-1} {2}} }\,, 
+\end{align}
+and
+$ Z_{\zeta}  =  1 + A_{\zeta}$. As before, the superscript ``B'' denotes the bare fields, couplings, and momenta.
+
+As before, we will use the same notations, namely, $z$ for the dynamical critical exponent, $\tilde z$ for the critical exponent along the extra spatial dimensions, $ \beta_{k_F}$ for the beta-function for ${\tilde k}_F$,
+and $\eta_\psi$ for the anomalous dimension of the fermions. Since we have two gauge fields now, we will use
+the symbols $\beta_{e_c} $ and $\beta_{e_s}$ to denote the beta-functions for the couplings $e_c$ and $e_s$ respectively, which are explicitly given by
+\begin{align}
+\beta_{e_c} =  \frac{\partial e_c}{\partial \ln \mu}\,,\quad
+\beta_{e_s} =  \frac{\partial e_s}{\partial \ln \mu}\, .
+\label{eqbeta2}
+\end{align}
+The anomalous dimensions of these two bosons are indicated by
+\begin{align}
+&\eta_{a_c} = \frac{1}{2} \frac{ \partial \ln Z_{a_c}}{\partial \ln \mu} \,,\quad
+\eta_{a_s} = \frac{1}{2} \frac{ \partial \ln Z_{a_s}}{\partial \ln \mu} \,.
+\end{align}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{RG flows at one-loop order}
+
+At one-loop order, the counterterms are given by 
+$Z_\zeta = 1 + Z_\zeta^{(1)}/\epsilon$, where the nonvanishing 
+coefficients are
+\begin{align}
+Z_0^{(1)} &= -\frac{u_0\left(\tilde{e}_c + \tilde{e}_s\right)}{N}\,, \quad
+Z_1^{(1)} = -\frac{u_1\left(\tilde{e}_c + \tilde{e}_s\right)}{N}\,, \quad
+Z_4^{(1)} = -\frac{u_4\left(\tilde{e}_c + \tilde{e}_s\right)}{N}\,,
+\end{align}
+with the effective couplings defined as
+\begin{align}
+\tilde{e}_c = \frac{e_c^{\frac{2(m+1)}{3}}}
+{\tilde{k}_F^{\frac{(m-1)(2-m)}{6}}}
+\quad \text{and} \quad
+\tilde{e}_s = \frac{e_s^{\frac{2(m+1)}{3}}}
+{\tilde{k}_F^{\frac{(m-1)(2-m)}{6}}}\,.
+\end{align}
+
+The one-loop beta-functions are given by
+\begin{align}
+& \beta_{k_F} = -\tilde{k}_F\,, \quad
+(1-z)\,Z_0 = -\beta_{e_c}\,\frac{\partial Z_0}{\partial e_c}
+- \beta_{e_s}\,\frac{\partial Z_0}{\partial e_s}
++ \tilde{k}_F\,\frac{\partial Z_0}{\partial\tilde{k}_F}\,, \nonumber \\
+& (1-\tilde{z})\,Z_1 = -\beta_{e_c}\,\frac{\partial Z_1}{\partial e_c}
+- \beta_{e_s}\,\frac{\partial Z_1}{\partial e_s}
++ \tilde{k}_F\,\frac{\partial Z_1}{\partial\tilde{k}_F}\,, \quad
+\frac{\beta_{e_c}}{e_c} = -\frac{\epsilon}{2}
++ \frac{1}{2}\left[\frac{(2-m)\tilde{z}}{m+1} + z - 2 
++ \frac{m}{2}\right]\,, \nonumber \\
+& \frac{\beta_{e_s}}{e_s} = -\frac{\epsilon}{2}
++ \frac{1}{2}\left[\frac{(2-m)\tilde{z}}{m+1} + z - 2 
++ \frac{m}{2}\right]\,.
+\label{beta11}
+\end{align}
+Solving these equations yields
+\begin{align}
+-\frac{\beta_{e_c}}{e_c} = -\frac{\beta_{e_s}}{e_s}
+&= \frac{\epsilon}{2} + \frac{(m-1)(2-m)}{4(m+1)} \nonumber \\
+& \quad - \frac{(m+1)\,u_0 + (2-m)\,u_1 - 2(m+1)\,u_4}
+{6N}\left(\tilde{e}_c + \tilde{e}_s\right).
+\end{align}
+
+As in the single gauge field case, the order-by-order loop corrections 
+for generic $m$ are controlled not by the bare couplings $e_c$ and $e_s$ 
+themselves, but by the effective couplings $\tilde{e}_c$ and $\tilde{e}_s$. 
+The RG flows are therefore most naturally expressed through the beta-functions of these effective couplings as follows:
+\begin{align}
+-\frac{\beta_{\tilde{e}_c}}{\tilde{e}_c} 
+= -\frac{\beta_{\tilde{e}_s}}{\tilde{e}_s}
+= \frac{(m+1)\,\epsilon}{3}
+- \frac{(m+1)\left[(m+1)(u_0 - 2u_4) + (2-m)u_1\right]
+\left(\tilde{e}_c + \tilde{e}_s\right)}{9N}\,.
+\end{align}
+The interacting fixed points are located at the zeros of these beta-functions, and satisfy
+\begin{align}
+\tilde{e}_c^* + \tilde{e}_s^* = 
+\frac{3N\,\epsilon}{(m+1)(u_0 - 2u_4) + (2-m)u_1}
++ \mathcal{O}(\epsilon^2)\,,
+\end{align}
+which defines a fixed \textit{line} in the space of couplings, 
+consistent with the finding of Ref.~\cite{debanjan} for the special 
+case $m = 1$. That this fixed line is infrared stable can be verified 
+by examining the first derivatives of the beta-functions. We have thus 
+established that the fixed line feature persists for critical FSs of 
+dimension greater than one. The critical exponents at this stable fixed 
+line take the same form as those in Eq.~\eqref{critex}.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Corrections arising from Feynman diagrams with more than one loop}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure*}[t!]
+\centering
+\subfigure{
+\includegraphics[width=0.22 \textwidth]{3} }
+\subfigure{
+\includegraphics[width=0.22 \textwidth]{4} 
+}
+\subfigure{
+\includegraphics[width=0.22 \textwidth]{5} 
+}
+\subfigure{
+\includegraphics[width=0.22 \textwidth]{6} 
+}
+\subfigure{
+\includegraphics[width=0.22 \textwidth]{33} 
+}
+\subfigure{
+\includegraphics[width=0.22 \textwidth]{44} 
+}
+\subfigure{
+\includegraphics[width=0.22 \textwidth]{55} 
+}
+\subfigure{
+\includegraphics[width=0.22 \textwidth]{66} 
+}
+\subfigure{
+\includegraphics[width=0.22 \textwidth]{333.jpg} 
+}
+\subfigure{
+\includegraphics[width=0.22 \textwidth]{444} 
+}
+\subfigure{
+\includegraphics[width=0.22 \textwidth]{555} 
+}
+\subfigure{
+\includegraphics[width=0.22 \textwidth]{666} 
+}
+\subfigure{
+\includegraphics[width=0.22 \textwidth]{3333} 
+}
+\subfigure{
+\includegraphics[width=0.22 \textwidth]{4444} 
+}
+\subfigure{
+\includegraphics[width=0.22 \textwidth]{5555} 
+}
+\subfigure{
+\includegraphics[width=0.22 \textwidth]{6666} }
+\caption{Aslamazov-Larkin-type diagrams contributing in the particle-particle channel 
+to the three-loop bosonic self-energy of the $a_c$ transverse gauge 
+field. Red and green wavy lines denote the $a_c$ and $a_s$ propagators, 
+respectively, while black and cyan solid arrowed lines represent the 
+$\psi_{1,\pm,j}$ and $\psi_{2,\pm,j}$ fermionic propagators, 
+respectively. The combined contribution from all sixteen diagrams is 
+proportional to $4\,e_c^2\left(\tilde{e}_c^2 + \tilde{e}_s^2\right)$.}\label{ALdiag}
+\end{figure*}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+Applying the same reasoning as in the single gauge field case, the 
+nonvanishing $Z_\zeta^{(1)}$ coefficients, including one- and two-loop 
+corrections for $m = 1$, are found to be
+\begin{align}
+Z_0^{(1)} &= -\frac{u_0\left(\tilde{e}_c + \tilde{e}_s\right)}{N}
+- \frac{v_0\left(\tilde{e}_s + \tilde{e}_c\right)^2}{N^2}\,, \quad
+Z_1^{(1)} = -\frac{u_1\left(\tilde{e}_c + \tilde{e}_s\right)}{N}
+- \frac{v_1\left(\tilde{e}_c + \tilde{e}_s\right)^2}{N^2}\,, \nonumber \\
+Z_2^{(1)} &= -\frac{w\left(\tilde{e}_c + \tilde{e}_s\right)^2}{N^2}\,, \quad
+Z_{4_s}^{(1)} = -\frac{u_4\left(\tilde{e}_c + \tilde{e}_s\right)}{N}
+- \frac{y\left(\tilde{e}_c + \tilde{e}_s\right)^2}{N^2}\,, \nonumber \\
+Z_{4_c}^{(1)} &= -\frac{u_4\left(\tilde{e}_c + \tilde{e}_s\right)}{N}
+- \frac{y\left(\tilde{e}_c + \tilde{e}_s\right)^2}{N^2}\,.
+\end{align}
+These lead to the beta-functions
+\begin{align}
+-\frac{\beta_{\tilde{e}_c}}{\tilde{e}_c} 
+= -\frac{\beta_{\tilde{e}_s}}{\tilde{e}_s}
+&= \frac{2\left[2u_1\left(\tilde{e}_c + \tilde{e}_s\right) 
++ 3N\right]\epsilon}{9N}
++ \frac{2\left(2u_0 + u_1 - 4u_4\right)
+\left(\tilde{e}_c + \tilde{e}_s\right)}{9N} \nonumber \\
+& \quad - \frac{4\left[-u_1^2 - 2u_0 u_1 + 4u_4 u_1 
+- 3(2v_0 + v_1 - 3w) + 12y\right]
+\left(\tilde{e}_c + \tilde{e}_s\right)^2}{27N^2}\,,
+\end{align}
+which again admit a continuous line of fixed points, defined by
+\begin{align}
+\frac{\tilde{e}_s^* + \tilde{e}_c^*}{N}
+= \frac{3\,\epsilon}{2u_0 + u_1 - 4u_4}
+- \frac{18\left(2v_0 + v_1 - 3w - 4y\right)\epsilon^2}
+{\left(2u_0 + u_1 - 4u_4\right)^3}
++ \mathcal{O}(\epsilon^3)\,.
+\end{align}
+
+At three-loop order, however, new contributions to the beta-functions 
+arise that are not simply proportional to integer powers of 
+$(\tilde{e}_s + \tilde{e}_c)$. Representative examples are the 
+Aslamazov-Larkin-type diagrams. The ones contributing 
+to the self-energy of the $a_c$ transverse gauge field in the particle-particle channel are shown in 
+Fig.~\ref{ALdiag}. All sixteen such diagrams together yield a 
+contribution proportional to $4 \,e_c^2(\tilde{e}_c^2 + \tilde{e}_s^2)$. 
+Analogously, the Aslamazov-Larkin diagrams in the particle-hole channel 
+contribute a term proportional to $4 \, e_c^2(\tilde{e}_c^2 + \tilde{e}_s^2)$, 
+and the corresponding corrections to the self-energy of the $a_s$ 
+transverse gauge field are proportional to 
+$4 \, e_s^2(\tilde{e}_c^2 + \tilde{e}_s^2)$. It is instructive to contrast 
+this with the hypothetical case in which both the fermion species carry 
+identical charges under the two gauge fields: in that scenario, the 
+contributions would instead be proportional to 
+$4e_c^2(\tilde{e}_c + \tilde{e}_s)^2$ and 
+$4e_s^2(\tilde{e}_c + \tilde{e}_s)^2$ for the $a_c$ and $a_s$ fields 
+respectively, which would leave the fixed line intact. The fact that 
+the actual contributions take a different form signals that the fixed 
+line may be destabilized by three-loop corrections when $m = 1$.
+For $m > 1$, by contrast, the UV/IR mixing renders all higher-loop 
+corrections $k_F$-suppressed, so they have no bearing on the fixed 
+line. The fixed line feature is therefore generically robust against 
+higher-loop corrections in this regime.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Conclusion}
+
+In this chapter, we have applied the dimensional regularization 
+framework, developed for NFLs arising at the Ising-nematic quantum 
+critical point (cf. Chapter 1), to the case of NFLs generated by transverse 
+gauge-field couplings with finite-density fermions. This has allowed us 
+to access the interacting fixed points perturbatively through an 
+expansion in $\epsilon$, defined as the difference between the upper 
+critical dimension, $d_c = m + 3/(m+1)$, and the physical dimension 
+$d_p = m+1$ for a FS of dimension $m$. The scaling behavior 
+has been extracted for both the single $U(1)$ and the $U(1)\times U(1)$ 
+gauge field cases.
+
+A key distinction between the Ising-nematic and the gauge-field cases lies 
+in the matrix structure of the couplings. This difference traces back 
+to the fact that fermions at antipodal points on the FS couple to the 
+Ising-nematic order parameter with the \textit{same} sign, whereas they 
+couple to a transverse gauge field with \textit{opposite} signs. As a 
+result, although the critical dimension and critical exponents turn out 
+to be identical in the two cases, the differences surface in the 
+renormalization of physical quantities such as the $2k_F$ scattering 
+amplitudes --- associated with backscattering processes carrying momentum 
+$2k_F$ --- which can also be identified with a CDW instability. In 
+particular, CDW ordering is \textit{enhanced} near the NFL 
+fixed point in the presence of transverse gauge field(s) for $m = 1$ \cite{ips-u1}, 
+in contrast to the Ising-nematic scenario \cite{Lee-Dalid}.
+
+The $U(1)\times U(1)$ case is of especial interest in light of recent 
+work showing that this framework provides a natural description of the 
+deconfined Mott transition and the deconfined metal-metal transition 
+\cite{debanjan}. Working in $(2+1)$ spacetime dimensions at one-loop 
+order, Zou and Chowdhury found in Ref.~\cite{debanjan} that these 
+systems exhibit a continuous line of stable fixed points rather than a 
+single isolated one. Their approach relied on modifying the bosonic 
+dispersion to render it nonanalytic in momentum, followed by a double 
+expansion in two small parameters \cite{nayak1, mross}. Our dimensional 
+regularization scheme sidesteps this complication entirely, and carries 
+the additional advantage of being applicable to FSs of generic dimension 
+$m$ as well as being systematically improvable to higher loop orders, 
+yielding corrections order by order in $\epsilon$. The discovery of a 
+fixed line in Ref.~\cite{debanjan} naturally raises the question of 
+whether this feature persists at higher dimensions or beyond one loop. 
+Our calculations demonstrate that extending to higher dimensions does 
+not reduce the fixed line to a discrete set of fixed points, nor does 
+it eliminate fixed points altogether.
+
+As for higher-loop corrections, while we have not carried these out 
+explicitly, arguments based on the known behavior at the Ising-nematic 
+critical point \cite{Lee-Dalid, ips-uv-ir1, ips-uv-ir2} lead us to 
+make informed predictions: While two-loop corrections will leave the fixed line intact,
+certain three-loop diagrams will destroy it. Should the fixed 
+line be destroyed at three-loop order or beyond for $m = 1$, two 
+scenarios could ensue: (1) the fixed line degenerates into a discrete 
+set of fixed points, which may be stable or unstable; or (2) the beta-function develops no finite zeros, so that no fixed point exists at all. 
+The physical consequences of each of these possibilities have been 
+discussed in detail in Sec.~V of Ref.~\cite{debanjan}.
+
+
+%\bibliographystyle{spphys.bst}
+%\bibliography{ref.bib}
+
+\begin{thebibliography}{10}
+\providecommand{\url}[1]{{#1}}
+\providecommand{\urlprefix}{URL }
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{DOI \discretionary{}{}{}#1}\else
+  \providecommand{\doi}{DOI \discretionary{}{}{}\begingroup
+  \urlstyle{rm}\Url}\fi
+
+\bibitem{Chakravarty}
+S.~{Chakravarty}, R.E. {Norton}, O.F. {Sylju{\aa}sen}, Phys. Rev. Lett.
+  \textbf{74}, 1423 (1995).
+\newblock \doi{10.1103/PhysRevLett.74.1423}
+
+\bibitem{MOTRUNICH}
+O.I. {Motrunich}, Phys. Rev. B \textbf{72}(4), 045105 (2005).
+\newblock \doi{10.1103/PhysRevB.72.045105}
+
+\bibitem{LEE_U1}
+S.S. Lee, P.A. Lee, Phys. Rev. Lett. \textbf{95}, 036403 (2005).
+\newblock \doi{10.1103/PhysRevLett.95.036403}.
+\newblock \urlprefix\url{http://link.aps.org/doi/10.1103/PhysRevLett.95.036403}
+
+\bibitem{PALEE}
+P.A. {Lee}, N.~{Nagaosa}, X.G. {Wen}, Reviews of Modern Physics \textbf{78}, 17
+  (2006).
+\newblock \doi{10.1103/RevModPhys.78.17}
+
+\bibitem{MotrunichFisher}
+O.I. Motrunich, M.P.A. Fisher, Phys. Rev. B \textbf{75}, 235116 (2007).
+\newblock \doi{10.1103/PhysRevB.75.235116}.
+\newblock \urlprefix\url{http://link.aps.org/doi/10.1103/PhysRevB.75.235116}
+
+\bibitem{nayak1}
+C.~{Nayak}, F.~{Wilczek}, Nucl. Phys. B \textbf{417}, 359 (1994).
+\newblock \doi{10.1016/0550-3213(94)90477-4}
+
+\bibitem{mross}
+D.F. Mross, J.~McGreevy, H.~Liu, T.~Senthil, Phys. Rev. B \textbf{82}, 045121
+  (2010).
+\newblock \doi{10.1103/PhysRevB.82.045121}
+
+\bibitem{ips-sudip1}
+S.B. Chung, I.~Mandal, S.~Raghu, S.~Chakravarty, Phys. Rev. B \textbf{88},
+  045127 (2013).
+\newblock \doi{10.1103/PhysRevB.88.045127}.
+\newblock \urlprefix\url{http://link.aps.org/doi/10.1103/PhysRevB.88.045127}
+
+\bibitem{ips-sudip2}
+Z.~Wang, I.~Mandal, S.B. Chung, S.~Chakravarty, Annals of Physics \textbf{351},
+  727  (2014).
+\newblock \doi{http://dx.doi.org/10.1016/j.aop.2014.09.021}.
+\newblock
+  \urlprefix\url{http://www.sciencedirect.com/science/article/pii/S0003491614002814}
+
+\bibitem{Lee-Dalid}
+D.~Dalidovich, S.S. Lee, Phys. Rev. B \textbf{88}, 245106 (2013).
+\newblock \doi{10.1103/PhysRevB.88.245106}
+
+\bibitem{ips-uv-ir2}
+I.~Mandal, Eur. Phys. J. B \textbf{89}(12), 278 (2016).
+\newblock \doi{10.1140/epjb/e2016-70509-4}
+
+\bibitem{ips-sc}
+I.~Mandal, Phys. Rev. B \textbf{94}, 115138 (2016).
+\newblock \doi{10.1103/PhysRevB.94.115138}
+
+\bibitem{max-isn}
+M.A. Metlitski, S.~Sachdev, Phys. Rev. B \textbf{82}, 075127 (2010).
+\newblock \doi{10.1103/PhysRevB.82.075127}
+
+\bibitem{debanjan}
+L.~Zou, D.~Chowdhury, Phys. Rev. Research \textbf{2}, 023344 (2020).
+\newblock \doi{10.1103/PhysRevResearch.2.023344}.
+\newblock
+  \urlprefix\url{https://link.aps.org/doi/10.1103/PhysRevResearch.2.023344}
+
+\bibitem{ips-uv-ir1}
+I.~Mandal, S.S. Lee, Phys. Rev. B \textbf{92}, 035141 (2015).
+\newblock \doi{10.1103/PhysRevB.92.035141}
+
+\bibitem{ips-u1}
+I.~Mandal, Phys. Rev. Research \textbf{2}, 043277 (2020).
+\newblock \doi{10.1103/PhysRevResearch.2.043277}.
+\newblock
+  \urlprefix\url{https://link.aps.org/doi/10.1103/PhysRevResearch.2.043277}
+
+\bibitem{LEE2008}
+S.S. {Lee}, Phys. Rev. B \textbf{78}(8), 085129 (2008).
+\newblock \doi{10.1103/PhysRevB.78.085129}
+
+\bibitem{ips-subir}
+A.~Eberlein, I.~Mandal, S.~Sachdev, Phys. Rev. B \textbf{94}, 045133 (2016).
+\newblock \doi{10.1103/PhysRevB.94.045133}.
+\newblock \urlprefix\url{http://link.aps.org/doi/10.1103/PhysRevB.94.045133}
+
+\bibitem{sachdev_2011}
+S.~Sachdev, \emph{Quantum Phase Transitions}, 2nd edn. (Cambridge University
+  Press, 2011).
+\newblock \doi{10.1017/CBO9780511973765}
+
+\bibitem{keimer}
+B.~Keimer, S.A. Kivelson, M.R. Norman, S.~Uchida, J.~Zaanen, Nature
+  \textbf{518}(7538), 179 (2015).
+\newblock \doi{10.1038/nature14165}.
+\newblock \urlprefix\url{https://doi.org/10.1038/nature14165}
+
+\bibitem{vojta}
+T.~Senthil, S.~Sachdev, M.~Vojta, Phys. Rev. Lett. \textbf{90}, 216403 (2003).
+\newblock \doi{10.1103/PhysRevLett.90.216403}.
+\newblock
+  \urlprefix\url{https://link.aps.org/doi/10.1103/PhysRevLett.90.216403}
+
+\end{thebibliography}

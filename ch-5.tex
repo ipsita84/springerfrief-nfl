@@ -1,0 +1,1151 @@
+\chapter{Non-Fermi liquid behaviour at the onset of incommensurate charge-density-wave order}
+\label{chap-nfl-2kf}
+
+
+\abstract{We study the onset of a quantum phase transition in a two-dimensional 
+metal, from a conventional Fermi liquid to an incommensurate 
+charge-density-wave (CDW) ordered phase, and show that it harbors a 
+stable non-Fermi liquid (NFL) fixed point. The CDW bosons 
+couples fermions at a single pair of antipodal hot-spots on the Fermi 
+surface (FS) connected by the nesting wavevector $\boldsymbol{\mathcal{Q}}$, 
+at which the tangent vectors are antiparallel. To tame the strong 
+coupling that prevails at the physical dimension $d = 2$, we extend the 
+co-dimension of the FS to a continuously tunable value via dimensional 
+regularization, while holding the FS dimension itself fixed at one. The 
+coupling constant becomes marginal at the upper critical dimension 
+$d_c = 5/2$, and a controlled expansion in the small parameter 
+$\epsilon = d_c - d$ yields the critical exponents of the stable infrared 
+fixed point. Returning to the physical theory by setting $\epsilon = 1/2$, 
+we find that the fermionic self-energy acquires a characteristic 
+fractional frequency dependence with exponent $2/3$ --- the hallmark of 
+NFL behaviour at a quantum critical point.}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Introduction}
+
+At quantum critical points (QCPs) hosting non-Fermi liquids (NFLs), 
+the critical order-parameter bosons fall into two broad categories. In 
+the first, the bosonic field is centered at zero momentum, causing 
+quasiparticles to lose coherence across the entire FS 
+\cite{max-isn, Lee-Dalid, ips-uv-ir1, ips-uv-ir2, ips-sc}. In the 
+second, the bosonic field is centered at a finite wavevector 
+$\boldsymbol{\mathcal{Q}}$ that connects points on the FS --- commonly 
+referred to as \textit{hot-spots} --- so that NFL behaviour emerges 
+locally in their vicinity \cite{max-isn, chubukov1, Chubukov, shouvik2, 
+ips-c2, andres1, andres2, ips-fflo}. The Ising-nematic critical point 
+is a prominent example of the first category, while the second 
+encompasses ordering transitions to phases such as spin-density wave 
+(SDW), charge-density wave (CDW) \cite{max-sdw, chubukov1, Chubukov, 
+shouvik2, ips-c2, andres1, andres2}, and 
+Fulde-Ferrell-Larkin-Ovchinnikov (FFLO) states \cite{ips-fflo}.
+
+CDW (SDW) bosons with $\boldsymbol{\mathcal{Q}} \neq 0$ drive 
+instabilities toward charge (magnetic) order, in which the charge 
+(spin) density spontaneously breaks translational symmetry and develops 
+a density modulation at wavevector $\boldsymbol{\mathcal{Q}}$. These 
+instabilities are further classified along two axes: whether the 
+wavevector is commensurate or incommensurate with the underlying 
+lattice, and whether $\boldsymbol{\mathcal{Q}}$ constitutes a nesting 
+vector of the FS. Commensurate wavevectors can be expressed as linear 
+combinations of the reciprocal lattice vectors $\{\boldsymbol{\mathcal{R}}\}$ 
+with rational coefficients, while incommensurate ones cannot. Although 
+there are infinitely many rational coefficients in principle, the 
+quantitative effects of commensurability diminish as the size of their 
+denominators grows. When $\boldsymbol{\mathcal{Q}}$ coincides with a 
+nesting vector connecting two points on the FS with antiparallel Fermi 
+velocities (equivalently, antiparallel tangent vectors), the spin and 
+charge orderings are enhanced by a well-known singularity arising from 
+the enlarged phase space available for low-energy particle-hole 
+excitations. In an inversion-symmetric crystal with valence band 
+dispersion $\xi(\mathbf{k})$, the nesting vectors $\boldsymbol{\mathcal{Q}}$ 
+are determined by the condition $\xi(\boldsymbol{\mathcal{Q}}/2 + 
+\mathbf{G}/2) = \xi_{k_F}$, where $\xi_{k_F}$ is the Fermi energy. 
+The nesting-vector condition, combined with inversion symmetry, implies 
+$|\boldsymbol{\mathcal{Q}}| = 2k_F$, where $k_F$ is the magnitude of 
+the local Fermi momentum. This follows from the fact that the two 
+hot-spots are related by inversion symmetry and therefore share the 
+same value of $k_F$.
+
+The $2k_F$ wavevector instabilities are ubiquitous in two-dimensional 
+systems displaying high-temperature superconductivity. Notable examples 
+include the SDW instability at a $2k_F$ wavevector in the ground state 
+of the 2d Hubbard model at half-filling \cite{hubbard, hubbard2}, and 
+d-wave bond charge order, triggered by antiferromagnetic fluctuations, 
+in models for cuprate superconductors \cite{max-sdw, bond-order}. It is 
+worth emphasizing that the nesting vector here causes only a 
+\textit{partial} nesting of the FS, which is conceptually distinct from 
+perfect nesting, wherein entire slices --- rather than discrete points 
+--- of the FS are connected by the same wavevector. Experimental 
+evidence for incommensurate CDW ordering has been reported in a range 
+of materials, including NbSe$_2$ and TaS$_2$ \cite{salvo, Scholz}, 
+VSe$_2$ \cite{pai}, SmTe$_3$ \cite{Gweon}, and TbTe$_3$ 
+\cite{Kapitulnik}. In some of these compounds, the CDW transition 
+temperature can be tuned toward zero by applying high pressure, 
+revealing a putative QCP at the onset of CDW order \cite{littlewood}. 
+These observations underscore the theoretical importance of understanding 
+QCPs associated with incommensurate $2k_F$ wavevector instabilities.
+
+In this chapter, we consider a pair of antipodal points on a 
+one-dimensional FS of a two-dimensional (2d) metal, with parallel tangent 
+vectors, interacting with an order-parameter boson whose condensation 
+gives rise to an incommensurate CDW ordered phase \cite{metzner1, 
+metzner2}. Right at the QCP, the CDW boson becomes massless, giving 
+rise to strong quantum fluctuations that drive the system across a phase 
+transition to an ordered state in which the electron density 
+spontaneously breaks translational symmetry and develops a density 
+modulation at a wavevector $\boldsymbol{\mathcal{Q}}$ incommensurate 
+with the reciprocal lattice. For definiteness, and without loss of 
+generality, we take $\boldsymbol{\mathcal{Q}} = 2k_F\,\hat{\boldsymbol{x}}$.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Model}
+\label{secmodel-2kf}
+
+%%%%%%%%%%%%%%%%%%%
+\begin{figure}[t!]
+\centering
+\includegraphics[width = 0.35 \textwidth]{nested_FS } 
+\caption{Schematics of the one-dimensional Fermi surface, showing the two hot-spots 
+connected by the wavevector $\boldsymbol{\mathcal{Q}} = 2k_F\,
+\hat{\boldsymbol{x}}$ (blue arrow), which is incommensurate with the 
+reciprocal lattice. The fermionic fields near the right and left 
+hot-spots are labeled $\psi_+$ and $\psi_-$, respectively, and both 
+couple to the CDW order-parameter bosonic fields with momenta centered 
+at $\boldsymbol{\mathcal{Q}}$.}\label{fig_FScdw}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+Our starting point is the low-energy QFT action for finite-density 
+fermions in two spatial dimensions, coupled to an incommensurate CDW 
+order parameter centered at momentum $\boldsymbol{\mathcal{Q}} = 
+2k_F\,\hat{\boldsymbol{x}}$. As shown in Fig.~\ref{fig_FScdw}, the 
+nesting vector $\boldsymbol{\mathcal{Q}}$ connects a pair of hot-spots 
+on the FS lying along the $x$-axis. The effective action governing the 
+low-energy degrees of freedom near the hot-spots and the CDW 
+order-parameter mode in $(2+1)$ dimensions reads \cite{metzner1, metzner2}
+\begin{align}
+S &= \sum_{s=\pm} \int_k \psi_s^\dagger(k)
+\left(-i\,k_0 + s\,k_1 + k_2^2\right)\psi_s(k)
++ \int_k \phi_+(k)\left(k_0^2 + k_1^2 + k_2^2\right)\phi_-(-k) 
+\nonumber \\
+& \qquad + e\int_{k,q}\Big[\phi_+(q)\,\psi_+^\dagger(k+q)\,\psi_-(k)
++ \phi_-(-q)\,\psi_-^\dagger(k-q)\,\psi_+(k)\Big]\,,
+\label{eqs0-2kf}
+\end{align}
+Here, $k = (k_0, \mathbf{k})$ denotes the three-vector comprising the 
+Matsubara frequency $k_0$ and the spatial momentum $\mathbf{k} = 
+(k_1, k_2) \equiv (k_x, k_y)$, with $\int_k \equiv \int 
+dk_0\,d^d\mathbf{k}/(2\pi)^{d+1}$ and $d = 2$ spatial dimensions. 
+The fermionic degrees of freedom near the right and left hot-spots are 
+represented by $\psi_+(k)$ and $\psi_-(k)$, respectively, while 
+$\phi_+(k)$ and $\phi_-(k)$ denote the bosonic fluctuations carrying 
+frequency $k_0$ and momenta $\boldsymbol{\mathcal{Q}} + \mathbf{k}$ 
+and $-\boldsymbol{\mathcal{Q}} + \mathbf{k}$. The bosons are massless, 
+reflecting the fact that we are working directly at the QCP. The 
+fermionic momenta have been rescaled so that the Fermi velocity has 
+unit magnitude and the FS curvature at the hot-spots equals $2$. The 
+bare bosonic velocity, although generically distinct from its fermionic 
+counterpart, can be absorbed into a field redefinition and is accordingly 
+set to unity. We further note that, at the critical point, the low-energy 
+bosonic dynamics is dominated by particle-hole excitations of the FS, 
+rendering the precise value of the bosonic velocity immaterial in the 
+infrared (IR).
+
+Since the FS is locally parabolic, we assign the scaling dimensions of $1$ 
+and $1/2$ to $k_1$ and $k_2$, respectively. To extract the critical 
+scalings in a controlled way, we extend the co-dimension of the FS 
+\cite{senshank, Lee-Dalid, shouvik2} to identify the upper critical 
+dimension, $d = d_c$, at which the fermionic self-energy develops 
+a logarithmic singularity. Maintaining analyticity in momentum space --- 
+or equivalently, locality in real space --- for generic co-dimensions 
+requires introducing the two-component spinors \cite{Lee-Dalid, 
+ips-uv-ir1, ips-uv-ir2, ips-fflo, ips-u1, ips-rafael},
+\begin{align}
+\Psi(k) = \left(\psi_+(k) \quad \psi_-^\dagger(-k)\right)^T 
+\quad \text{and} \quad \bar{\Psi} \equiv \Psi^\dagger\,\gamma_0\,.
+\end{align}
+Un terms of these spinor, the action describing the one-dimensional FS embedded 
+in a $d$-dimensional momentum space, takes the form of
+\begin{align}
+\label{eqs1}
+S &= \int_k \bar{\Psi}(k)\,i\left(\vec{\Gamma}\cdot\vec{K} 
++ \gamma_{d-1}\,\delta_k\right)\Psi(k)
++ \int_k\left(k_d^2 + \tilde{a}\,e_k\right)\phi_+(k)\,\phi_-(-k) 
+\nonumber \\
+& \quad - \frac{i\,e\,\mu^{x/2}}{2}\int_{k,q}
+\Big[\phi_+(q)\,\bar{\Psi}(k+q)\,\gamma_0\,\bar{\Psi}^T(-k)
+- \phi_-(-q)\,\Psi^T(q-k)\,\gamma_0\,\Psi(k)\Big]\,, \nonumber \\
+x &= \frac{5}{2} - d\,, \quad \delta_k = k_{d-1} + k_d^2\,, \quad 
+e_k = k_{d-1} + \frac{k_d^2}{2}\,.
+\end{align}
+The $(d-1)$-component vector, $\vec{K} \equiv (k_0, k_1, \ldots, 
+k_{d-2})$, collects the frequency together with the $(d-2)$ momentum 
+components arising from the added co-dimensions. The original momentum 
+components along the $x$- and $y$-directions have been relabelled 
+$k_{d-1}$ and $k_d$, respectively, so that within the $d$-dimensional 
+momentum space, $\{k_1, \ldots, k_{d-1}\}$ spans the $(d-1)$ directions 
+perpendicular to the FS while $k_d$ runs parallel to it. The matrix 
+vector $\vec{\Gamma} \equiv (\gamma_0, \gamma_1, \ldots, \gamma_{d-2})$ 
+carries $(d-1)$ components representing the gamma matrices associated 
+with $k_0$ and the extra co-dimensions. Since the goal is ultimately to 
+continue to $d = 2$, it suffices throughout to work with the $2\times 2$ 
+gamma matrices $\gamma_0 = \sigma_y$ and $\gamma_{d-1} = \sigma_x$.
+
+In the purely bosonic sector, only the $k_d^2$ term in the kinetic 
+energy survives, since $(|\vec{K}|^2 + k_{d-1}^2)$ is irrelevant under 
+the patch-theory scaling \cite{max-isn, Lee-Dalid, ips-uv-ir1, 
+ips-uv-ir2, ips-fflo, ips-u1}, wherein each component of 
+$\{\mathbf{K},\,k_{d-1}\}$ carries dimension one and $k_d$ carries 
+dimension $1/2$. A dependence on $e_k$ in the bosonic propagator is 
+generated dynamically through the susceptibility, driven by strong 
+particle-hole fluctuations. We have therefore already included the term 
+$\tilde{a}\,e_k$ in the action, whose form is fixed by the divergent 
+contribution to the one-loop susceptibility derived below [see 
+Eq.~\eqref{eqpi}]. This term carries the same mass dimension as $k_d^2$, 
+while $\tilde{a}$ itself has vanishing engineering dimension. Its 
+omission would produce infrared divergences in loop integrals involving 
+the bosonic propagator --- spurious artifacts of truncating the effective 
+action to the $k_d^2$ term alone. The engineering dimension of the 
+fermion-boson coupling $e$ is $x/2$, which is why we have introduced an 
+explicit factor of $\mu^{x/2}$: it renders $e$ dimensionless, as is 
+standard practice in QFT calculations.
+
+A noteworthy contrast with the Ising-nematic case (discussed in Chapter 2) is worth drawing here. 
+In that setting, an emergent sliding symmetry \cite{max-isn, Lee-Dalid, 
+ips-uv-ir1, ips-uv-ir2} forces the terms proportional to 
+$\bar{\Psi}(k)\,k_{d-1}\,\Psi(k)$ and $\bar{\Psi}(k)\,k_d^2\,\Psi(k)$ 
+to renormalize in lockstep, so that the fermionic propagator depends on 
+$k_{d-1}$ and $k_d^2$ only through the combination $\delta_k$, even 
+after loop corrections are included. No such symmetry is operative in 
+the present problem, and there is no a priori reason why sole dependence 
+on $\delta_k$ should be preserved under renormalization. In principle, 
+the corrected terms could conspire to flatten the FS at the hot-spots, 
+as reported in the RPA calculations of Ref.~\cite{metzner2}. As far as our 
+explicit one-loop computations will show, however, no such flattening 
+occurs at one-loop order order of our QFT analysis. The flattening might show up when one computes higher-loop Feynman diagrams.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{One-loop self-energies and implementation of dimensional regularization}
+\label{secselfen}
+
+The value of $x$ reveals that the coupling constant $e$ becomes marginal 
+precisely at the upper critical dimension $d_c = 5/2$, remaining 
+relevant for $d < 5/2$ and irrelevant for $d > 5/2$. We therefore seek 
+to access the interacting phase through a perturbative expansion about 
+$d = 5/2 - \epsilon$, where $\epsilon$ serves as the small control 
+parameter, and the physical two-dimensional theory is ultimately 
+recovered by setting $\epsilon = 1/2$. As a preparatory step toward 
+deriving the RG flow equations, we compute the one-loop self-energies 
+of the bosonic and fermionic sectors, which supply the key ingredients 
+needed to determine the beta functions of the coupling constants $e$ 
+and $\tilde{a}$. The bare fermionic and bosonic propagators, that follow 
+from the action in Eq.~\eqref{eqs1}, are
+\begin{align}
+ &G_{(0)} (k) \equiv  \left\langle \Psi(k)\,  \bar{\Psi}(k) \right\rangle_0 
+ = \frac{1} {i}\,\frac{\boldsymbol{\Gamma} \cdot  {\mathbf{K}}  + \gamma_{d-1}\, \delta_k}
+{ |\mathbf K|^2 + \delta_k^2} \,, \nn &
+%%%%%%%%%%%%
+ D_{(0)}^+(k) \equiv  \left\langle \phi_+(k) \, \phi_-(-k) \right\rangle_0 
+ = \frac{1}{k_d^2 + \tilde a\, e_k } \,,
+  \text{and} 
+ \nn &  D_{(0)}^- (k)  \equiv  \left\langle \phi_-(k)\, \phi_+(-k) \right\rangle_0 = D_{(0)}^+(k) \,.
+\end{align}  
+
+%%%%%%%%%%%%%%%%%%%
+\begin{figure}[t!]
+\centering
+\subfigure[]{\includegraphics[scale=0.25]{boscdw} }\quad
+\subfigure[]{\includegraphics[scale=0.32]{fermicdw} } \quad
+\subfigure[]{\includegraphics[scale=0.27]{vert1cdw} 
+\includegraphics[scale=0.27]{vert2cdw} }
+\caption{One-loop Feynman diagrams for the (a) bosonic self-energy, (b) fermionic 
+self-energy, and (c) fermion-boson vertices. All the fermion propagators 
+are represented by arrowed solid lines corresponding to the bare 
+Green's function, $G_{(0)}$, while the dressed bosonic propagator, $D_{(1)}$, 
+is depicted by wiggly lines.}\label{figcdw}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{One-loop bosonic self-energy}
+\label{secbos}
+
+The one-loop bosonic self-energy [cf.\ Fig.~\ref{figcdw}(a)] is defined by
+\begin{align}
+\Pi(k) = -\frac{e^2\,\mu^x}{4}\times 2
+\int_q \text{Tr}\left[\gamma_0\,G_{(0)}(q)\,\gamma_0\,G_{(0)}^T(k-q)\right].
+\label{eqbos2}
+\end{align}
+Applying the commutation relations between the gamma matrices alongside 
+the identities $\gamma_{d-1}^T = -\gamma_0\,\gamma_{d-1}\,\gamma_0$ 
+and $\Gamma^T = -\gamma_0\,\Gamma\,\gamma_0$, this simplifies to
+\begin{align}
+\Pi(k) = e^2\,\mu^x \int_q
+\frac{\vec{Q}\cdot(\vec{Q} - \vec{K}) - \delta_q\,\delta_{k-q}}
+{\left(\vec{Q}^2 + \delta_q^2\right)
+\left[(\vec{Q} - \vec{K})^2 + \delta_{k-q}^2\right]}\,.
+\end{align}
+Using $\delta_{k-q} = k_{d-1} + q_{d-1} + (k_d - q_d)^2$, we shift 
+$q_{d-1} \rightarrow q_{d-1} - q_d^2$ and apply Feynman parametrization, 
+arriving at
+\begin{align}
+\Pi(k) &= e^2\,\mu^x \int_q \int_0^1 dt\,
+\frac{|\mathbf{Q}|^2 - t(1-t)|\mathbf{K}|^2 
+- \tilde{e}_{kq}\,q_{d-1} + q_{d-1}^2}
+{\left[|\mathbf{Q}|^2 + t(1-t)|\mathbf{K}|^2 + t\,\tilde{e}_{kq}^2 
++ q_{d-1}^2 - 2t\,\tilde{e}_{kq}\,q_{d-1}\right]^2} \nonumber \\
+&= e^2\,\mu^x \int d^{d-1}|\mathbf{Q}|\,dq_d \int_0^1 dt\,
+\frac{|\mathbf{Q}|^d}
+{2^d\,\pi^{\frac{d+1}{2}}\,\Gamma\!\left(\frac{d-1}{2}\right)
+\left[|\mathbf{Q}|^2 + t(1-t)\left(\tilde{e}_{kq}^2 
++ |\mathbf{K}|^2\right)\right]^{3/2}} \nonumber \\
+&= e^2\,\mu^x \int dq_d\,
+\frac{2^{1-2d}\csc\!\left(\frac{d\pi}{2}\right)
+\left(\tilde{e}_{kq}^2 + |\mathbf{K}|^2\right)^{\frac{d-2}{2}}}
+{\pi^{\frac{d-1}{2}}\,\Gamma\!\left(\frac{d-1}{2}\right)}\,.
+\end{align}
+The substitution $u = \sqrt{2}\,q_d - k_d/\sqrt{2}$, with Jacobian 
+$1/\sqrt{2}$, then gives
+\begin{align}
+\Pi(k) = e^2\,\mu^x \int_0^\infty du\,
+\frac{2^{\frac{3}{2}-2d}\csc\!\left(\frac{d\pi}{2}\right)
+\left[\left(u^2 + e_k\right)^2 + |\mathbf{K}|^2\right]^{\frac{d-2}{2}}}
+{\pi^{\frac{d-1}{2}}\,\Gamma\!\left(\frac{d-1}{2}\right)}\,.
+\end{align}
+Since the bare susceptibility diverges at zero temperature at the nesting 
+vector $\boldsymbol{\mathcal{Q}}$, a well-defined self-energy is obtained 
+by subtracting off the singular zero-momentum contribution:
+\begin{align}
+\label{eqtildepi}
+\tilde{\Pi}(k) = \Pi(k) - \Pi(0)
+= \frac{2^{\frac{3}{2}-2d}\csc\!\left(\frac{d\pi}{2}\right)
+e^2\,\mu^x}
+{\pi^{\frac{d-1}{2}}\,\Gamma\!\left(\frac{d-1}{2}\right)}
+\,I_\Pi(k,d)\,,
+\end{align}
+Upon the further substitution, $z = u^2 + e_k$, we get
+\begin{align}
+I_{\Pi} (k,d) & \equiv \int_{e_k}^\infty dz\,
+\frac{
+\left ( z-{  e_k} \right )^{2-d}
+-
+\left[ z^2+ |\mathbf K|^2\right]^{\frac{2-d}{2}}
+}
+{ 2\,\sqrt{z-{  e_k}}
+\, \left[ z^2+ |\mathbf K|^2\right]^{\frac{2-d}{2}}
+\, \left ( z-{  e_k} \right )^{2-d}
+}\nn
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+& =\begin{cases}
+\frac{ \Gamma (d-1) \,
+ \left(-e_k\right)^{d-\frac{3}{2}}}
+{ 2 } 
+\left [ \frac{\Gamma \left(\frac{3-d}{2}\right) \, 
+\, _2F_1\left(\frac{ 3-2 \,d}{4} ,
+\frac{5-2 \,d}{4} ;\frac{3-d}{2};
+-\frac{|\mathbf K|^2}{ { e_k}^2}\right)}{\sqrt{\pi }}
++ \frac{_2 {F}_1\big (\frac{1}{2},1;d;1 \big) } {\Gamma(d)}
+\right]  & \\
+%%%%%%%%
++ \, \frac{ |\mathbf K|^d \,\,
+ _3F_2\big (\frac{3}{4},1,\frac{5}{4};\frac{3}{2},\frac{d}{2}+1;
+ -{|\mathbf K|^2}/ { { e_k}^2}\big )}
+{  4 \,d\, \left(- { e_k} \right)^{3/2}}
++
+\frac{\pi^{3/2} \,
+|\mathbf K|^{d-1} \sec \left(\frac{ d\,\pi} {2}\right)  
+\, \,  _2 {F}_1 \big(\frac{1}{4},\frac{3}{4};\frac{d+1}{2};
+-{|\mathbf K|^2} /{ e_k^2}\big)}
+{ 4\, \sqrt{- { e_k}  } \,\,\Gamma \left(\frac{2-d}{2}\right)
+\, \Gamma \left (\frac{d+1}{2} \right )
+} & \\
+%%%%%%%%%%%%%  
++ \, |\mathbf K|^{d-2} \,\sqrt{-e_k} \, \,
+_3F_2\left(\frac{1}{2},1,1-\frac{d}{2};\frac{3}{4},\frac{5}{4};-\frac{e_k^2} {|\mathbf K|^2}\right)
++ \frac{ \left(-e_k\right)^{d-\frac{3}{2}} }
+{3-2\, d}
+ \text{ for }  { e_k}<0 &
+%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\\ & \\ & \\
+\frac{\sqrt{\pi } \,  e_k^{ d - \frac{3}{2}} 
+\, \Gamma \left(\frac{3-d}{2}\right) \, \,
+_2F_1 \big (\frac{3-2 \,d}{4} ,\frac{5-2 \,d}{4} ;\frac{3-d}{2};-
+ |\mathbf K|^2 / { {e_k}^2} \big )} 
+ {2\, \Gamma (2-d)} \text{ for }   e_k  > 0\,.&
+\end{cases} 
+\end{align} 
+%%%%%%%%%%%%%
+The zeros of $1/\Gamma\!\left(\frac{2-d}{2}\right)$ and $1/\Gamma(2-d)$ 
+at $d = 2$ are cancelled by the factor $\csc\!\left(\frac{d\pi}{2}\right)$ 
+in Eq.~\eqref{eqtildepi}, making overall term non-singular for $d=2$.
+
+
+In the limit $|\mathbf{K}|^2/e_k^2 \ll 1$, the leading-order behaviour is
+\begin{align}
+I_\Pi(k,d) = \begin{cases}
+%%%%%%%%%%%%%%%%
+\dfrac{\Gamma(d-1)(-e_k)^{d-\frac{3}{2}}}{2}
+\left[\dfrac{_2\tilde{F}_1\!\left(\frac{1}{2},1;d;1\right)}{\Gamma(d)}
++ \dfrac{\Gamma\!\left(\frac{3}{2}-d\right)}{\sqrt{\pi}}
++ \dfrac{\sqrt{\pi}}{\Gamma\!\left(d-\frac{1}{2}\right)}\right] & \\[8pt]
+%%%%%%%%%%%%%%%%%%%
++\, \dfrac{(-e_k)^{d-\frac{3}{2}}}{3-2d}
++ \dfrac{\pi^{3/2}|\mathbf{K}|^{d-1}\sec\!\left(\frac{d\pi}{2}\right)}
+{2\sqrt{-e_k}\,\Gamma\!\left(\frac{2-d}{2}\right)
+\Gamma\!\left(\frac{d+1}{2}\right)}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
++ \mathcal{O}\!\left(\dfrac{|\mathbf{K}|^d}{(-e_k)^{3/2}}\right)
+ \text{for } e_k <  0 & \\[8 pt] & \\[8 pt]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\dfrac{\sqrt{\pi}\,\Gamma\!\left(\frac{3}{2}-d\right)
+e_k^{d-\frac{3}{2}}}{2\,\Gamma(2-d)}
++ \dfrac{\sqrt{\pi}\,\Gamma\!\left(\frac{7}{2}-d\right)|\mathbf{K}|^2}
+{4\,(d-3)\,\Gamma(2-d)\,e_k^{\frac{7-2d}{2}}}
+ & \\[8 pt]
++ \mathcal{O}\!\left(\dfrac{|\mathbf{K}|^4}{e_k^{11/2-d}}\right)
+ \text{for } e_k >  0 \,.&
+\end{cases}
+\end{align}
+%%%%%%%%%%%%%%%%%%%%%
+The poles of $\Gamma(3/2 - d)$ and $1/(3-2d)$ at $d = 3/2$ signal, 
+respectively, a logarithmic divergence at $d = 3/2$ and a linear 
+divergence at $d = 5/2$ in the Wilsonian language of a momentum cutoff 
+$\Lambda \sim \mu$. Within dimensional regularization, UV divergences of 
+all orders appear as poles of $\Gamma$-functions, and reinstating an 
+explicit Wilsonian cutoff $\Lambda$ allows one to read off their degree. 
+While these terms are important for the analysis of UV-stable fixed 
+points, they must be set aside in the present context, as we are focused 
+on the infrared RG flows in $d = 5/2 - \epsilon$ dimensions, where they 
+correspond to IR-irrelevant operators. The situation is closely analogous 
+to that of a $\phi^6$ interaction added to a $\phi^4$ scalar field theory 
+in $(3+1)$ dimensions: the $\phi^4$ vertex is renormalizable with upper 
+critical dimension $4$, whereas the $\phi^6$ vertex has upper critical 
+dimension $3$, and its presence destroys renormalizability in four 
+spacetime dimensions.
+
+Expanding in $\epsilon$ about $d = 5/2 - \epsilon$ and dropping the 
+terms with poles at $d = 3/2$, we find
+\begin{align}
+& \left[\mu^x\,\frac{2^{\frac{3}{2}-2d}\csc\!\left(\frac{d\pi}{2}\right)}
+{\pi^{\frac{d-1}{2}}\,\Gamma\!\left(\frac{d-1}{2}\right)}
+\times I_\Pi(k,d)\right]\Bigg|_{d=\frac{5}{2}-\epsilon}
+\nn
+&= \begin{cases}
+-\,\dfrac{\pi^{3/4}\,\dfrac{|\mathbf{K}|^{3/2}}{\sqrt{|e_k|}}
+\left(\dfrac{\mu}{|\mathbf{K}|}\right)^\epsilon}
+{32\sqrt{2}\,\Gamma^2(3/4)\,\Gamma(7/4)}
++ \mathcal{O}(\epsilon)
+& \text{for } e_k < 0 \\[12pt]
+-\,\dfrac{\dfrac{|\mathbf{K}|^2}{e_k}
+\left(\dfrac{\mu}{e_k}\right)^\epsilon}
+{32\pi^{3/4}\,\Gamma(3/4)}
++ \mathcal{O}(\epsilon)
+& \text{for } e_k > 0 \,.
+\end{cases}\nonumber
+\end{align}
+The leading-order self-energy correction in Eq.~\eqref{eqtildepi} 
+therefore takes the form,
+\begin{align}
+\label{eqpi}
+\tilde{\Pi}(k) = -\,\frac{e^2\,\mu^x\,b\,|\mathbf{K}|^{d-1}}
+{\sqrt{|e_k|}}\,\Theta(-e_k)\,,
+\quad \text{where} \quad
+b = \frac{\pi^{3/4}}
+{32\sqrt{2}\,\Gamma^2(3/4)\,\Gamma(7/4)}\,,
+\end{align}
+in the limit $|\mathbf{K}|^2/e_k^2 \ll 1$.
+
+Since the bare bosonic propagators $D_{(0)}^\pm(k)$ are independent of 
+$\mathbf{K}$, loop integrals involving them are ill-defined without 
+resumming a class of diagrams that endows the propagator with a 
+nontrivial dispersion in these directions. We therefore dress the 
+propagator by incorporating the finite one-loop correction 
+$\tilde{\Pi}(k) \propto |\mathbf{K}|^{d-1}/\sqrt{|e_k|}$ in all 
+subsequent loop calculations. For both $\phi_+(k)$ and $\phi_-(k)$, 
+this amounts to working with
+\begin{align}
+\label{eqbos1}
+D_{(1)}(k) = \frac{1}{\left[D_{(0)}^+(k)\right]^{-1} - \tilde{\Pi}(k)}
+= \frac{1}{k_d^2 + \dfrac{b\,e^2\,\mu^x\,|\mathbf{K}|^{d-1}
+\,\Theta(-e_k)}{\sqrt{|e_k|}}}\,.
+\end{align}
+This reorganization of the perturbative expansion ensures that the 
+$\mathbf{K}$-dependent finite part of the one-loop bosonic self-energy 
+is already accounted for at the zeroth order. The term $\tilde{\Pi}(k)$ is 
+the well-known \textit{Landau-damping} contribution, which underlies the 
+characteristic $\text{sgn}(k_0)|k_0|^{2/3}$ frequency dependence of 
+the fermionic self-energy --- a robust signature of NFL behaviour that 
+has been identified at the QCPs in a broad range of 
+strongly-correlated systems
+\cite{max-isn, max-sdw, Lee-Dalid, ips-uv-ir1, ips-uv-ir2, ips-fflo, ips-u1}.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{One-loop fermion self-energy}
+\label{secferm}
+
+Turning to the fermionic sector, the one-loop self-energy 
+[cf.\ Fig.~\ref{figcdw}(b)] is expressed as the integral
+\begin{align}
+\label{eqFS 0}
+\Sigma(k) & =  e^2 \,\mu^{x}
+\int_{q} \,\gamma_0\, G_{(0)}^T(q-k) \,\gamma_0\, D_{(1)}(q)  
+%%%%%%%%%%%%
+ = i\,\Sigma_1 (k) \, \mathbf{\Gamma} \cdot \mathbf K
++ i\,\Sigma_2 (k) \,\gamma_{d-1} \,,
+\end{align}
+where
+\begin{align}
+\Sigma_1 (k) = - \frac{e^2 \,\mu^{x} } { |\mathbf K|^2 }
+\int_q \frac{ \mathbf{K} \cdot (\mathbf Q- {\mathbf{K}} ) 
+}
+{(\mathbf Q- {\mathbf{K}} )^2 
++ \delta^2_{q-k}} \, D_{(1)}(q)
+\end{align}
+and
+\begin{align}
+\label{eqFS 2}
+\Sigma_2 (k) =  e^2 \,\mu^{x} 
+\int_q \frac{ \delta_{q-k} }
+{(\mathbf Q- {\mathbf{K}} )^2 + \delta^2_{q-k}} \, D_{(1)}(q)\,.
+\end{align}
+The evaluation of these two contributions is detailed in the following 
+two subsections, which the reader may wish to skip if they prefer to 
+bypass the more involved intermediate steps. For convenience, we 
+collect the final results here. Setting $d = d_c - \epsilon$, the 
+singular part evaluates to
+\begin{align}
+\Sigma(k) & =- 
+ \frac{ e^{4/3} \, \, {\mathcal U}_1 \, } 
+{ \left (2- \tilde a  \right )^{2/3}
+\,\epsilon} 
+\, i\left( \mathbf{\Gamma} \cdot \mathbf K \right)
++\order{\epsilon^0} ,\quad
+%%%%%%%%%%%%%%%%
+{\mathcal U}_1 = \frac{\sqrt{2} \,\,
+ \Gamma \big (\frac{5}{4}\big)}
+ {3\, \sqrt 3 \, \pi^{7/4} \, b^{1/3}  }\,,
+\label{eqferm1}
+\end{align}
+where the logarithmic divergence is reflected by a pole at $  \epsilon =0 $.
+
+
+ 
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Computation of $\mathbf \Gamma$-dependent part}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+The leading-order dependence of $\Sigma_1(k)$ on $\mathbf{K}$ is captured 
+by setting the external momentum components $k_d$ and $k_{d-1}$ to 
+zero, reducing the problem to evaluating
+\begin{align}
+& \Sigma_1 (\mathbf K, 0,0)  \nn & =  \frac{ e^2 \,\mu^{x} } 
+{ |\mathbf K|^2 }
+\int_q \frac{ \mathbf{K} \cdot (\mathbf K - {\mathbf{Q}} ) 
+}
+{(\mathbf Q- {\mathbf{K}} )^2 
++  \delta_q^2 }  \times
+\frac{1}
+{ q_d^2 +  e^2\,\mu^{x} \, b\, |\mathbf Q |^{d-1} \,\Theta(- e_q)
+ /\sqrt{| e_q|}  } \,.
+\end{align}
+%%%%%%%%%%%%%%%%%%%555
+Switching to $q_d$ and $e_q$ as integration variables, and splitting 
+the integration domain into the regions $e_q < 0$ and $e_q > 0$ via 
+$\Sigma_1(\mathbf{K}, 0, 0) = I_1 + I_2$, we obtain
+%%%%%%%%%%%%%%%%%%%% 
+\begin{align}
+I_1 & = \frac{ e^2 \,\mu^{x} } 
+{ |\mathbf K|^2 }
+\int_{ e_q<0} \frac{d^{d-1} \mathbf{Q}\, dq_d \,d e_q
+}
+{ (2\,\pi)^{d+1} }  \,
+ \frac{ - \mathbf{K} \cdot (\mathbf Q - \mathbf K ) }
+{(\mathbf Q- {\mathbf{K}} )^2 
++ \left(  e_q+ q_d^2/2  \right)^2
+}  \,
+\frac{1}
+{ q_d^2  + e^2 \,\mu^{x} \, b \,
+|\mathbf Q |^{d-1}  /\sqrt{| e_q|}  } \nn
+%%%%%%%%%%%%%%%%%%%
+ & =  \frac{ e^2 \,\mu^{x} } 
+{ |\mathbf K|^2 }
+ \int_0^\infty \frac{ du} {\sqrt { u/2} }
+ \int_0^\infty d e_q
+  \int_{-\infty}^{\infty}
+  \frac{d^{d-1} \mathbf{Q}
+}
+{  (2\,\pi)^{d+1} }
+ \frac{ \mathbf K^2 -\mathbf K \cdot \mathbf Q
+}
+{(\mathbf Q- {\mathbf{K}} )^2 
++   \left( u- e_q  \right)^2
+}  
+\nn & \hspace{5 cm } 
+%%%%%%%%%%
+\times \frac{1}
+{ 2\, u  + e^2\,\mu^{x}\, b \,|\mathbf Q |^{d-1} /\sqrt{ e_q} 
+}  
+\end{align} 
+and
+%%%%%%%%%%%%%%%%%%%% 
+\begin{align}
+I_2 & =  \frac{ e^2 \,\mu^{x} } 
+{ |\mathbf K|^2 }
+\int_{ e_q>0} \frac{d^{d-1} \mathbf{Q}\, dq_d \,d e_q
+}
+{ (2\,\pi)^{d+1} }  \,
+ \frac{ - \mathbf{K} \cdot (\mathbf Q - \mathbf K ) 
+}
+{(\mathbf Q- {\mathbf{K}} )^2 
++ \left(  e_q+ q_d^2/2  \right)^2
+}  \,
+\frac{1}
+{ q_d^2 }
+%%%%%%%%%%%%%
+\nn & = 
+\frac{ e^2 \,\mu^{x} } 
+{ |\mathbf K|^2 }
+\int_{ e_q>0} \frac{d^{d-1} \mathbf{Q}\, dq_d \,d e_q
+}
+{ (2\,\pi)^{d+1} }  \,
+ \frac{ - \mathbf{K} \cdot \mathbf Q 
+}
+{ \mathbf Q^2  + \left(  e_q+ q_d^2/2  \right)^2
+}  \,
+\frac{1}{ q_d^2 } = 0 \,.
+\end{align} 
+
+
+
+
+The integral $I_1$ does not admit an exact closed form, and we proceed 
+by identifying the regions that dominate the integrand. The first factor 
+concentrates weight near $|\mathbf{Q}| \sim |\mathbf{K}|$ and 
+$u \sim e_q$, while the second factor is dominated by 
+$e_q \sim |\mathbf{Q}|^{2(d-1)/3} \sim |\mathbf{K}|^{2(d-1)/3}$. 
+Since $|\mathbf{K}|^{2(d-1)/3} \gg |\mathbf{K}|$ for small $|\mathbf{K}|$ 
+when $2(d-1)/3 < 1$, we may replace $u$ by $e_q$ in both the $\sqrt{u}$ 
+factor in the overall denominator and the $2u$ term in the denominator 
+of the second factor. Extending the lower limit of the $u$-integration 
+to $-\infty$ then yields
+%%%%%%%%%%%%%%%%%%%%%%%
+\begin{align}
+I_1 & \simeq \frac{ e^2 \,\mu^{x} } 
+{ |\mathbf K|^2 }
+\int_{-\infty}^\infty 
+\frac{d^{d-1} \mathbf{Q}\, du} {(2\,\pi)^{d+1}}
+  \int_{e_q>0} \frac{  d e_q}
+{   \sqrt{ e_q/2 } }\,
+ \frac{ \mathbf{K} \cdot (\mathbf K - {\mathbf{Q}} ) 
+}
+{(\mathbf Q- {\mathbf{K}} )^2 +  u^2
+}  \,
+\frac{1}
+{ 2\,  e_q
++ e^2\, \mu^{x}\, b\,|\mathbf Q |^{d-1} /\sqrt{ e_q } }
+% \quad \left [\text{shifting } u \rightarrow u  + e_q \right ] 
+\nn
+%%%%%%%%%%%%%%%%%%%%%%%
+& =  \frac{ e^2 \,\mu^{x} } 
+{ |\mathbf K|^2 }
+\int_{-\infty}^\infty 
+\frac{d^{d-1} \mathbf{Q}\, du} {(2\,\pi)^{d+1}}
+  \int_{e_q>0} d e_q \,
+ \frac{ \mathbf{K} \cdot (\mathbf K - {\mathbf{Q}} ) 
+}
+{(\mathbf Q- {\mathbf{K}} )^2 + u^2
+}  \,
+\frac{ \sqrt 2
+}
+{ 2\,   e_q^{3/2}
++  e^2\, \mu^{x}\, b \,|\mathbf Q |^{d-1} } \nn
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+& = -\frac{
+e^{4/3} \, \Gamma \big (\frac{5-2 \,d}{6} \big ) \,
+\Gamma \big (\frac{d}{2}\big ) \,
+\Gamma \big (\frac{d+2}{6} \big ) 
+} 
+{ 2^{\frac{4 \,d-1} {6} } \pi^{\frac{d+1}{2}} \times 
+3 \, \sqrt{3} \times 2^{2/3}
+\, b^{1/3} \, \Gamma \big (\frac{5 \,d-2}{6} \big )}
+ \left(  \frac{\mu} { |\mathbf K| } \right)^{\frac{2\, x} {3} }\,.
+\end{align}
+%%%%%%%%%%%
+The integral diverges at $d = 5/2$, thereby confirming this as the 
+value of the upper critical dimension, $d_c$. The fermion-boson coupling, 
+$e$, is irrelevant for $d > d_c$ and relevant for $d < d_c$, and marginal 
+precisely at $d = d_c$. This structure opens the door to a controlled 
+perturbative treatment of the strongly interacting NFL state by working 
+in $d = 5/2 - \epsilon$, where $\epsilon$ plays the role of a small 
+expansion parameter. Within our dimensional regularization scheme, the 
+divergence manifests as a $\sim \epsilon^{-1}$ pole, arising from the 
+factor $\Gamma\!\left(\frac{5-2d}{6}\right)$ at $d = d_c$. We further 
+note that this term reproduces the fermionic self-energy behavior 
+$\sim \text{sgn}(k_0)|k_0|^{2/3}$ at $d = 2$, in agreement with the 
+uncontrolled RPA result \cite{metzner1, metzner2}. It is worth 
+emphasizing that this correct $k_0$-dependence of $\Sigma$ could only 
+be captured by incorporating the Landau-damping term into the dressed 
+bosonic propagator $D_{(1)}$ from the outset.
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Computation of $\gamma_{d-1} $-dependent part}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+The leading dependence of $\Sigma_2(k)$ on $k_d$ and $k_{d-1}$ is 
+captured by setting $\mathbf{K} = 0$, reducing the problem to evaluating
+\begin{align}
+\label{eqFS 20}
+\Sigma_2 (\mathbf 0, k_d , k_{d-1})  & =  e^2 \,\mu^{x} e^2 \,\mu^{x} 
+\left[ I_3 (k_d , k_{d-1}) + I_4 (k_d , k_{d-1}) \right ] ,
+\end{align}
+%%%%%%%%%%%%%%%%%%5
+where
+$ \delta_{q-k}  =  q_{d-1} - k_{d-1} +k_d^2 + q_d^2  - 2 \,k_q\, q_d $
+and
+\begin{align}
+& I_3 (k_d , k_{d-1})= \int_{q, \, e_q <0} \frac{ \delta_{q-k} }
+{ |\mathbf Q|^2 + \delta^2_{q-k}}   \times \frac{1} 
+{ q_d^2 + e^2 \, \mu^{x} \, b \,|\mathbf Q|^{d-1}  / \sqrt{| e_q|} } 
+\text{ and}\nn &
+I_4 (k_d , k_{d-1})= \int_{q, \, e_q > 0} \frac{ \delta_{q-k} }
+{ |\mathbf Q|^2 + \delta^2_{q-k}}  \times \frac{1} {  q_d^2 } \,.
+\end{align}
+%%%%%%%%%%%%%%%%%%%%%%%%
+To streamline the calculation, we set $k_d = 0$, whereupon
+\begin{align}
+I_3 ( 0 , k_{d-1}) & = \int_{q, \, e_q > 0} \frac{  q_d^2 /2  -e_q  - k_{d-1}   }
+{ |\mathbf Q|^2 + \left( q_d^2 /2  - e_q - k_{d-1}  \right)^2 }  \times \frac{1} 
+{  q_d^2  +  e^2 \, \mu^{x} \, b \,|\mathbf Q|^{d-1}  /\sqrt{e_q} } \nn
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+& = \int_0^\infty \frac{ du} {\sqrt { u/2} }
+ \int_0^\infty d e_q
+  \int_{-\infty}^{\infty} \frac{d^{d-1} \mathbf{Q}}
+{  (2\,\pi)^{d+1} }\, \frac{ u -e_q  - k_{d-1} }
+{ |\mathbf Q|^2 
++   \left(  u -e_q  - k_{d-1}  \right)^2 }  \nn &
+\hspace{1.5 cm} \times
+\frac{1}   { 2\, u  + e^2\,\mu^{x}\, b \,|\mathbf Q |^{d-1} /\sqrt{ e_q} }  
+\; \left (\text{where } 2\,u = {q_d^2} \right ) .
+\end{align}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+The first factor of the integrand concentrates the dominant contribution 
+near $|\mathbf{Q}| \sim 0$ and $u \sim e_q + k_{d-1}$, while the second 
+factor is dominated by $e_q \sim |\mathbf{Q}|^{2(d-1)/3}$. We may 
+therefore replace $u$ by $e_q + k_{d-1}$ in both the $\sqrt{u}$ factor 
+in the overall denominator and the $2u$ term in the denominator of the 
+second factor, and extend the lower limit of the $u$-integration to 
+$-\infty$. This yields
+%%%%%%%%%%%%%%%%%%%%%%%
+\begin{align}
+I_3 ( 0 , k_{d-1}) & \simeq \int_0^\infty \frac{ du} {\sqrt {e_q +  k_{d-1}} }
+ \int_0^\infty d e_q
+  \int_{-\infty}^{\infty} \frac{d^{d-1} \mathbf{Q}}
+{  (2\,\pi)^{d+1} } 
+\frac{ u -e_q  - k_{d-1} }
+{ |\mathbf Q|^2 
++   \left(  u -e_q  - k_{d-1}  \right)^2}  
+%%%%%%%%%%%%
+\nn & \hspace{ 2 cm} \times \frac{ \sqrt 2}
+{  2 \, e_q + 2\, k_{d-1} + e^2\,\mu^{x}\, b \,|\mathbf Q |^{d-1} /\sqrt{ e_q} }  = 0 \,.
+\end{align}
+To leading order, the integral $I_3$ therefore vanishes, leaving no 
+$b$-dependent contribution. Proceeding to the next term, we have
+%%%%%%%%%%%%%%%%%%%%%%%
+\begin{align}
+I_4 ( 0 , k_{d-1}) &= \int_{q, \, e_q > 0} \frac{  q_d^2 /2  + e_q  - k_{d-1}   }
+{ |\mathbf Q|^2 + \left( q_d^2 /2 + e_q - k_{d-1}  \right)^2 }  \times \frac{1} {  q_d^2 }\nn & 
+=
+\int_0^\infty \frac{ du} {\sqrt { u/2} }
+ \int_{-\infty}^0 d e_q \int_{-\infty}^{\infty} \frac{d^{d-1} \mathbf{Q}}
+{  (2\,\pi)^{d+1} }\, \frac{ u + e_q  - k_{d-1} }
+{ |\mathbf Q|^2 
++   \left(  u + e_q  - k_{d-1}  \right)^2 }  \,
+\frac{1}   { 2\, u}  \,.
+\end{align}
+Applying the same reasoning as before, the first factor of the integrand 
+concentrates the dominant contribution near $|\mathbf{Q}| \sim 0$ and 
+$u \sim k_{d-1} - e_q$. Substituting $u \sim k_{d-1} - e_q$ into the 
+$\sqrt{u}$ factor in the overall denominator and the $2u$ term in the 
+denominator of the second factor, and extending the lower limit of the 
+$u$-integration to $-\infty$, we find $I_4(0, k_{d-1}) = 0$. It follows 
+that the FS flattening at the hot-spots, which appears in the RPA 
+calculations of Ref.~\cite{metzner2}, does not emerge in our one-loop 
+computation.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{One-loop vertex correction}
+\label{secvert}
+
+The one-loop vertex corrections [cf.\ Fig.~\ref{figcdw}(c)] are 
+finite and therefore play no role in the renormalization procedure 
+or the resulting RG flows.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+\section{RG flows under the minimal subtraction scheme}
+\label{secrg}
+
+The counterterm action, constructed to absorb the singular contributions, 
+takes the form
+\begin{align}
+\label{actcount}
+S_{CT} = & \int_k \bar{\Psi}(k)\,i\,\Bigl[A_1\,\vec{\Gamma}\cdot\vec{K}
++ \gamma_{d-1}\left(A_2\,e_k + A_3\,\frac{k_d^2}{2}\right)\Bigr]\Psi(k)
++ \int_k A_4\,k_d^2\,\phi_+(k)\,\phi_-(-k) \nonumber \\
+& - \frac{i\,e\,\mu^{x/2}}{2}\int_{k,q} A_6\,
+\Big[\phi_+(q)\,\bar{\Psi}(k+q)\,\gamma_0\,\bar{\Psi}^T(-k)
+- \phi_-(-q)\,\Psi^T(q-k)\,\gamma_0\,\Psi(k)\Big]\,,
+\end{align}
+where $A_\zeta = \sum_{n=1}^\infty Z_\zeta^{(n)}/\epsilon^n$ with 
+$\zeta \in [1,5]$. The $(d-1)$-dimensional rotational invariance in 
+the space perpendicular to the FS ensures that every term in 
+$\vec{\Gamma}\cdot\vec{K}$ is renormalized in the same way.
+
+Subtracting $S_{CT}$ from the \textit{bare} action $S_{\text{bare}}$ 
+yields the renormalized action, which constitutes the \textit{physical} 
+effective action of the theory, expressed entirely in terms of 
+non-divergent quantum parameters. While the bare parameters may be 
+divergent, the physical observables are identified with the renormalized 
+coupling constants, whose evolution is governed by the RG equations. 
+These describe how the couplings flow as functions of the floating 
+energy scale $\mu\,e^{-l}$, or equivalently, as the logarithmic length 
+scale $l$ increases. To set this up, we first introduce the bare action,
+%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{align}
+\label{actren}
+S_{\text{bare}}  = &   \int_{k^B} \bar{\Psi}^B (k^B)
+\,\, i \left[ 
+\,{\vec \Gamma} \cdot { \vec K^B} 
++   \gamma_{d-1} \left \lbrace  e_k^B + 
+\frac{ \left( k^B\right)^2 }{2} \right \rbrace  \right ] \Psi^B (k^B)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%  
+\nn &  + \int_{k^B}  \left (k^B_d \right)^2 \,
+\phi_+^B (k^B) \,\, \phi_-^B (-k^B) 
+ \nn & 
+ %%%%%%%%%%%%%%%%
+- \frac{ i\, e^B } {2} 
+\int_{k^B,\, \, q^B}
+\Big[ \,\phi^B_+(q^B) \,
+ \bar \Psi^B  (k^B+q^B) \, \gamma_0 
+ \left( {\bar \Psi}^B (-k^B) \right )^T  
+\nn & \hspace{2.5 cm}
+- \phi^B_-(-q^B) \left( {\Psi^B} (q^B-k^B) \right)^T  \gamma_0 \,
+\Psi^B (k^B) \Big] \,,
+\end{align}
+%%%%%%%%%%%%%
+comprising of the \textit{bare quantities}.
+The superscript ``$B$'' labels bare fields, couplings, frequencies, and 
+momenta throughout. The bare quantities are related to their renormalized 
+counterparts (those without the superscript ``$B$'') through the 
+multiplicative $Z_\zeta$-factors, via
+\begin{align}
+& S_{\text{bare}} = S + S_{CT}\,, \quad Z_\zeta = 1 + A_\zeta\,, \quad
+\vec{K}^B = \frac{Z_1}{Z_3}\,\vec{K}\,, \quad
+e_k^B = \frac{Z_2}{Z_3}\,e_k\,, \quad k_d^B = k_d\,, \nonumber \\
+& \Psi^B(k^B) = Z_\Psi^{1/2}\,\Psi(k)\,, \quad
+\phi_\pm^B(k^B) = Z_\phi^{1/2}\,\phi_\pm\,,
+\end{align}
+and
+\begin{align}
+& Z_\Psi = Z_1\left(\frac{Z_1}{Z_3}\right)^{-d}
+\left(\frac{Z_2}{Z_3}\right)^{-1}\,, \quad
+Z_\phi = Z_4\left(\frac{Z_1}{Z_3}\right)^{1-d}
+\left(\frac{Z_2}{Z_3}\right)^{-1}\,, \nonumber \\
+& e^B = Z_e\,e\,\mu^{\frac{\epsilon}{2}}\,, \quad
+Z_e = \frac{Z_5\left(\frac{Z_1}{Z_3}\right)^{1-\frac{d}{2}}
+\left(\frac{Z_2}{Z_3}\right)^{-1/2}}{\sqrt{Z_1}\,Z_4}\,.
+\end{align}
+There exists a freedom to rescale both fields and momenta without 
+affecting the action, and we exploit this by fixing $k_d^B = k_d$, 
+which amounts to measuring the scaling dimensions of all other 
+quantities relative to that of $k_d$. The resulting $S$ is the 
+renormalized --- or Wilsonian effective --- action, expressed entirely 
+in terms of renormalized quantities. In essence, we have written the 
+fundamental action of the theory in two equivalent ways, which allows 
+the divergent contributions collected in $S_{CT}$ to be systematically 
+subtracted off.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{RG flow equations from the one-loop results}
+%%%%%%%%%%%%%%%%%
+
+
+At one-loop order, the divergent contributions are extracted from 
+Eqs.~\eqref{eqpi} and \eqref{eqferm1}, and yield
+\begin{align}
+\label{eqZvals}
+& Z_1 = 1 - \frac{e^{4/3}\,\mathcal{U}_1}{2^{2/3}\,\epsilon}\,, \quad
+Z_2 = Z_3 = Z_4 = Z_5 = 1\,, \nonumber \\
+& b = \frac{\pi^{3/4}}{32\sqrt{2}\,\Gamma^2\!\left(\tfrac{3}{4}\right)
+\Gamma\!\left(\tfrac{7}{4}\right)}\,, \quad
+\mathcal{U}_1 = \frac{\sqrt{2}\,\Gamma\!\left(\frac{5}{4}\right)}
+{3\sqrt{3}\,\pi^{7/4}\,b^{1/3}}\,.
+\end{align}
+At this order, we find that $Z_2 = Z_3$, with neither receiving any 
+correction from the loop integrals.
+
+Since $Z_2 = Z_3$, a single dynamical critical exponent suffices for 
+the fermions,
+\begin{align}
+z = 1 + \frac{\partial\ln\!\left(\frac{Z_1}{Z_2}\right)}{\partial\ln\mu}
+= 1 + \frac{\partial\ln\!\left(\frac{Z_1}{Z_3}\right)}{\partial\ln\mu}\,,
+\end{align}
+reflecting the fact that the $\delta_k$ term, taken as a whole, is not 
+renormalized at one-loop order. The anomalous dimensions of the fermions 
+and bosons are defined by
+\begin{align}
+\eta_\psi = \frac{1}{2}\frac{\partial\ln Z_\psi}{\partial\ln\mu}
+\quad \text{and} \quad
+\eta_\phi = \frac{1}{2}\frac{\partial\ln Z_\phi}{\partial\ln\mu}\,,
+\end{align}
+respectively, and the beta function for $e$ is
+\begin{align}
+\beta_e = \frac{de}{d\ln\mu}\,.
+\end{align}
+
+The mass scale $\mu$ was introduced purely as a regularization device 
+to render the loop-integrals finite. Since it is not a parameter of the 
+fundamental theory, physical observables must be independent of it, and 
+the same must hold for the bare parameters. Imposing this requirement, 
+together with the condition that the non-singular parts of the solutions 
+admit the small-$\epsilon$ expansions
+\begin{align}
+\label{eqexp}
+z = z^{(0)}\,, \quad
+\eta_\psi = \eta_\psi^{(0)} + \eta_\psi^{(1)}\,\epsilon\,, \quad
+\eta_\phi = \eta_\phi^{(0)} + \eta_\phi^{(1)}\,\epsilon\,, \quad
+\beta_e = \beta_e^{(0)} + \beta_e^{(1)}\,\epsilon\,,
+\end{align}
+in the limit $\epsilon \rightarrow 0$, one arrives at the differential 
+equations,
+\begin{align}
+& z = 1 + \beta_e^{(1)}\,\frac{\partial Z_1^{(1)}}{\partial e}\,, \quad
+\eta_\psi = \frac{1}{4}\left(5 - 5z + 
+2\,\frac{\partial Z_1^{(1)}}{\partial e}\,\beta_e^{(1)}\right)
++ \frac{(z-1)\,\epsilon}{2}\,, \nonumber \\
+& \eta_\phi = \frac{3-3z}{4} + \frac{(z-1)\,\epsilon}{2}\,, \quad
+\frac{4\,\beta_e^{(0)}}{e} = -e\,z\,\frac{\partial Z_1^{(1)}}{\partial e}
++ z - 1\,, \quad
+\beta_e^{(1)} = -\frac{e\,z}{2}\,.
+\end{align}
+These equations are derived by (1) imposing 
+$\frac{d}{d\ln\mu}(\text{bare quantity}) = 0$; (2) substituting the 
+expressions from Eqs.~\eqref{eqZvals} and \eqref{eqexp}; (3) expanding 
+in powers of $\epsilon$; and (4) matching coefficients of regular powers 
+of $\epsilon$ on both sides. Solving this system yields
+\begin{align}
+-\frac{\beta_e}{e} = \frac{6\,\epsilon - 3\times 2^{1/3}\,\mathcal{U}_1\,
+\tilde{e}}{12 - 2^{7/3}\,\mathcal{U}_1\,\tilde{e}}\,, \quad
+z = \frac{3}{3 - 2^{1/3}\,\mathcal{U}_1\,\tilde{e}}\,, \quad
+\eta_\psi = \eta_\phi = \frac{(3-2\,\epsilon)\,\mathcal{U}_1\,\tilde{e}}
+{4\,\mathcal{U}_1\,\tilde{e} - 6\times 2^{2/3}}\,,
+\end{align}
+where $\tilde{e} = e^{4/3}$. Since we are interested in the behavior at 
+infrared energy scales, we track the RG flows with respect to the 
+logarithmic length scale $l$, through the derivative
+\begin{align}
+\frac{de}{dl} \equiv -\beta_e
+\end{align}
+for the coupling constant $e$.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Stability of the fixed points of the RG flows}
+
+
+The fixed points of the RG-flow differential equation are located where the beta-function, 
+$\beta_e$, vanishes. They are readily found to be $e = 0$ and 
+$\tilde{e} = 2^{2/3}\,\epsilon/\mathcal{U}_1$. To determine the 
+stability of each fixed point, one examines whether the RG-flow lines 
+in the IR, generated by $\{-\beta_e\}$, flow toward or away from 
+it. This classifies the fixed point as stable or unstable, accordingly. 
+For $\epsilon \in (0, 1/2]$, there is precisely one stable interacting 
+fixed point for each value of $\epsilon$, located at 
+$\tilde{e} = 2^{2/3}\,\epsilon/\mathcal{U}_1$, while $e = 0$ 
+corresponds to an unstable Gaussian (non-interacting) fixed point. At 
+the stable fixed point, the critical exponents evaluate to 
+$z = 1 + 2\,\epsilon/3$ and $\eta_\phi = \eta_\psi = -\,\epsilon/2$.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Conclusion}
+\label{secsum-2kf}
+
+This chapter has been devoted to a QFT analysis of the QCP that governs the continuous phase transition between a normal 
+metallic state and a phase exhibiting incommensurate CDW order. A key 
+ingredient throughout has been the use of a bosonic propagator 
+augmented by the Landau-damping correction $\Pi_{\rm LD}$, which proves 
+essential in generating the NFL fixed point. In particular, this dressed propagator is responsible 
+for causing the frequency-dependence $ \sim \text{sgn}(k_0)|k_0|^{2/3}$ appearing in the 
+fermionic self-energy, that is a defining characteristic of an NFL behaviour 
+\cite{Lee-Dalid, ips-uv-ir1, ips-uv-ir2, ips-fflo, ips-u1, ips-rafael, peng}.
+
+%\bibliographystyle{spphys.bst}
+%\bibliography{ref.bib}
+
+\begin{thebibliography}{10}
+\providecommand{\url}[1]{{#1}}
+\providecommand{\urlprefix}{URL }
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{DOI \discretionary{}{}{}#1}\else
+  \providecommand{\doi}{DOI \discretionary{}{}{}\begingroup
+  \urlstyle{rm}\Url}\fi
+
+\bibitem{max-isn}
+M.A. Metlitski, S.~Sachdev, Phys. Rev. B \textbf{82}, 075127 (2010).
+\newblock \doi{10.1103/PhysRevB.82.075127}
+
+\bibitem{Lee-Dalid}
+D.~Dalidovich, S.S. Lee, Phys. Rev. B \textbf{88}, 245106 (2013).
+\newblock \doi{10.1103/PhysRevB.88.245106}
+
+\bibitem{ips-uv-ir1}
+I.~Mandal, S.S. Lee, Phys. Rev. B \textbf{92}, 035141 (2015).
+\newblock \doi{10.1103/PhysRevB.92.035141}
+
+\bibitem{ips-uv-ir2}
+I.~Mandal, Eur. Phys. J. B \textbf{89}(12), 278 (2016).
+\newblock \doi{10.1140/epjb/e2016-70509-4}
+
+\bibitem{ips-sc}
+I.~Mandal, Phys. Rev. B \textbf{94}, 115138 (2016).
+\newblock \doi{10.1103/PhysRevB.94.115138}
+
+\bibitem{chubukov1}
+A.~{Abanov}, A.~{Chubukov}, Physical Review Letters \textbf{93}(25), 255702
+  (2004).
+\newblock \doi{10.1103/PhysRevLett.93.255702}
+
+\bibitem{Chubukov}
+A.~{Abanov}, A.V. {Chubukov}, Physical Review Letters \textbf{84}, 5608 (2000).
+\newblock \doi{10.1103/PhysRevLett.84.5608}
+
+\bibitem{shouvik2}
+S.~Sur, S.S. Lee, Phys. Rev. B \textbf{91}, 125136 (2015).
+\newblock \doi{10.1103/PhysRevB.91.125136}
+
+\bibitem{ips-c2}
+I.~Mandal, Annals of Physics \textbf{376}, 89  (2017).
+\newblock \doi{https://doi.org/10.1016/j.aop.2016.11.009}.
+\newblock
+  \urlprefix\url{http://www.sciencedirect.com/science/article/pii/S0003491616302585}
+
+\bibitem{andres1}
+A.~Schlief, P.~Lunts, S.S. Lee, Phys. Rev. X \textbf{7}, 021010 (2017).
+\newblock \doi{10.1103/PhysRevX.7.021010}.
+\newblock \urlprefix\url{https://link.aps.org/doi/10.1103/PhysRevX.7.021010}
+
+\bibitem{andres2}
+P.~Lunts, A.~Schlief, S.S. Lee, Phys. Rev. B \textbf{95}, 245109 (2017).
+\newblock \doi{10.1103/PhysRevB.95.245109}.
+\newblock \urlprefix\url{https://link.aps.org/doi/10.1103/PhysRevB.95.245109}
+
+\bibitem{ips-fflo}
+D.~Pimenov, I.~Mandal, F.~Piazza, M.~Punk, Phys. Rev. B \textbf{98}, 024510
+  (2018).
+\newblock \doi{10.1103/PhysRevB.98.024510}
+
+\bibitem{max-sdw}
+M.A. Metlitski, S.~Sachdev, Phys. Rev. B \textbf{82}, 075128 (2010).
+\newblock \doi{10.1103/PhysRevB.82.075128}
+
+\bibitem{hubbard}
+H.J. Schulz, Phys. Rev. Lett. \textbf{64}, 1445 (1990).
+\newblock \doi{10.1103/PhysRevLett.64.1445}.
+\newblock \urlprefix\url{https://link.aps.org/doi/10.1103/PhysRevLett.64.1445}
+
+\bibitem{hubbard2}
+P.A. Igoshev, M.A. Timirgazin, A.A. Katanin, A.K. Arzhnikov, V.Y. Irkhin, Phys.
+  Rev. B \textbf{81}, 094407 (2010).
+\newblock \doi{10.1103/PhysRevB.81.094407}.
+\newblock \urlprefix\url{https://link.aps.org/doi/10.1103/PhysRevB.81.094407}
+
+\bibitem{bond-order}
+S.~Sachdev, R.~La~Placa, Phys. Rev. Lett. \textbf{111}, 027202 (2013).
+\newblock \doi{10.1103/PhysRevLett.111.027202}.
+\newblock
+  \urlprefix\url{https://link.aps.org/doi/10.1103/PhysRevLett.111.027202}
+
+\bibitem{salvo}
+F.D.S. J.A.~Wilson, S.~Mahajan, Advances in Physics \textbf{24}(2), 117 (1975).
+\newblock \doi{10.1080/00018737500101391}.
+\newblock \urlprefix\url{https://doi.org/10.1080/00018737500101391}
+
+\bibitem{Scholz}
+G.~Scholz, O.~Singh, R.~Frindt, A.~Curzon, Solid State Communications
+  \textbf{44}(10), 1455 (1982).
+\newblock \doi{https://doi.org/10.1016/0038-1098(82)90030-8}.
+\newblock
+  \urlprefix\url{https://www.sciencedirect.com/science/article/pii/0038109882900308}
+
+\bibitem{pai}
+P.~Chen, W.W. Pai, Y.H. Chan, V.~Madhavan, M.Y. Chou, S.K. Mo, A.V. Fedorov,
+  T.C. Chiang, Phys. Rev. Lett. \textbf{121}, 196402 (2018).
+\newblock \doi{10.1103/PhysRevLett.121.196402}.
+\newblock
+  \urlprefix\url{https://link.aps.org/doi/10.1103/PhysRevLett.121.196402}
+
+\bibitem{Gweon}
+G.H. Gweon, J.D. Denlinger, J.A. Clack, J.W. Allen, C.G. Olson, E.~DiMasi, M.C.
+  Aronson, B.~Foran, S.~Lee, Phys. Rev. Lett. \textbf{81}, 886 (1998).
+\newblock \doi{10.1103/PhysRevLett.81.886}.
+\newblock \urlprefix\url{https://link.aps.org/doi/10.1103/PhysRevLett.81.886}
+
+\bibitem{Kapitulnik}
+A.~Fang, N.~Ru, I.R. Fisher, A.~Kapitulnik, Phys. Rev. Lett. \textbf{99},
+  046401 (2007).
+\newblock \doi{10.1103/PhysRevLett.99.046401}.
+\newblock
+  \urlprefix\url{https://link.aps.org/doi/10.1103/PhysRevLett.99.046401}
+
+\bibitem{littlewood}
+Y.~{Feng}, J.~{van Wezel}, J.~{Wang}, F.~{Flicker}, D.M. {Silevitch}, P.B.
+  {Littlewood}, T.F. {Rosenbaum}, Nature Physics \textbf{11}(10), 865 (2015).
+\newblock \doi{10.1038/nphys3416}
+
+\bibitem{metzner1}
+T.~Holder, W.~Metzner, Phys. Rev. B \textbf{90}, 161106 (2014).
+\newblock \doi{10.1103/PhysRevB.90.161106}.
+\newblock \urlprefix\url{https://link.aps.org/doi/10.1103/PhysRevB.90.161106}
+
+\bibitem{metzner2}
+J.~S\'ykora, T.~Holder, W.~Metzner, Phys. Rev. B \textbf{97}, 155159 (2018).
+\newblock \doi{10.1103/PhysRevB.97.155159}.
+\newblock \urlprefix\url{https://link.aps.org/doi/10.1103/PhysRevB.97.155159}
+
+\bibitem{senshank}
+T.~Senthil, R.~Shankar, Phys. Rev. Lett. \textbf{102}, 046406 (2009).
+\newblock \doi{10.1103/PhysRevLett.102.046406}
+
+\bibitem{ips-u1}
+I.~Mandal, Phys. Rev. Research \textbf{2}, 043277 (2020).
+\newblock \doi{10.1103/PhysRevResearch.2.043277}.
+\newblock
+  \urlprefix\url{https://link.aps.org/doi/10.1103/PhysRevResearch.2.043277}
+
+\bibitem{ips-rafael}
+I.~Mandal, R.M. Fernandes, Phys. Rev. B \textbf{107}, 125142 (2023).
+\newblock \doi{10.1103/PhysRevB.107.125142}.
+\newblock \urlprefix\url{https://link.aps.org/doi/10.1103/PhysRevB.107.125142}
+
+\bibitem{peng}
+P.~Rao, F.~Piazza, Phys. Rev. Lett. \textbf{130}, 083603 (2023).
+\newblock \doi{10.1103/PhysRevLett.130.083603}.
+\newblock
+  \urlprefix\url{https://link.aps.org/doi/10.1103/PhysRevLett.130.083603}
+
+\end{thebibliography}

@@ -1,0 +1,629 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Enhancement Of Superconductivity By Ising-Nematic Order Parameter}
+\label{chap-sc}
+
+
+\abstract{This chapter demonstrates how  the techniques of dimensional regularization and renormalization-group 
+(RG) are employed to investigate four-fermion interactions capable of inducing superconducting instabilities. The computations are carried out in the presence of Ising-nematic ordering, studied in the earlier chapter. The fermionic part is characterised by critical Fermi 
+surfaces of generic dimensions ($m$) and co-dimensions ($d-m$). The superconducting 
+instabilities are shown to be enhanced by the  fermionic quasiparticles' interactions with the gapless 
+Ising-nematic order parameter. By analysing the RG-flow equations, the stable fixed points are identified as functions of $d$ and $m$. The results reveal that the flow toward a NFL fixed point is consistently preempted by 
+Cooper-pair formation in the physical regimes of $(d=3, m=2)$ and 
+$(d=2, m=1)$. Most importantly, the results demonstrate a significant 
+enhancement of superconductivity driven by the order-parameter 
+fluctuations.}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Introduction}
+
+We continue our exploration of the Ising-nematic ordering \cite{Lee-Dalid, ips-uv-ir1} by examining 
+its effect on a four-fermion interaction of strength $V$ in the pairing 
+channel. Taking a system embedded in $d$ spatial dimensions (see Chapter 1)
+possessing an $m$-dimensional Fermi surface (FS),
+the tree-level scaling dimension of $V$ is $[V] = -d + 1 + m/2$. As we 
+shall see, scatterings in the BCS channel are enhanced by powers of the 
+FS volume, $\sim k_F^m$, so that the effective coupling governing the 
+potential superconducting instability becomes $\tilde{V} = V\,k_F^{m/2}$, 
+with an enhanced scaling dimension of $[\tilde V ] = -d + 1 + m$. This effective 
+coupling is marginal precisely when the co-dimension takes the value 
+$d - m = 1$. Our goal is to understand how the interactions between 
+the fermions and the critical bosons conspire to enhance a pairing 
+instability \cite{ips-sc}.
+
+
+%%%%%%%%%%%%%%%%%%%%%
+\section{Superconducting Instability}
+\label{sec-sc-action}
+
+
+
+To investigate the emergence of superconducting instabilities within the 
+prescribed non-Fermi liquid framework, we augment the fermion-boson 
+action introduced in Chapter 1 with the requisite four-fermion 
+interaction terms. The following terms can give rise to Cooper pairing in the BCS channel:
+\begin{align}
+ & \int \left ( \prod_{s=1}^4 {dp_s }  \right)
+  \frac{    \mathcal{F}(p_1,p_3;p_2,p_4)  }   { 4 } \, \Big [
+ \big \lbrace \bar{\Psi}_{j_1} (p_3) \, {\Psi}_{j_2} (p_1) \big \rbrace \, 
+ \big \lbrace \bar{\Psi}_{j_3}  (p_4 ) \, {\Psi}_{j_4}  (p_2 ) \big \rbrace
+\nn & \hspace{ 5 cm}
+%%%%%%%%%%%%%%%%%%%%%
+- \big \lbrace \bar{\Psi}_{j_3}  (p_3)  \sigma_z  {\Psi}_{j_4} (p_1) \big \rbrace \, 
+ \big \lbrace \bar{\Psi}_{j_1} (p_4 )  \sigma_z   {\Psi}_{j_2} (p_2 ) \big \rbrace
+ \Big ]   \nn
+%%%%%%%%%%%%%%%%%%%%%
+& =  - \,\int \left ( \prod_{s=1}^4 {dp_s }  \right)
+ \mathcal{F}(p_1,p_3;p_2,p_4)  
+\Big [
+\psi^{\dagger}_{+,j_1} (p_3)\,\psi^{\dagger}_{-,j_2} (- p_1)\, \psi_{-,j_3} (-p_4) \, \psi_{+,j_4} (p_2) 
+\Big ]   \,.\nonumber
+\end{align}
+In this context, the vertex function $ \mathcal{F}(p_1,p_3;p_2,p_4) $ 
+exhibits invariance under the simultaneous exchange of indices 
+$(p_1, p_3) \leftrightarrow (p_2,p_4) $. Consequently, the action 
+defined in Chapter 1 is supplemented by
+%%%%%%%%%%%%%
+\begin{align}
+S^{\rm{SC}}_{\rm{gen}}
+&=  \frac{ \mu^{d_v}} { 4  }  \sum_{j_1,j_2,j_3,j_4 }  
+\int \left ( \prod_{s=1}^4 {dp_s }  \right)
+\,(2\pi)^{d+1} \, \delta^{(d+1)} (p_1+p_2-p_3-p_4 ) \nn &
+%%%%%%%%%%%%%%%%
+\hspace{3 cm} \times \Big [
+ \lbrace \bar \Psi_{j_1}(p_3) \Psi_{j_2 }(p_1) \rbrace  \, \lbrace \bar \Psi_{j_3 }(p_4)  \Psi_{j_4 }(p_2)\rbrace
+\nn & \hspace{3.5 cm}
+- \lbrace \bar \Psi_{j_3 }(p_3) \sigma_z  \Psi_{j_4 }(p_1) \rbrace  \, 
+ \lbrace \bar \Psi_{j_1 }(p_4)  \sigma_z  \Psi_{j_2 }(p_2)\rbrace
+ \Big ] \nn & \hspace{3 cm}
+ %%%%%%%%%%%%%%
+  \times  \Big[ V_{S}(\vec {p}_1,\vec{p}_3; \vec {p}_2,\vec {p}_4) \left( \delta_{j_1,j_3 } \delta_{j_2,j_4 } -  
+  \delta_{j_1,j_4} \delta_{j_2,j_3 }\right)
+ \nn & \hspace{3.5 cm}  +
+  V_{A}(\vec {p}_1,\vec{p}_3; \vec {p}_2,\vec {p}_4) \left( \delta_{j_1,j_3 } \delta_{j_2,j_4 } +  \delta_{j_1,j_4} \delta_{j_2,j_3 }\right) \Big] ,\nonumber
+\end{align}
+%%%%%%%%%%%%%%%%
+The subscripts $S$ and $A$ denote that the vertex functions 
+$V_S(\vec{p}_1,\vec{p}_3; \vec{p}_2,\vec{p}_4)$ and 
+$V_A(\vec{p}_1,\vec{p}_3; \vec{p}_2,\vec{p}_4)$ possess symmetric 
+and antisymmetric properties, respectively, under the interchange 
+$p_1 \leftrightarrow p_3$ or $p_2 \leftrightarrow p_4$. These 
+couplings are rendered dimensionless via the mass scale $\mu$, 
+where $d_v = -d+1+ \frac{m}{2}$ characterizes the scaling 
+dimension of the interaction. A Renormalization group (RG) 
+analysis will reveal that a superconducting instability 
+necessitates the kinematic constraint $\vec{p}_1 = \vec{p}_3$ 
+and $\vec{p}_2 = \vec{p}_4$. Furthermore, the assumption of rotational invariance permits 
+the simplification $V_{S/A}(\vec{p}_1,\vec{p}_1; \vec{p}_2,\vec{p}_2) = 
+V_{S/A}(\theta_1 - \theta_2)$, where $\theta_1$ and $\theta_2$ 
+parameterize the angular positions on the Fermi surface. To 
+facilitate an analytical treatment, we restrict our focus to 
+the $s$-wave channel, characterized by a constant non-zero $V_S$. 
+This channel requires a minimum of two fermion flavors; 
+accordingly, for $N=2$, the effective action reduces to
+%%%%%%%%%%%%%%
+\begin{align}
+\label{scaction}
+S^{\rm{SC}}
+&= \frac{ -\, \mu^{d_v}  V_{S}} { 4  }  \sum_{j_1,j_2 }  
+\int \left ( \prod_{s=1}^4 {dp_s }  \right)
+\,(2\pi)^{d+ 1} \, \delta^{(d+1)} (p_1+p_2-p_3-p_4 )  \,
+\left( 1-  \delta_{j_1,j_2 } \right)\nn
+& \hspace{2.5 cm} \times 
+\Big [
+ \lbrace \bar \Psi_{j_1}(p_3)   \Psi_{j_2 }(p_1) \rbrace  \, \lbrace \bar \Psi_{j_2  }(p_4)   \Psi_{j_1 }(p_2)\rbrace
+\nn & \hspace{ 3 cm}   -
+ \lbrace \bar \Psi_{j_1 }(p_3) \sigma_z  \Psi_{j_2 }(p_1) \rbrace  \, 
+ \lbrace \bar \Psi_{j_2 }(p_4)  \sigma_z  \Psi_{j_2 }(p_1)\rbrace
+ \Big ].
+ \end{align}
+%%%%%%%%%%%%%%%%
+The results from this simple treatment can be readily generalized to systems 
+characterized by an arbitrary number of fermion flavours, $N > 2$, 
+and superconducting instability involving nonzero values of angular momentum.
+
+
+%%%%%%%%%%
+\begin{figure}[t!]
+        \centering
+ \includegraphics[width=0.35 \textwidth]{bcs-tree.png} 
+\caption{Tree-level Feynman diagram proportional to $e^2$.}\label{bcstree}
+\end{figure} 
+%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{One-loop diagrams generating terms proportional to $V_{S}^2$ }
+ 
+To account for contributions proportional to $V_{S}^2$, we evaluate 
+the one-loop diagrams illustrated in Fig.~\ref{fig:loop-4VV}. 
+The contribution from Fig.~\ref{fig:loop-4VV}(a) is determined to be proportional to
+\begin{align*}
+& - (1 -\delta_{j_1,j_2})^2 \int dk \, \mbox{Tr} \big[ G_0 (k+ \mathbf{P_1} - \mathbf{P_3}) \, G_0 (k)\big]
+%%%%%%%%%%%%%%
+\nn &  = \frac{  2^{ 1 -2d +\frac{m}{2} } 
+\left ( 1- \delta_{j_1,j_2}  \right ) \, k_F^{m/2}  \, \pi^{ 1-\frac{d} {2} }   \, \sec \left ( \frac{ (d-m)\, \pi } {2} \right )
+} 
+{ \Gamma \left ( \frac{ d-m} { 2 } \right )   
+\, | \mathbf{  P_3 -P_1} |^{-d+m+ 1}} \,,
+\end{align*}
+which is logarithmically-divergent at $d-m=1$. Hence, we express it as $\frac{ k_F^{m/2} \,\ln \left( \frac{\Lambda} {|\mathbf{P_1} - \mathbf{P_3} |}\right) }
+{2^ { \frac{3m}{2}} \, \pi^{ 1 + \frac{m}{2}} }$.
+The results from Figs.~\ref{fig:loop-4VV}(b) and \ref{fig:loop-4VV}(c) are suppressed by powers of $k_F$ and, hence, do not contribute to the beta-functions.
+%%%%%%%%%
+Noting that $\mbox{Tr} \big[ \sigma_z\, G_0 (k+ \mathbf{P_1} - \mathbf{P_3})\,\sigma_z \, G_0 (k)\big]
+= - \mbox{Tr} \big[ G_0 (k+ \mathbf{P_1} - \mathbf{P_3}) \, G_0 (k)\big] $, the full contribution from all one-loop diagrams proportional to $V_{S }^2$ is given by
+\begin{align}
+& t_{VV} =
+ \frac{4\times 2}{2 !} \frac{4}{ 4 \times 4  } \times \frac{ 2^{ 2 + 2d-\frac{m}{2}} \, k_F^{m/2}  \, \mu^{2 \, d_v}
+ \, V_{S}^2 }
+{  \pi^{ \frac{d}{2}}   \,\Gamma \left ( \frac{ d-m} { 2 } \right )  \epsilon} + \mathcal{O}\left( \epsilon\right)  
+= \frac{ v_2 \, \mu^{2 \, d_v +\frac{m} {2} } \,\tilde{k}_F^{m/2} \, V_{S}^2 }{\epsilon}  + \mathcal{O}\left( \epsilon\right) ,
+\nn & \text{where }
+%%%%%%%%%%%
+v_2 =  \frac{ 2^{ 2 -2d+\frac{m}{2}}  }
+{ \pi  ^{ \frac{d}{2}  }  \,  \Gamma \left ( \frac{ d-m} { 2 } \right ) } 
+\text{ and } d-m=1-\epsilon\,.
+\end{align}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[t!]
+\centering
+\subfigure[]
+{\includegraphics[width=0.32 \textwidth]{vv1}}
+\subfigure[]
+{\includegraphics[width=0.35 \textwidth]{vv2}}
+\subfigure[]
+{\includegraphics[width= 0.26 \textwidth]{vv3.png}}
+\caption{One-loop diagrams proportional to $V_S^2.$ Here, $p_4 = p_1+p_2-p_3$.}\label{fig:loop-4VV}
+\end{figure}
+
+In accordance with previous treatments in the literature \cite{son, Max-cooper}, the 
+analysis must incorporate tree-level contributions within the BCS 
+channel, arising from long-range interactions between fermions. 
+In the present context, these interactions are mediated by the 
+exchange of massless bosons. Consistent with our treatment of 
+competing terms, these contributions are evaluated using the 
+formalism of dimensional regularization. Specifically, the 
+diagrams in Fig.~\ref{bcstree} yield the terms,
+\begin{align} 
+& \sum_{j_1, j_2} \Big [ 
+- \psi^{\dagger}_{+,j_1 } (p_2)\,\psi^{\dagger}_{-,j_2} (- p_2)  \, \psi_{-,j_2} (-p_1) \, \psi_{+,j_1} (p_1)
+\nn & \qquad  -  \psi^{\dagger}_{+,j_1 } ( p_1 ) \, \psi^{\dagger}_{-,j_2 } ( -p_1)
+     \, \psi_{-,j_2 } (-p_2)  \, \psi_{+,j_1 } (p_2)   \nn
+&  \qquad - \, \psi^{\dagger}_{+,j_1} (p_2) \, \psi_{+,j_1 } (p_1 ) \,  \psi^{\dagger}_{+,j_2 } (p_1) \, \psi_{+,j_2 } (p_2 ) 
+ \nn & \qquad -   \psi^{\dagger}_{-,j_2} ( -p_2)\, \psi_{-,j_2} ( -p_1 )
+\,\psi^{\dagger}_{-,j_1 } (-p_1)  \, \psi_{-,j_1 } (- p_2 )
+  \Big ]  \nonumber
+\end{align}
+which multiply $ \frac{(i\,e)^2  \mu^{x_e}   D_1(p_1-p_2) } {2 \, N}  $. Owing to the symmetry of $D_1(p_1-p_2)$ under the interchange 
+$p_1 \leftrightarrow p_2$, this term contributes as 
+$ \frac{ e^2  \mu^{x_e} D_1(p_1-p_2) } { N} $ to the components 
+governing the pairing instability.
+
+ %%%%%%%%%%
+\begin{figure}[t!]
+\centering
+\subfigure[]{\includegraphics[width= 0.3  \textwidth]{ev1}}
+\subfigure[]{\includegraphics[width= 0.3  \textwidth]{ev2}}
+\subfigure[]{\includegraphics[width= 0.3  \textwidth]{ev3}}
+\subfigure[]{ \includegraphics[width= 0.3  \textwidth]{ev4}}
+ \subfigure[]{\includegraphics[width= 0.3  \textwidth]{ev5}}
+\subfigure[]{\includegraphics[width=0.3 \textwidth]{ev6}}  
+\caption{One-loop diagrams proportional to $ \tilde e \, V_{S}$, each consisting of two fermionic and one bosonic propagators forming the loop. Here $p_4=p_1+p_2-p_3$, $\vec p_1 = \vec p_3$ and $\vec p_2 = \vec p_4$.}\label{fig:loop-4V}
+\end{figure}
+%%%%%%%%%%%%%%%
+
+Using $  \mathbf{L}_{(q)} ^ 2   \simeq 2\, k_F^2 (1- \cos \theta)/k_F\Rightarrow 
+ |\mathbf{L}_{(q)}| \simeq  \sqrt{k_F} \, |\theta|$, the decomposition into angular-momentum channels for an 
+$m$-dimensional FS yields a contribution 
+proportional to
+ \begin{eqnarray}
+t_{ee}
+&\simeq &
+  \frac{ e^2 \, \Lambda^{x_e}} {2 \, N} \times 2  \int_{\theta >0} 
+   { d \theta}   \, \frac{ \theta^{m-1} \, |\mathbf{L}_{(q)}|} 
+   { \mathbf{L}_{(q)} ^ 3  + \tilde \alpha \, |\vec Q |^{d-m} } 
+   %%%%%
+=    \frac{  e^2 \, \Lambda^{x_e}} {  N\, k_F^{m/2}  }  \int_{\theta >0} 
+   { d  |\mathbf{L}_{(q)}|}   \, \frac{ |\mathbf{L}_{(q)}|^ m } 
+   { \mathbf{L}_{(q)} ^ 3  + \tilde \alpha \, |\vec Q |^{d-m} } \nn
+%%%
+&=&
+  \frac{ e^2 \, \Lambda^{x_e}  \,   \Gamma \left( \frac{m+1} {3}\right ) \, \Gamma \left( \frac{ 2-m} {3}\right )} 
+ {3 \, N\, k_F^{m/2} \, \tilde \alpha^{\frac{2-m}{3} }  \, |\vec Q |^{ \frac{(d-m)(2-m)}{3} }} \,.
+ %%%%%%%%%%%%%%%%%%%%%  
+\end{eqnarray}
+This result is evidently independent of the specific angular-momentum channel under consideration. For $m = 2 - \delta$ and 
+$d = m + 1 - \gamma \varepsilon$, the expression yields a pole of 
+the form,
+\begin{equation}
+t_{ee} \simeq \frac{ \tilde{e} \, \Lambda^{\gamma \varepsilon + 
+\frac{(2-m)(m-1)}{6}} \, \Gamma \left( \frac{m+1}{3} \right) } 
+{ \beta_d^{\frac{2-m}{3}} N \, k_F^{m/2} } \frac{1}{\delta}\,,
+\end{equation}
+which is equivalent to the logarithmically-divergent term 
+$\frac{ e^2 \Lambda^{x_e} \Gamma \left( \frac{m+1}{3} \right) } 
+{ N k_F^{m/2} } \ln \left( \frac{\sqrt{k_F}} 
+{ \tilde{\alpha}^{\frac{1}{3}} |\mathbf{Q}|^{\frac{d-m}{3}} } \right)$. 
+Upon continuation to the strongly coupled regime at $m=1$, this 
+term manifests as an infrared (IR) divergence. The corresponding 
+counterterm is given by
+%%%%%%%%%%%%%%%%
+\bqa
+\label{v1}
+&& - \frac{    \mu^{\lambda_1   \varepsilon} \,  \tilde{ e } \, v_1 } { 4 \, N\, a \, \epsilon }  \sum_{j_1,j_2 }  
+\int \left ( \prod_{s=1}^4 {dp_s }  \right)
+ (2\pi)^{d+1 } \, \delta^{(d+1)} (p_1+p_2-p_3-p_4 )  
+\left ( 1-  \delta_{j_1, j_2 }   \right)  \nn
+&& \qquad \qquad \qquad  \times \,
+\Big [
+ \lbrace \bar \Psi_{j_1}(p_3)   \Psi_{j_2 }(p_1) \rbrace  \, \lbrace \bar \Psi_{j_1 }(p_4)    \Psi_{j_2 }(p_2)\rbrace
+-
+ \lbrace \bar \Psi_{j_1 }(p_3)  \sigma_z  \Psi_{j_2 }(p_1) \rbrace  \, 
+ \lbrace \bar \Psi_{j_1 }(p_4)   \sigma_z  \Psi_{j_2 }(p_2)\rbrace
+ \Big ]  ,\nn
+ %%%%%%%%
+&&  \lambda_1 =1-  \frac{a\,(7-m^2)} { 6 \, (m+1) } \,,\quad
+a \, \epsilon = 2-m\, , \quad
+v_1 = \frac{    \Gamma \left( \frac{m+1} {3}\right )}
+{ \beta_d^{\frac{ 2-m }{3} }}  \,.
+\eqa 
+Using $   \mathbf{L}_{(q)} ^ 2   \simeq 2\, k_F^2 (1- \cos \theta)/k_F\Rightarrow 
+ |\mathbf{L}_{(q)}| \simeq  \sqrt{k_F} \, |\theta|$, the decomposition into angular momentum channels for an $m$-dimensional FS leads to the contribution being proportional to:
+ \begin{align}
+t_{ee}
+&\simeq 
+  \frac{ e^2 \, \Lambda^{x_e}} {2 \, N} \times 2  \int_{\theta >0} 
+   { d \theta}   \, \frac{ \theta^{m-1} \, |\mathbf{L}_{(q)}|} 
+   { \mathbf{L}_{(q)} ^ 3  + \tilde \alpha \, |\vec Q |^{d-m} } 
+   %%%%%
+=    \frac{  e^2 \, \Lambda^{x_e}} {  N\, k_F^{m/2}  }  \int_{\theta >0} 
+   { d  |\mathbf{L}_{(q)}|}   \, \frac{ |\mathbf{L}_{(q)}|^ m } 
+   { \mathbf{L}_{(q)} ^ 3  + \tilde \alpha \, |\vec Q |^{d-m} } \nn
+%%%
+&=
+  \frac{ e^2 \, \Lambda^{x_e}  \,   \Gamma \left( \frac{m+1} {3}\right ) \, \Gamma \left( \frac{ 2-m} {3}\right )} 
+ {3 \, N\, k_F^{m/2} \, \tilde \alpha^{\frac{2-m}{3} }  \, |\vec Q |^{ \frac{(d-m)(2-m)}{3} } } \,,
+ %%%%%%%%%%%%%%%%%%%%%  
+\end{align}
+which is independent of the angular momentum channel.
+This expression tells us that, for $ m = 2 - \delta $ and $d= m+1-\gamma \, \varepsilon $, we get a pole (in $\delta$) parametrised as
+$t_{ee} \simeq   \frac{  \tilde e \, \Lambda^{ \gamma \, \varepsilon+
+( 2-m )\, (m-1) } {6 }  }  \,   \Gamma \left( \frac{m+1} {3}\right )\, 
+\beta_d^{\frac{ m-2 }{3}}   N^{-1}\, k_F^{-m/2} \,\delta^{- 1}  $,
+which is equivalent to the logarithmically divergent term, $  \frac{ e^2 \, \Lambda^{x_e}  \,   \Gamma \left( \frac{m+1} {3}\right ) } 
+ {  N\, k_F^{m/2}} 
+ \ln \left (  \frac{\sqrt{ k_F}}  {\tilde \alpha^{\frac{1}{3}} \, |\mathbf{Q}|^{\frac{d-m}{3}} }  \right ) $. This term, when continued to the strongly-coupled regime of $m=1$, will translate into the infrared divergence there. The resulting counterterm is given by 
+ %%%%%%%%%%%%%%%%
+\begin{align}
+\label{eqv1}
+& \frac{  -\, \mu^{\lambda_1   \varepsilon} \,  \tilde{ e } \, v_1 } { 4 \, N\, a \, \epsilon }  \sum_{j_1,j_2 }  
+\int \left ( \prod_{s=1}^4 {dp_s }  \right)
+ (2\pi)^{d+1 } \, \delta^{(d+1)} (p_1+p_2-p_3-p_4 )  
+\left ( 1-  \delta_{j_1, j_2 }   \right)  \nn
+& \hspace{2.5 cm}  \times \,
+\Big [
+ \lbrace \bar \Psi_{j_1}(p_3)   \Psi_{j_2 }(p_1) \rbrace  \, \lbrace \bar \Psi_{j_1 }(p_4)    \Psi_{j_2 }(p_2)\rbrace
+\nn & \hspace{3 cm}  -
+ \lbrace \bar \Psi_{j_1 }(p_3)  \sigma_z  \Psi_{j_2 }(p_1) \rbrace  \, 
+ \lbrace \bar \Psi_{j_1 }(p_4)   \sigma_z  \Psi_{j_2 }(p_2)\rbrace
+ \Big ]  , 
+\end{align}
+where $\lambda_1 =1-  \frac{a\,(7-m^2)} { 6 \, (m+1) } $, $a \, \epsilon = 2-m$, and $v_1 =    \Gamma \left( \frac{m+1} {3}\right )\, \beta_d^{\frac{ m-2 }{3} } $.
+
+
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ \subsection{One-loop diagrams generating terms proportional to $\tilde e \, V_{S} $ }
+ 
+ 
+
+
+%%%%%%%%%%
+\begin{figure}[t!]
+\centering
+\subfigure[]{ \includegraphics[width= 0.37   \textwidth]{evc1.png}}
+\subfigure[] { \includegraphics[width= 0.37 \textwidth]{evc2.png}}
+\caption{One-loop diagrams proportional to $ \tilde e \, V_{S}$, resulting from counterterms. The counterterm vertex has been denoted by a blob. Here $p_4=p_1+p_2-p_3$.}\label{figevc}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%% 6 %%%%%%%%%%%%%%%%%%%%
+\begin{figure}[t!]
+\centering
+ \subfigure[]  { \includegraphics[width= 0.4   \textwidth]{evzero1}}
+\subfigure[] { \includegraphics[width= 0.4  \textwidth]{evzero2}}  
+\caption{One-loop diagrams proportional to $ e^2 \, V_{S}$, each consisting of two Yukawa vertices and one fermionic loop.}\label{figevzero}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+ The set of one-loop diagrams which can generate terms proportional to $\tilde e \, V_{S} $  are shown in Fig.~\ref{fig:loop-4V}. It turns out that only Figs.~\ref{figevc}(a) and \ref{figevc}(b) contribute \cite{ips-sc}. After cancellation with the appropriate diagrams in Fig.~\ref{figevc} consisting of counterterm-vertices, their net contribution to the beta-function is captured by
+  %%%%%%%%%%%%%%%%
+$\left (  \frac{v_3  }   {a}  +  v_4  \right)
+\frac{ \tilde e \,V_S \,  \mu^{\left (\lambda_2 + \gamma \right )\, \varepsilon}   } {  N \, \varepsilon }$, where $
+ v_3 =\frac{2\, \gamma_E }
+ { \beta_d^{  \frac{2-m} {3}  } \,(2   \pi )^{\frac{3} {5-m}+m-2  }
+ \, \Gamma \left (  \frac{m} {2}  \right)   \Gamma \left (  \frac{3} {2  \left(  m+1 \right ) }  \right) \pi } $, $ v_4=\frac{3 \,  v_3 } { m+1 } - \frac{ 2 } {3} $, and $ \lambda_2 =  { a\,(m-1) }  /  {6} $.
+%%%%%%%%%%%%%%%%%%%%%%%%%%5 
+ Furthermore, the contribution from Figs.~\ref{fig:loop-4V}(a) and \ref{fig:loop-4V}(b), after cancellation with Figs.~\ref{figevc}(a) and \ref{figevc}(b), is given by $\left (  \frac{v_5  }   {\gamma }  + \frac{ v_6 } {a}  \right) \frac{ \tilde e \,V_S \,  \mu^{ \lambda_1 \varepsilon}   }
+{  N \, \varepsilon }$, where $ v_5 = -\, 2^{5 -2d+\frac{m} {2} } \, \gamma_E \,  \Gamma \left (  \frac{m+1} {3}  \right) \, \beta_d^{ \frac{m-2} {3}}  \,  \pi^{-\frac{d} {2}}   \, \Gamma^{-1} \left (  \frac{d-m} {2}  \right) $ and $ v_6=- v_5 $.
+ %%%%%%%%%%%%%%%%%%%%
+There are two more diagrams in this class, as shown in Fig.~\ref{figevzero}. Due to the vanishing of the trace of the gamma matrices in the fermionic loop, they are identically zero.
+
+
+
+ 
+The counterterms essential to account for the four-fermion interactions are captured by
+\begin{align}
+S^{\rm{SC}}_{CT} & = -\, \frac{    \mu^{\gamma \, \varepsilon} 
+\tilde{ A }_S \tilde{ V}_S} { 4  }  
+\sum_{j_1,j_2 }  \int \left ( \prod_{s=1}^4 {dp_s }  \right)
+ (2\pi)^{d+1 } \, \delta^{(d+1)} (p_1+p_2-p_3-p_4 )  
+\left (  1- \delta_{j_1, j_2 }   \right)  \nn
+%%%%%%%%%%%%%%%%%%
+& \hspace{ 4 cm} \times \,\Big [
+ \lbrace \bar \Psi_{j_1}(p_3)   \Psi_{j_2 }(p_1) \rbrace  \, 
+ \lbrace \bar \Psi_{j_1 }(p_4)    \Psi_{j_2 }(p_2)\rbrace
+\nn & \hspace{ 4.5 cm}
+- \lbrace \bar \Psi_{j_1 }(p_3)  \sigma_z  \Psi_{j_2 }(p_1) \rbrace  \, 
+ \lbrace \bar \Psi_{j_1 }(p_4)   \sigma_z  \Psi_{j_2 }(p_2)\rbrace
+ \Big ]  ,    \nonumber
+\end{align}
+where $\tilde{A}_{S} \equiv  \tilde{Z}_S -1
+=  \sum_{ \alpha_1   =1}^\infty \frac{\tilde{Z}_{S,\alpha_1 }(\tilde e,\tilde{k}_F, V_S )} { \varepsilon ^{\alpha_1}   }$. On the other hand, denoting the bare quantities by the superscript ``$B$", we obtain the bare four-fermion interaction as
+\begin{align}
+\label{actsc-ren}
+S^{\rm{SC}}_{\rm{bare} } &=    -\,  \frac{  V_S^{\rm{B} } }  { 4 }  \sum_{j_1,j_2 }  
+\int \left ( \prod_{s=1}^4 {dp^{\rm{B} }_s }  \right)
+\,(2\pi)^{d+1 } \, \delta^{(d+1)} (p^{\rm{B} }_1+p^{\rm{B} }_2-p^{\rm{B} }_3-p^{\rm{B} }_4 ) 
+\left ( 1-  \delta_{j_1, j_2 }  \right) \, \nn
+& \hspace{2.5 cm}\times \,\Big [
+ \lbrace \bar \Psi^{\rm{B} }_{j_1}(p_3) \Psi^{\rm{B} }_{j_2 }(p_1) \rbrace  \, \lbrace \bar \Psi^{\rm{B} }_{j_1 }(p_4)     \Psi^{\rm{B} }_{j_2 }(p_2)\rbrace
+\nn  &  \hspace{3 cm} - \lbrace 
+\bar \Psi^{\rm{B} }_{j_1 }(p_3)  \sigma_z  \Psi^{\rm{B} }_{j_2 }(p_1) \rbrace  \, 
+ \lbrace \bar \Psi^{\rm{B} }_{j_1 }(p_4)  \sigma_z  \Psi^{\rm{B} }_{j_2 }(p_2)\rbrace
+ \Big ] \,,
+\end{align}
+%%%%%%%%%%%%%%
+where $  V_S^{\rm{B} } \, k_F^{m/2} = \tilde{Z}_S \, Z_{\psi}^{-2}  \left( \frac{Z_2}{Z_1} \right)^{3 (d-m)} \mu^{  \gamma \, \varepsilon} \, \tilde{V}_S $.
+%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%% roots  %%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[t!]
+\centering
+ \subfigure[]{\includegraphics[width=0.45 \textwidth]{root1}} 
+\hspace{1 cm}
+\subfigure[]{\includegraphics[width=0.45 \textwidth]{root2}}
+\caption{The contourplots of the two fixed points ($\tilde{ V }_S^*$) of $\beta_V$ as functions of $d$ and $m$. The intersection of the white areas in the two density-plots corresponds to regions where no perturbative fixed point exists. The dashed black (red) curve (line) represents $d =  d_c (d = \tilde d_c )$ in each plot.
+}\label{roots}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Using the definition $2-m = a \, \varepsilon \Rightarrow a= \frac{ 3 \,(1 - \gamma )  } { 1 \, + \, (1- \gamma )
+\, \varepsilon } $, we have
+%%%%%%%%%%%%%%%%%%
+$ \frac{ \tilde{Z}_{S, 1 }  \, \tilde{V}_S \, \mu^{\gamma \, \varepsilon } }
+{    \varepsilon  }
+=  \frac{ \left (  \frac{ v_1 } {a}   + \frac{v_5 \tilde{V}_S} {\gamma }  + \frac{ v_6 \tilde{V}_S } {a} \right ) 
+\tilde{e} \, \mu^{\lambda_1 \, \varepsilon } } {N   \, \varepsilon }
++ \frac{v_2 \, \tilde{V}_S^2 \, \mu^{\gamma \, \varepsilon} } { \gamma \, \varepsilon }
++\frac{ \left(   \frac{v_3 } {a } +    v_4  \right) 
+      \tilde e \, \tilde V_S \, \mu^{\left (\lambda_2 +\gamma \right ) \varepsilon }} 
+{ N \, \varepsilon}$.
+%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%% roots  %%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[t!]
+\centering
+\includegraphics[width=0.45 \textwidth]{root2_enlarged}
+\caption{The contourplot illustrates the second root of the beta-function, 
+$\beta_V = 0$, which corresponds to the fixed-point value 
+$\tilde{V}_S^*$ as a function of the dimensions $m$ and $d$. To 
+highlight the behavior in the vicinity of the physical limit, 
+the region surrounding $m = 1$ has been magnified. The dashed black 
+line denotes the critical dimension, $d = d_c$.}\label{roots2}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Since the bare quantities should not depend on the floating mass scale, $\mu$, we demand that $\frac{d}{d \ln \mu}\left(  V_S^{\rm{B} } \, k_F^{m/2} \right) =0 $. This leads to the beta-function for $\tilde V $ as
+%%%%%%%%%%%
+\begin{align}
+&\beta_V +\frac{ \Big \lbrace   \frac{ v_1 } {a}  + 
+\left ( \frac{v_3 +v_6 } {a } +    v_4 
++ \frac{v_5  } {\gamma }    \right ) \tilde{V}_S
+\Big \rbrace  \, {\beta_{\tilde e} } 
+%%%%%%
++ \left ( \frac{v_3 + v_6 } {a } +    v_4 +  \frac{v_5  } {\gamma }   \right )  \beta_V \, \tilde e  } { N \, \varepsilon}  
+\nn & + \left \lbrace  \gamma \, \varepsilon - 4 \, \eta_\psi + 3 \left( d-m \right) \left( 1-z \right)
+\right \rbrace  \left( \tilde V_S  + \frac{v_2 \, \tilde V_S^2 } {\gamma \, \varepsilon } \right) 
+%%%%%%%%%%%%
+ \nn & + \frac{   2 \,v_2 \, \tilde V_S \, \beta_V } 
+ {\gamma \, \varepsilon}  
+%%%%%%%%%%%
++ \frac{ 
+ \big \lbrace  \lambda_1 \, \varepsilon - 4 \, \eta_\psi + 3  ( d-m ) ( 1-z )\big \rbrace 
+\left(   \frac{v_1 } {a } +  \frac{ v_5   \tilde V_S}{ \gamma }  + 
+ \frac{ v_6 \tilde{V}_S } {a}\right) \tilde e } { N \, \varepsilon} 
+%%%%%%%%%%%
+\nn & +  \big \lbrace \left( \lambda_2 + \gamma \right) \varepsilon - 4 \, \eta_\psi + 3 \left( d-m \right) \left( 1-z \right)
+\big \rbrace 
+\frac{ \left(   \frac{v_3 } {a } +  v_4   \right) 
+              \tilde e \, \tilde V_S } 
+{ N \, \varepsilon}
+= 0  \,,
+%%%%%%%%%%%%%%
+\end{align}
+Because there are two coupling constants, we have to deal with two beta-functions, $\beta_V$ and $\beta_{\tilde e}$.
+Following the usual procedure, the dependence of the beta-functions on $\epsilon $ must be of the forms,
+$\beta_V \equiv \frac{\partial \tilde{V}_S } {\partial \ln \mu}
+= \beta_V ^{(0)} +  \beta_V ^{( 1 )}  \varepsilon $ and $ 
+\beta_{\tilde e} \equiv \frac{\partial \tilde{e}  } {\partial \ln \mu} 
+ = -\, \frac{m+1}{3} \,\varepsilon \, \tilde{e} + \mathcal{O } \left( \tilde{e}^2 \right)$.
+%%%%%%%%%%%%%%%%%%%%%%
+Hence, we need to compare the coefficients of the regular powers of $\varepsilon $, which lead to
+\begin{align}
+\frac{\partial \tilde{ V }_S }  { \partial l } & =
+\gamma \, \varepsilon  \tilde V_S 
+- v_2   \tilde V_S^2
+- \frac{(7-m^2) \, v_1 } { 6 \,N \, ( m+1) }\, \tilde e  
+%%%%%%%%%%%%%
+\nn & \quad +  \Big[
+\frac{  \left ( 5-m^2 -2m \right )\left  (3 \, v_5 - v_6 \right )   } 
+{ m+1  }
++
+(m-1)  \,  v_3   - 2\, (m+1)\, (  u_1 +  v_4  )
+\Big]  \frac{\tilde e \,  \tilde{ V }_S } {6 \, N},\nonumber
+\end{align}
+%%%%%%%%%%%%%%%%%%%%%%
+correct upto $\mathcal{O} \left(  \tilde{e}^2, \tilde{ e} \, \varepsilon, \varepsilon^2  \right)$ at the level one-loop corrections.
+The final simplified form turns out to be
+%%%%%%%%%%%%
+\begin{align}
+\label{betav}
+\frac{\partial \tilde{ V }_S }  { \partial l } =
+\begin{cases}
+\left(  \varepsilon-\frac{1 } { 2} \right)  \tilde V_S \, 
+-v_2 \tilde V_S^2
+-\frac{ v_1 } { 2 \, N} \, \tilde{e}
++\frac{    3 \, v_5-  4\,  v_4 - v_6  - 4 \, u_1  } { 6\, N} 
+\, \tilde{e}\, \tilde V_S
+& \mbox{ for } m=1 \\
+%%%%%%%%%%%%%%%%%%%%%%%%
+\gamma \, \varepsilon  \tilde V_S
+-v_2 \tilde V_S^2
+-\frac{  v_1 } { 6 \, N}   \, \tilde{e}
++\frac{  v_3 + 6\, v_4 - 3 \, v_5 + v_6 - 6 \, u_1
+  } { 6 \, N} \, \tilde{e}\, \tilde V_S
+& \mbox{ for } m=2 \mbox{ and } \gamma = \pm 1 
+\end{cases} . \nonumber
+ \end{align}
+%%%%%%%%%%%%%%%%%%%
+The RG flows for some relevant values of $(d,m)$ have been displayed in Fig.~\ref{figflows}.
+
+ 
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Stability of the solutions and final remarks}
+\label{sec-sc-soln}
+
+
+
+
+
+
+
+
+The fixed points of the theory are determined by the simultaneous solutions 
+to the flow equations $\frac{\partial \tilde{V}_S}{\partial l} = 0$ and 
+$\frac{\partial \tilde{e}}{\partial l} = 0$. The resulting quadratic 
+equation for the fixed-point values $\tilde{V}_S^*$ yields two distinct 
+roots. Figures~\ref{roots} and \ref{roots2} display the contour plots of 
+these roots as functions of $m$ and $d$, where the analysis is 
+constrained to the perturbative window $|\tilde{V}_S^*| < 1$. This 
+restriction ensures the validity of the underlying expansion. In 
+Fig.~\ref{roots}, the intersection of the white regions indicates 
+parameter regimes where no perturbative fixed point exists. In these 
+regimes, the system is invariably driven toward a superconducting state 
+as $\tilde{V}_S^*$ flows into the strong-coupling limit, regardless of 
+ the initial bare couplings. To elucidate the stability of these fixed 
+points, representative RG flows for selected values of $m$ and $d$ are 
+presented in Fig.~\ref{figflows}. Several key observations emerge:
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[t!]
+\centering
+\subfigure[]{\includegraphics[width=0.44 \textwidth]{flow1} } \quad
+\subfigure[]{\includegraphics[width=0.44 \textwidth]{flow3}}\\
+\subfigure[]{\includegraphics[width=0.44 \textwidth]{flow2} } \quad
+\subfigure[]{\includegraphics[width=0.44 \textwidth]{flow4}}
+\caption{The representative RG flows in the various regions of the $(d,m)$-plane. The black dots represent the finite fixed points when they exist. The contour-shading conveys the magnitudes of the flow vector $\left(   \frac{\partial \tilde{ V }_S }  { \partial l } , \frac{\partial \tilde{ e}  }  { \partial l } \right)$ in different regions.}\label{figflows}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\begin{enumerate}
+\item At $(d=3, m=2)$, the only finite solution is the Gaussian fixed 
+point $(\tilde{V}_S^* = 0, \tilde{e}^* = 0)$, which is IR unstable [cf. 
+Fig.~\ref{figflows}(d)]. In the absence of gauge fluctuations 
+($\tilde{e} = 0$), superconductivity only arises for attractive initial 
+couplings ($\tilde{V}_S < 0$), consistent with standard BCS theory in a 
+Fermi liquid. However, the introduction of a non-zero coupling 
+$\tilde{e} > 0$ destabilizes the non-Fermi liquid (NFL) phase, 
+driving the system toward strong-coupling superconductivity even for 
+initially repulsive interactions. Consequently, order-parameter 
+fluctuations significantly enhance the superconducting instability relative 
+to the Fermi-liquid benchmark.
+
+\item In the vicinity of $(d=5/2, m=1)$ (magnified in Fig.~\ref{roots2}), 
+a narrow region exists below $d_c$ where two perturbative solutions 
+are present: $(\tilde{V}_S^* = -f_1, \tilde{e}^* = \frac{N\varepsilon}{u_1})$ 
+and the trivial fixed point [see Fig.~\ref{figflows}(a)]. Here, the NFL phase 
+remains stable for a given initial $\tilde{e} > 0$. Conversely, in the 
+broader vicinity of $(d=2, m=1)$, no perturbative fixed points exist, 
+rendering the system unstable to superconductivity for any initial value of 
+$\tilde{V}_S$ [cf. Fig.~\ref{figflows}(c)]. This behavior holds for 
+$m=1$ and $d = d_c - \varepsilon$ with $\varepsilon \gtrsim 0.017$.
+
+The fluctuations of the order parameter thus provide a mechanism for the 
+marked enhancement of pairing in the physical regime of interest near 
+$(d=2, m=1)$. While the expansion at $\varepsilon \sim 1/2$ technically 
+lies at the boundary of perturbative control, a continuous extrapolation 
+to the physical case suggests that the pairing instability is strongly 
+amplified near the $(2+1)$-dimensional Ising-nematic critical point. This 
+implies that the destruction of quasiparticles is preempted by Cooper 
+pairing, a result consistent with the findings of Ref.~\cite{Max-cooper}.
+\end{enumerate}
+
+Several remarks regarding the enhanced superconductivity at $(d=3, m=2)$ 
+and $(d=2, m=1)$ are warranted. The Yukawa-like coupling $\tilde{e}$ 
+generates an effective attractive interaction that mediates Cooper 
+pairing, ensuring that the RG flow targets the strong-coupling superconducting 
+regime for any non-vanishing $\tilde{e}$. The energy scale associated 
+with this instability consistently exceeds the NFL scale at which 
+quasiparticle degradation becomes appreciable. While the magnitude of 
+the pairing gap remains sensitive to the initial couplings, the qualitative 
+behavior aligns with the estimates of Metlitski \textit{et al.} 
+\cite{Max-cooper} upon setting $\varepsilon \simeq 0$ and 
+$\varepsilon = 1/2$ for the $(d=3, m=2)$ and $(d=2, m=1)$ cases, respectively.
+
+
+
+%\bibliographystyle{spphys.bst}
+%\bibliography{ref.bib}
+
+\begin{thebibliography}{1}
+\providecommand{\url}[1]{{#1}}
+\providecommand{\urlprefix}{URL }
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{DOI \discretionary{}{}{}#1}\else
+  \providecommand{\doi}{DOI \discretionary{}{}{}\begingroup
+  \urlstyle{rm}\Url}\fi
+  
+  \bibitem{Lee-Dalid}
+D.~Dalidovich, S.S. Lee, Phys. Rev. B \textbf{88}, 245106 (2013).
+\newblock \doi{10.1103/PhysRevB.88.245106}
+
+
+\bibitem{ips-uv-ir1}
+I.~Mandal, S.S. Lee, Phys. Rev. B \textbf{92}, 035141 (2015).
+\newblock \doi{10.1103/PhysRevB.92.035141}
+
+\bibitem{ips-sc}
+I.~Mandal, Phys. Rev. B \textbf{94}, 115138 (2016).
+\newblock \doi{10.1103/PhysRevB.94.115138}
+
+\bibitem{son}
+D.T. Son, Phys. Rev. D \textbf{59}, 094019 (1999).
+\newblock \doi{10.1103/PhysRevD.59.094019}
+
+\bibitem{Max-cooper}
+M.A. Metlitski, D.F. Mross, S.~Sachdev, T.~Senthil, Phys. Rev. B \textbf{91},
+  115111 (2015).
+\newblock \doi{10.1103/PhysRevB.91.115111}
+
+\end{thebibliography}

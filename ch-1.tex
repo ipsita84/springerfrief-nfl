@@ -1,0 +1,333 @@
+\chapter{Introduction}
+\label{intro-intro}
+
+\abstract{In this introductory chapter, we outline the unique and exotic 
+characters of the strange-metallic systems that we are going to ponder 
+over in the various chapters of the book. This encompasses a few examples
+of non-Fermi liquid (NFL) phases that arise in quantum critical points (QCPs) or when electrons intricate with transverse gauge fields. In particular, they represent strongly-interacting 
+metallic systems, closely connected with the breakdown of Landau's 
+Fermi-liquid (FL) theory and the emergence of anomalous thermodynamic and 
+transport properties. The hallmark signatures of the NFL behaviour involve various striking features such as
+violation of the well-known $ \sim k_0^2$ dependence of the FLs' fermionic self-energy on the frequency $ k_0 $ (i.e., the energy deviation from the Fermi level), emergence of the 
+characteristic $\sim \text{sgn}(k_0)|k_0|^{2/3}$ behaviour instead, and the enhanced affinity towards 
+superconducting instabilities (characteristic of unconventional superconductors). We identify some principal scenarios in which 
+such strange-metallic behaviour emerges in seemingly distinct circumstances, but encompassing the crucial feature that finite-density 
+fermions (defining a sharp Fermi surface) are interacting strongly with massless order-parameter bosons or transverse gauge fields. 
+The gaplessness of the bosonic fluctuations is the essential ingredient which endows the one-loop corrected bosonic propators with Landau-damping.
+We critically survey the main theoretical
+approaches that have been formulated to tackle the strong correlations in these problems, from the Hertz-Millis framework 
+and large-$N$ expansions to RPA-based schemes and deformations of the 
+bosonic dispersion, highlighting the limitations inherent in each. 
+Against this backdrop, we advocate for the method of dimensional 
+regularization as the framework of choice for obtaining controlled 
+perturbative access to NFL fixed points, and outline how it is 
+systematically implemented throughout the rest of the book.}
+
+
+Non-Fermi liquids (NFLs) are metallic states that encapsulate, in 
+striking fashion, the consequences of strong interactions in condensed 
+matter systems \cite{max-isn, max-sdw, olav, Lee-Dalid, ips-uv-ir1, 
+ips-uv-ir2, ips-fflo, ips-u1, metzner1, metzner2, ips-2kf, ips-cavity, 
+ips-rafael, ips-moire-cdw}, and resist analysis by conventional 
+theoretical methods. Chief among these is Landau's Fermi liquid (FL) 
+theory, which provides an excellent description of normal metals but 
+breaks down entirely for NFLs. The reason is fundamental: Landau's 
+framework rests on the existence of long-lived quasiparticles, and when 
+interactions are strong enough to destroy these quasiparticles, the 
+entire edifice collapses. NFLs therefore exhibit thermodynamic and 
+transport properties \cite{ips-subir, ips-c2, ips-hermann, ips-hermann2, 
+ips-hermann3, ips-hermann-review} that are qualitatively distinct from 
+those of ordinary metals. A telling example is the DC resistivity 
+$\rho$: in a conventional FL, electron-electron interactions give rise 
+to the characteristic $\rho \sim T^2$ dependence at low temperatures, 
+whereas in an NFL one finds $\rho \sim T^\alpha$ with $\alpha \neq 2$, 
+the most common cases being $\alpha = 1$ and $\alpha = 4/3$. Further 
+distinctions manifest in properties such as the optical conductivity 
+\cite{ips-subir, ips-c2} and an enhanced propensity toward 
+superconducting instabilities \cite{ips-sudip1, ips-sc, ips-c2}. The 
+principal physical scenarios in which such strange-metallic behavior 
+emerges include: (1) finite-density fermions interacting with 
+order-parameter bosons that become massless at a quantum critical point 
+(QCP) \cite{max-isn, max-sdw, Lee-Dalid, ips-uv-ir1, ips-uv-ir2, 
+ips-fflo, ips-rafael, ips-2kf, ips-cavity}; (2) finite-density fermions 
+coupled to transverse gauge fields \cite{olav, ips-sudip1, ips-sudip2, 
+ips-u1} that remain massless; and (3) Fermi points at band-touching 
+semimetals subject to unscreened Coulomb interactions, probed at zero 
+chemical potential \cite{Abrikosov, moon-xu, rahul-sid, ips-rahul, 
+ips-hermann, ips-hermann2, ips-hermann3, malcolm-bitan, ips-birefringent, 
+ips-hermann-review}. This last class involves NFL behaviour at isolated 
+Fermi points (encoding points where the density-of-states goes to zero) and is therefore free from the complications associated 
+with the presence of an extended Fermi surface (FS) accompanying finite-density systems.
+
+Extensive efforts have been devoted to accessing NFL states through 
+controlled approximations, employing a range of distinct and 
+complementary approaches, which we now survey in turn:
+\begin{enumerate}
+
+\item The approach of Hertz and Millis \cite{hertz, millis} proceeds by 
+performing a renormalization group (RG) analysis on an effective bosonic 
+action for the order parameter, obtained by integrating out the fermions. 
+This procedure is not well-justified, however, since one set of gapless 
+degrees of freedom --- the fermionic fields --- is eliminated at the 
+outset, and both fermions and bosons must instead be treated on an equal 
+footing.
+
+\item Setting aside the Hertz-Millis formulation, an early and natural 
+attempt involved introducing a large number $N$ of fermion flavors 
+\cite{ALTSHULER, polchinski, ybkim} as a mathematical device, motivated 
+by the intuition that additional flavors should not qualitatively alter 
+the physics beyond enlarging the flavor-symmetry group. The 
+infinite-flavor limit was then to serve as the starting point for a 
+controlled $1/N$ expansion, with the hope that setting $N$ to its 
+physical value at the end would yield a reliable approximation. It was 
+subsequently established, however, that the $N \rightarrow \infty$ limit 
+is not described by a mean-field theory for finite-density fermions with 
+a well-defined FS \cite{SSLee-largeN, max-isn}, contrary to the original 
+assumption. The culprit is the proliferation of planar diagrams 
+\cite{SSLee-largeN}, which renders even the large-$N$ theory strongly 
+interacting: solving it requires a nontrivial resummation of infinitely 
+many Feynman diagrams. These serious shortcomings prompted the search 
+for alternative approaches.
+
+\item The insights above also call into question physical pictures based 
+on the random-phase approximation (RPA), since RPA amounts to nothing 
+more than the leading-order term in the large-$N$ expansion. One 
+alternative scheme that circumvents these difficulties involves 
+deforming the bare dispersion of the quantum fields. In 
+Refs.~\cite{nayak, mross}, this was accomplished by replacing the 
+bosonic kinetic term $\boldsymbol{k}^2|\phi(k)|^2$ with 
+$\boldsymbol{k}^{1+\epsilon}|\phi(k)|^2$. For $\epsilon \in (0,1)$, 
+the density of states of the order-parameter boson is suppressed at low 
+energies, reducing quantum fluctuations and making $\epsilon$ a viable 
+perturbative parameter. This scheme retains a finite fermionic density 
+of states and preserves all microscopic symmetries. Its drawback, 
+however, is that the nonanalytic momentum dependence of the bosonic 
+kinetic term corresponds to a nonlocal hopping in real space, which 
+prevents the collective mode from acquiring an anomalous dimension, 
+since short-distance quantum fluctuations cannot renormalize a nonlocal 
+hopping term.
+
+\item The approach that achieves genuine mathematical control over the 
+perturbative expansion is dimensional regularization \cite{olav, 
+Lee-Dalid, ips-uv-ir1}. In our non-relativistic setting, one can tune 
+independently the number of dimensions perpendicular to the FS 
+(denoted as $d_{co}$) and the dimension of the FS itself (denoted as $d_F$). 
+Increasing $d_{co}$ amounts to continuously raising the number of 
+spacetime dimensions in which the FS is embedded, which suppresses 
+quantum fluctuations by reducing the density of states in higher 
+dimensions.
+
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%
+Throughout this book, we adopt the dimensional regularization framework to analyse the systems under consideration, 
+in the spirit of Refs.~\cite{Lee-Dalid, ips-uv-ir1}. A key virtue of 
+this approach is that it preserves locality in real space and, for 
+$d_F = 1$, an additional locality emerges in the momentum space as well. The 
+next chapter lays out the most important building blocks for 
+constructing the effective action that serves as the starting point for 
+applying dimensional regularization, with the Ising-nematic quantum 
+critical point as the guiding example. The NFL systems treated in the 
+remaining chapters draw on minor variations of this framework, with the 
+essential structure established in Chapter 2 remaining intact throughout.
+The variation mainly lies in the formulation of the two-component spinors, which lead to differing forms of the one-loop bosonic self-energy.
+Despite the different forms, all of them feature a term representing Landau-damping (analogous to an overdamped harmonic-oscillator mode) arising from one-loop corrections. The overarching consequence of this is the drastic modification of the dependence of the fermionic self-energy on the Matsubara-frequency ($k_0$) from the $\sim k_0^2 $ behaviour of the FLs --- the resulting one-loop fermionic self-energy shows a universal scaling form, viz.
+$ \sim \text{sgn}(k_0)|k_0|^{2/3}$.
+
+
+\begin{thebibliography}{10}
+\providecommand{\url}[1]{{#1}}
+\providecommand{\urlprefix}{URL }
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{DOI \discretionary{}{}{}#1}\else
+  \providecommand{\doi}{DOI \discretionary{}{}{}\begingroup
+  \urlstyle{rm}\Url}\fi
+
+\bibitem{max-isn}
+M.A. Metlitski, S.~Sachdev, Phys. Rev. B \textbf{82}, 075127 (2010).
+\newblock \doi{10.1103/PhysRevB.82.075127}
+
+\bibitem{max-sdw}
+M.A. Metlitski, S.~Sachdev, Phys. Rev. B \textbf{82}, 075128 (2010).
+\newblock \doi{10.1103/PhysRevB.82.075128}
+
+\bibitem{olav}
+S.~Chakravarty, R.E. Norton, O.F. Sylju\aa{}sen, Phys. Rev. Lett. \textbf{74},
+  1423 (1995).
+\newblock \doi{10.1103/PhysRevLett.74.1423}.
+\newblock \urlprefix\url{https://link.aps.org/doi/10.1103/PhysRevLett.74.1423}
+
+\bibitem{Lee-Dalid}
+D.~Dalidovich, S.S. Lee, Phys. Rev. B \textbf{88}, 245106 (2013).
+\newblock \doi{10.1103/PhysRevB.88.245106}
+
+\bibitem{ips-uv-ir1}
+I.~Mandal, S.S. Lee, Phys. Rev. B \textbf{92}, 035141 (2015).
+\newblock \doi{10.1103/PhysRevB.92.035141}
+
+\bibitem{ips-uv-ir2}
+I.~Mandal, Eur. Phys. J. B \textbf{89}(12), 278 (2016).
+\newblock \doi{10.1140/epjb/e2016-70509-4}
+
+\bibitem{ips-fflo}
+D.~Pimenov, I.~Mandal, F.~Piazza, M.~Punk, Phys. Rev. B \textbf{98}, 024510
+  (2018).
+\newblock \doi{10.1103/PhysRevB.98.024510}
+
+\bibitem{ips-u1}
+I.~Mandal, Phys. Rev. Research \textbf{2}, 043277 (2020).
+\newblock \doi{10.1103/PhysRevResearch.2.043277}.
+\newblock
+  \urlprefix\url{https://link.aps.org/doi/10.1103/PhysRevResearch.2.043277}
+
+\bibitem{metzner1}
+T.~Holder, W.~Metzner, Phys. Rev. B \textbf{90}, 161106 (2014).
+\newblock \doi{10.1103/PhysRevB.90.161106}.
+\newblock \urlprefix\url{https://link.aps.org/doi/10.1103/PhysRevB.90.161106}
+
+\bibitem{metzner2}
+J.~S\'ykora, T.~Holder, W.~Metzner, Phys. Rev. B \textbf{97}, 155159 (2018).
+\newblock \doi{10.1103/PhysRevB.97.155159}.
+\newblock \urlprefix\url{https://link.aps.org/doi/10.1103/PhysRevB.97.155159}
+
+\bibitem{ips-2kf}
+I.~Mandal, Nucl. Phys. B \textbf{1005}, 116586 (2024).
+\newblock \doi{10.1016/j.nuclphysb.2024.116586}
+
+\bibitem{ips-cavity}
+I.~{Mandal}, Ann. Phys. \textbf{474}, 169925 (2025).
+\newblock \doi{10.1016/j.aop.2025.169925}
+
+\bibitem{ips-rafael}
+I.~Mandal, R.M. Fernandes, Phys. Rev. B \textbf{107}, 125142 (2023).
+\newblock \doi{10.1103/PhysRevB.107.125142}.
+\newblock \urlprefix\url{https://link.aps.org/doi/10.1103/PhysRevB.107.125142}
+
+\bibitem{ips-moire-cdw}
+I.~{Mandal}, Annals of Physics \textbf{474}, 169925 (2025).
+\newblock \doi{https://doi.org/10.1016/j.aop.2025.169925}.
+\newblock
+  \urlprefix\url{https://www.sciencedirect.com/science/article/pii/S0003491625000065}
+
+\bibitem{ips-subir}
+A.~Eberlein, I.~Mandal, S.~Sachdev, Phys. Rev. B \textbf{94}, 045133 (2016).
+\newblock \doi{10.1103/PhysRevB.94.045133}.
+\newblock \urlprefix\url{http://link.aps.org/doi/10.1103/PhysRevB.94.045133}
+
+\bibitem{ips-c2}
+I.~Mandal, Annals of Physics \textbf{376}, 89  (2017).
+\newblock \doi{https://doi.org/10.1016/j.aop.2016.11.009}.
+\newblock
+  \urlprefix\url{http://www.sciencedirect.com/science/article/pii/S0003491616302585}
+
+\bibitem{ips-hermann}
+I.~Mandal, H.~Freire, Phys. Rev. B \textbf{103}, 195116 (2021).
+\newblock \doi{10.1103/PhysRevB.103.195116}.
+\newblock \urlprefix\url{https://link.aps.org/doi/10.1103/PhysRevB.103.195116}
+
+\bibitem{ips-hermann2}
+H.~Freire, I.~Mandal, Physics Letters A \textbf{407}, 127470 (2021).
+\newblock \doi{https://doi.org/10.1016/j.physleta.2021.127470}.
+\newblock
+  \urlprefix\url{https://www.sciencedirect.com/science/article/pii/S0375960121003340}
+
+\bibitem{ips-hermann3}
+I.~Mandal, H.~Freire, Journal of Physics: Condensed Matter \textbf{34}(27),
+  275604 (2022).
+\newblock \doi{10.1088/1361-648x/ac6785}.
+\newblock \urlprefix\url{https://doi.org/10.1088/1361-648x/ac6785}
+
+\bibitem{ips-hermann-review}
+I.~Mandal, H.~Freire, Journal of Physics: Condensed Matter \textbf{36}(44),
+  443002 (2024).
+\newblock \doi{10.1088/1361-648X/ad665e}.
+\newblock \urlprefix\url{https://dx.doi.org/10.1088/1361-648X/ad665e}
+
+\bibitem{ips-sudip1}
+S.B. Chung, I.~Mandal, S.~Raghu, S.~Chakravarty, Phys. Rev. B \textbf{88},
+  045127 (2013).
+\newblock \doi{10.1103/PhysRevB.88.045127}.
+\newblock \urlprefix\url{http://link.aps.org/doi/10.1103/PhysRevB.88.045127}
+
+\bibitem{ips-sc}
+I.~Mandal, Phys. Rev. B \textbf{94}, 115138 (2016).
+\newblock \doi{10.1103/PhysRevB.94.115138}
+
+\bibitem{ips-sudip2}
+Z.~Wang, I.~Mandal, S.B. Chung, S.~Chakravarty, Annals of Physics \textbf{351},
+  727  (2014).
+\newblock \doi{http://dx.doi.org/10.1016/j.aop.2014.09.021}.
+\newblock
+  \urlprefix\url{http://www.sciencedirect.com/science/article/pii/S0003491614002814}
+
+\bibitem{Abrikosov}
+A.A. Abrikosov, Sov. Phys.-JETP \textbf{39}, 709 (1974)
+
+\bibitem{moon-xu}
+E.G. Moon, C.~Xu, Y.B. Kim, L.~Balents, Phys. Rev. Lett. \textbf{111}, 206401
+  (2013).
+\newblock \doi{10.1103/PhysRevLett.111.206401}.
+\newblock
+  \urlprefix\url{https://link.aps.org/doi/10.1103/PhysRevLett.111.206401}
+
+\bibitem{rahul-sid}
+R.M. Nandkishore, S.A. Parameswaran, Phys. Rev. B \textbf{95}, 205106 (2017).
+\newblock \doi{10.1103/PhysRevB.95.205106}.
+\newblock \urlprefix\url{https://link.aps.org/doi/10.1103/PhysRevB.95.205106}
+
+\bibitem{ips-rahul}
+I.~{Mandal}, R.M. {Nandkishore}, Pys. Rev. B \textbf{97}(12), 125121 (2018).
+\newblock \doi{10.1103/PhysRevB.97.125121}
+
+\bibitem{malcolm-bitan}
+B.~Roy, M.P. Kennett, K.~Yang, V.~Juri\ifmmode \check{c}\else
+  \v{c}\fi{}i\ifmmode~\acute{c}\else \'{c}\fi{}, Phys. Rev. Lett. \textbf{121},
+  157602 (2018).
+\newblock \doi{10.1103/PhysRevLett.121.157602}.
+\newblock
+  \urlprefix\url{https://link.aps.org/doi/10.1103/PhysRevLett.121.157602}
+
+\bibitem{ips-birefringent}
+I.~Mandal, Physics Letters A \textbf{418}, 127707 (2021).
+\newblock \doi{https://doi.org/10.1016/j.physleta.2021.127707}.
+\newblock
+  \urlprefix\url{https://www.sciencedirect.com/science/article/pii/S0375960121005715}
+
+\bibitem{hertz}
+J.A. Hertz, Phys. Rev. B \textbf{14}, 1165 (1976).
+\newblock \doi{10.1103/PhysRevB.14.1165}.
+\newblock \urlprefix\url{https://link.aps.org/doi/10.1103/PhysRevB.14.1165}
+
+\bibitem{millis}
+A.J. Millis, Phys. Rev. B \textbf{48}, 7183 (1993).
+\newblock \doi{10.1103/PhysRevB.48.7183}.
+\newblock \urlprefix\url{https://link.aps.org/doi/10.1103/PhysRevB.48.7183}
+
+\bibitem{ALTSHULER}
+B.L. Altshuler, L.B. Ioffe, A.J. Millis, Phys. Rev. B \textbf{50}, 14048
+  (1994).
+\newblock \doi{10.1103/PhysRevB.50.14048}.
+\newblock \urlprefix\url{http://link.aps.org/doi/10.1103/PhysRevB.50.14048}
+
+\bibitem{polchinski}
+J.~{Polchinski}, Nucl. Phys. B \textbf{422}, 617 (1994).
+\newblock \doi{10.1016/0550-3213(94)90449-9}
+
+\bibitem{ybkim}
+E.A. {Kim}, M.J. {Lawler}, P.~{Oreto}, S.~{Sachdev}, E.~{Fradkin}, S.A.
+  {Kivelson}, Phys. Rev. B \textbf{77}(18), 184514 (2008).
+\newblock \doi{10.1103/PhysRevB.77.184514}
+
+\bibitem{SSLee-largeN}
+S.S. Lee, Phys. Rev. B \textbf{80}, 165102 (2009).
+\newblock \doi{10.1103/PhysRevB.80.165102}
+
+\bibitem{nayak}
+C.~{Nayak}, F.~{Wilczek}, Nucl. Phys. B \textbf{430}, 534 (1994).
+\newblock \doi{10.1016/0550-3213(94)90158-9}
+
+\bibitem{mross}
+D.F. Mross, J.~McGreevy, H.~Liu, T.~Senthil, Phys. Rev. B \textbf{82}, 045121
+  (2010).
+\newblock \doi{10.1103/PhysRevB.82.045121}
+
+\end{thebibliography}

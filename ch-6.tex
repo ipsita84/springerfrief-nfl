@@ -1,0 +1,1329 @@
+\chapter{Non-Fermi liquids by critical cavity photons at the onset of superradiance}
+\label{chapcavity}
+
+\abstract{We investigate the emergence of a non-Fermi liquid (NFL) at a quantum 
+critical point which marks the onset of superradiance in a cavity quantum 
+electrodynamics set-up. While the finite cavity, bounded by reflecting 
+mirrors, endows the photons with an effective mass, this mass vanishes 
+precisely at the continuous phase transition, rendering the photons 
+critical. The matter sector comprises fermions on a honeycomb lattice 
+near half-filling, with low-energy excitations described by doped Dirac 
+cones at two sets of inequivalent valleys. This choice is motivated by 
+the presence of a fermion-boson interaction vertex that generates Landau 
+damping of the critical bosons and thereby drives the system into an 
+NFL phase. To construct the quantum effective action, we identify the 
+hot-spots on the generically anisotropic, trigonally-warped Fermi 
+surfaces (FSs) --- defined as the sets of points with mutually parallel 
+or antiparallel tangent vectors. The cavity photons play the role of 
+charge-density-wave (CDW) order parameters, connecting pairs of 
+hot-spots on the FS within a single valley. With these ingredients in 
+hand, we characterize the resulting NFL phases using dimensional 
+regularization and renormalization group (RG) flow equations. Our 
+analysis reveals the existence of stable NFL fixed points in the 
+low-energy limit, as determined by examining the RG flows along the 
+direction of the CDW coupling constant.}
+
+
+\section{Introduction}
+
+Cavity-confined photons have emerged as a powerful and versatile tool 
+for engineering strong electron-electron interactions via light-matter 
+coupling \cite{jaksch, kollath, eckstein, farokh, demler, diehl, ahana}, 
+motivating us to explore the possibility of non-Fermi liquid (NFL) 
+phases arising in cavity quantum electrodynamics (QED) set-ups involving 
+two-dimensional (2d) crystalline lattices \cite{roux, piazza_qed, zhang, 
+piazza_superrad, bhaseen, basko, polini, pascal, peng}. The rapidly 
+advancing field of cavity QED offers the prospect of realizing strong 
+coupling between cavity photons and fermionic matter, from 2d layered 
+heterostructures \cite{sentef} to synthetic ultracold atomic arrays 
+\cite{piazza_qed, roux, zhang}. Although the finite spatial extent of 
+the cavity endows the photonic modes with an effective mass, the system 
+can be driven toward a superradiant phase in which the cavity photons 
+become massless at a continuous phase transition \cite{piazza_superrad, 
+bhaseen, basko, polini, pascal, peng}. In the superradiant phase, the 
+ground state hosts a macroscopic occupation of coherent photons --- 
+effectively, a photon condensate --- coupling the lattice atoms to a 
+spatially uniform, single-mode electromagnetic field. Accessing this 
+transition demands an exceptionally strong atom-field coupling. 
+Superradiant phase transitions have been realized experimentally across 
+a range of platforms, including optically pumped gases \cite{ref22cav}, 
+photoexcited semiconducting quantum dots \cite{ref23cav, ref24cav}, and 
+pumped ultracold gases confined in ultrahigh-finesse optical cavities 
+\cite{ref25cav}. It is important to note, however, that all these 
+experiments rely on an external drive, and a true equilibrium 
+realization of the superradiant transition remains elusive. We proceed 
+nonetheless with the expectation that such an equilibrium set-up will be 
+achieved in the near future.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Model}
+\label{secmodel-cav}
+
+Our starting point is the non-interacting tight-binding Hamiltonian on 
+the honeycomb lattice, the paradigmatic model for graphene, which has 
+been studied extensively in the literature \cite{neto}. At half-filling, 
+Dirac cones emerge at two types of inequivalent valleys, labelled as $K_\varsigma$ 
+(with $\varsigma = \pm$), and the two types of Dirac points are exchanged under 
+time-reversal symmetry. We focus on the low-energy dynamics of fermions 
+with momenta close to $K_\varsigma$, which is captured by taking the 
+continuum limit of the tight-binding model. Upon doping away from the 
+Dirac points, the system evolves into a Fermi liquid with a nonparabolic 
+dispersion and singly-connected convex Fermi surfaces (FSs). At sufficiently 
+low doping, the dispersion remains linear and isotropic, placing the 
+system in the regime of the so-called Dirac Fermi liquid (DFL) 
+\cite{maslov-dfl}.
+
+The band structure is obtained by expanding the momentum $\mathbf{P}$ 
+around the valley $K_\varsigma$ as $\mathbf{P} = \mathbf{K}_\varsigma 
++ \mathbf{p}$, where $|\mathbf{p}|/|\mathbf{K}_\varsigma| \ll 1$. At 
+leading order in this small parameter, one recovers the linear dispersion 
+characteristic of the DFL. Retaining corrections up to order 
+$(|\mathbf{p}|/|\mathbf{K}_\varsigma|)^2$ introduces trigonal-warping 
+of the bands \cite{ando1998, dresselhaus, neto} in the vicinity of 
+$K_\varsigma$. Working in a diagonal electron-hole basis and suppressing 
+the spin degrees of freedom, the noninteracting Hamiltonian takes the 
+form \cite{maslov-dfl},
+\begin{align}
+\label{eqheh}
+H_0 = \sum_{\varsigma,\mathbf{p}}
+\left[
+\left(\epsilon_{\varsigma,\mathbf{p},+} - \mu_c\right)
+\alpha^\dagger_{\varsigma,\mathbf{p}}\,
+\alpha^{\phantom{\dagger}}_{\varsigma,\mathbf{p}}
++ \left(\epsilon_{\varsigma,\mathbf{p},-} - \mu_c\right)
+\beta^\dagger_{\varsigma,\mathbf{p}}\,
+\beta^{\phantom{\dagger}}_{\varsigma,\mathbf{p}}
+\right],
+\end{align}
+where $\mu_c$ is the chemical potential. The dispersion, accounting for trigonal-warping corrections, reads
+\begin{align}
+\label{twd}
+& \epsilon_{\varsigma,\mathbf{p},\lambda}(\theta_p) =
+\epsilon^\mathrm{D}_{\mathbf{p},\lambda}
++ \epsilon^\mathrm{TW}_{\varsigma,\mathbf{p},\lambda}(\theta_p)\,, \quad
+\epsilon^\mathrm{D}_{\mathbf{p},\lambda} = 
+\lambda\,v_\mathrm{D}\,|\mathbf{p}|\,, \nonumber \\
+& \epsilon^\mathrm{TW}_{\varsigma,\mathbf{p},\lambda}(\theta_p) = 
+\lambda\,\varsigma\,\frac{v_\mathrm{D}\,|\mathbf{p}|^2}{2\tilde{\rho}}
+\cos(3\theta_p)\,, \quad
+\theta_p = \arctan\!\left(\frac{p_y}{p_x}\right),
+\end{align}
+%%%%%%%%%%%%%%%%%
+where $\alpha^\dagger_{\varsigma,\mathbf{p}}$ 
+($\beta^\dagger_{\varsigma,\mathbf{p}}$) creates an electron (hole) 
+in the conduction (valence) band in the vicinity of valley 
+$K_\varsigma$. The parameter $\lambda = \pm$ labels the band, 
+$v_\mathrm{D}$ denotes the Fermi velocity at the Dirac point, and 
+$\tilde{\rho}$ encodes the strength of trigonal-warping, scaling 
+inversely with the nearest-neighbor hopping distance. Our coordinate 
+choice ensures that the Dirac and warping terms enter with the same 
+sign for the valley $K_+$. Provided the warping remains sufficiently 
+weak, both FSs retain global convexity, as depicted in 
+Fig.~\ref{fig_fscavity}.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Location of hot-spots paired by CDW ordering}
+
+The electron-photon coupling is implemented through the Peierls 
+substitution, which ties the fermion-boson vertex to the gradient of 
+the Hamiltonian with respect to the vector potential \cite{peng}. For 
+the Hamiltonian in Eq.~\eqref{eqheh}, the current operator is extracted 
+via the standard formula $\mathbf{j} = -\frac{\delta}{\delta\mathbf{A}}
+H_0(\mathbf{p} - e\mathbf{A})$, where $\mathbf{A}$ denotes the vector 
+potential. The completely filled valence band contributes no net 
+current, so we focus exclusively on $\lambda = +$, yielding the 
+intraband current
+\begin{align}
+\label{eqcur}
+\mathbf{j} = \sum_{\varsigma,\mathbf{p}} \mathbf{v}_{\varsigma,\mathbf{p}}\,
+\alpha_{\varsigma,\mathbf{p}}^\dagger\,\alpha^{\phantom{\dagger}}_{\varsigma,\mathbf{p}}\,, 
+\quad
+\mathbf{v}_{\varsigma,\mathbf{p}} = 
+\boldsymbol{\nabla}_{\mathbf{k}}\epsilon_{\varsigma,\mathbf{p},+}\,.
+\end{align}
+For brevity, we drop the spin label throughout what follows. An 
+important consequence is that the polarization function --- which 
+controls the possible appearance of a CDW gap --- arises from the 
+current-current correlator and therefore involves no intervalley 
+scattering: CDW bosons can only link hot-spots belonging to the same 
+valley.
+
+The derivation of the polarization function is a standard exercise 
+well covered in existing literature and serves to establish the 
+conditions under which a CDW gap opens. The mechanism relies on an 
+enhancement of the low-energy phase space when electrons scatter 
+between hot-spots whose tangent vectors are either parallel or 
+antiparallel. The setup bears a close resemblance to the 
+current-current correlator analysis of Ref.~\cite{maslov-dfl}, which 
+treated doped monolayer graphene with an effective four-fermion 
+interaction generated by the bare Coulomb potential, also incorporating 
+trigonal-warping. The crucial difference is that our model contains no 
+four-fermion interaction, thereby eliminating intervalley scattering 
+processes altogether. Had such a term been present, CDW instabilities 
+with wavevector $\boldsymbol{\mathcal{Q}}$ linking time-reversed 
+patches on the two distinct FSs centered at $K_+$ and $K_-$ 
+would have been accessible, as explored in Ref.~\cite{levitov}. We 
+further remark that the supplemental calculations in Ref.~\cite{peng} 
+assume circular FSs at each valley, with hot-spot pairs 
+sharing the same curvature. In our case, the FS are 
+noncircular due to trigonal-warping, and the hot-spots connected by 
+$\boldsymbol{\mathcal{Q}}$ typically possess different curvatures.
+ 
+%%%%%%%%%%%%%%%%%%
+\begin{figure}[t!]
+\centering
+\includegraphics[width = 0.65 \textwidth]{patches2} 
+\caption{Schematic illustration of the two trigonally-warped Fermi surfaces 
+situated at the neighboring valleys, $K_+$ and $K_-$. The hot-spot 
+pairs on each surface, linked by the incommensurate wavevector 
+$\boldsymbol{Q}$ (depicted by the black arrow), are emphasised. In 
+the $K_+$ ($K_-$) valley, the fermionic degrees of freedom localised 
+near the right and left hot-spots are denoted $\psi_+^{(1)}$ 
+($\psi_-^{(2)}$) and $\psi_+^{(2)}$ ($\psi_-^{(1)}$), respectively. 
+These fermions interact with the critical cavity-photon modes, which carry
+momenta centered about $\boldsymbol{\mathcal{Q}}$.}\label{fig_fscavity}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Patch theory using time-reversed partners}
+
+
+To construct a patch theory, we introduce two-component spinors formed 
+from time-reversed partners \cite{Lee-Dalid, ips-uv-ir1}, which in this particular setting
+case effectively correspond to fermionic operators on the conjugate 
+valleys $K_+$ and $K_-$. Each valley supports three distinct pairs of 
+hot-spots, with the members of each pair connected by a CDW boson. 
+These three pairs are related to one another by $2\pi/3$ rotations, 
+reflecting the threefold rotational symmetry inherent to the honeycomb 
+lattice. The momenta of the three CDW bosons, centered at wavevectors 
+$\boldsymbol{\mathcal{Q}}$, are similarly related by $2\pi/3$ rotations. 
+Since the cavity photons carry no self-interactions, the theory 
+factorizes into three decoupled sectors, each containing two pairs of 
+hot-spots with parallel or antiparallel tangent vectors, coupled to a 
+single CDW boson species. It therefore suffices to study a single such 
+sector, to which we restrict our attention throughout the remainder of 
+this chapter. Working in patch coordinates \cite{Lee-Dalid, ips-uv-ir1, 
+ips-u1, ips-rafael, ips-fflo, ips-2kf}, the effective action for the 
+patches located at $\theta_p = 0$ and $\theta_p = \pi$ reads 
+\cite{ips-cavity},
+%%%%%%%%%%%%%%%%%%%%%%
+\begin{align}
+ S &= \sum_{\substack{ \varsigma = \pm \\ 
+n = 1, 2 }  }
+ \int_{k} \left \lbrace \psi^{(n)}_{\varsigma } (k) \right  \rbrace^{\dagger}
+  \left [ -i\, k_0 -(-1)^n
+  \, \varsigma \,v_F^{(n)} \,k_1 
+  + \kappa^{(n)} \, k_2^2 \right ] \psi_{\varsigma }^{(n)} (k) 
+\nn &	\quad +
+%%%%%%%%%%%%
+\frac{1} {2}	\int_k \phi(k) \left( k_0^2 + k_1^2 + k_2^2 \right) \phi(-k) \nn
+%%%%%%%
+& \quad + \frac{e} {2}  \int_k  \int_q \,
+\Big[ \,\phi(q) \left \lbrace 
+\psi^{(1)}_{+ } (k+q) \right \rbrace^{\dagger} 
+\psi^{(2)}_{+ }(k) 
++ \phi (-q) \left \lbrace 
+\psi^{(2)}_{+ } (k-q) \right \rbrace^{\dagger} 
+\psi^{(1)}_{+ }(k) 
+\,\Big] \nn
+%%%%%%%
+& \quad + \frac{ e} {2}  \int_k  \int_q \,
+\Big[ \,\phi (q) \left \lbrace 
+\psi^{(2)}_{- } (k+q) \right \rbrace^{\dagger} 
+\psi^{(1)}_{- }(k) 
++ \phi (-q) \left \lbrace 
+\psi^{(1)}_{- } (k-q) \right \rbrace^{\dagger} 
+\psi^{(2)}_{- }(k) 
+\,\Big]\,.
+\label{eqs0}
+\end{align}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+The three-vector $k = (k_0, \boldsymbol{k})$ comprises the Matsubara 
+frequency, $k_0$, and the spatial momentum, 
+$\boldsymbol{k} = (k_1, k_2) \equiv (k_\perp, k_\parallel)$. The integrals are denoted via the 
+shorthand $\int_k \equiv \int dk_0\,d^d\boldsymbol{k}/(2\pi)^{d+1}$ 
+and $d = 2$ spatial dimensions. In the neighborhood of $K_\varsigma$, 
+the low-energy fermionic excitations localized near the two hot-spots 
+are labeled $\psi_\varsigma^{(1)}(k)$ and $\psi_\varsigma^{(2)}(k)$, 
+as illustrated in Fig.~\ref{fig_fscavity}. The CDW bosonic field 
+$\phi(k)$, arising from the cavity photons, carries frequency $k_0$ 
+and momentum $\boldsymbol{\mathcal{Q}} + \boldsymbol{k}$. Precisely 
+at the superradiant quantum critical point, these cavity bosons lose 
+their mass, as manifest in the purely quadratic bosonic sector of the 
+action. We rescale fermionic momenta such that for the fields 
+$\psi_+^{(1)}(k)$ and $\psi_-^{(1)}(k)$, both the Fermi velocity and 
+curvature are set to unity: $v_F^{(1)} = \kappa^{(1)} = 1$. For the 
+remaining hot-spots, we adopt the notation $v_F^{(2)} = \upsilon$ and 
+$\kappa^{(2)} = \kappa$. The curvature $\kappa$ can become negative 
+when the corresponding hot-spot is concave. Although the bare bosonic 
+velocity differs in general from its fermionic counterpart, we normalize 
+it to unity, as it does not enter the infrared effective theory: near 
+the quantum critical point, the bosonic propagator is governed entirely 
+by particle-hole fluctuations of the FS at low energies.
+
+Before rescaling, the Fermi velocity at angular position $\theta_p$ 
+reads $\upsilon_{F,\varsigma}(\theta_p) = v_D\left[1 + 
+\varsigma\cos(3\theta_p)/\rho\right]$, with $\rho \simeq \tilde{\rho}\,
+v_D/\mu_c$, and we write $\kappa_\varsigma(\theta_p)$ for half the 
+curvature. Upon evaluation at $\theta_p = 0$ and $\theta_p = \pi$ 
+[cf.\ Fig.~\ref{fig_fscavity}], these become $v_F^{(n)}$ and 
+$\kappa^{(n)}$. Exploiting the freedom to rescale, we pass to the 
+dimensionless ratios $\upsilon_{F,\varsigma}(\theta_p) \rightarrow 
+\upsilon_{F,\varsigma}(\theta_p)/\upsilon_{F,+}(0)$ and 
+$\kappa_\varsigma(\theta_p) \rightarrow \kappa_\varsigma(\theta_p)/
+\kappa_+(0)$, as depicted in Fig.~\ref{figfs-cavity2} for the valley 
+$K_+$. This choice renders $v_F^{(1)} \equiv \upsilon_{F,+}(0)$ and 
+$\kappa^{(1)} \equiv \kappa_+(0)$ both equal to unity --- these 
+correspond to the right-hand hot-spot of $K_+$ and the left-hand 
+hot-spot of $K_-$ --- while the conjugate hot-spots carry 
+$v_F^{(2)} \equiv \upsilon = \upsilon_{F,+}(\pi)$ and 
+$\kappa^{(2)} \equiv \kappa = \kappa_+(\pi)$, subject to the global 
+convexity requirement $1 - \kappa/\upsilon \geq 0$. Throughout, we 
+work in parameter regimes where both FSs remain everywhere convex.
+
+Within the patch-coordinate framework, essential for captuirng the correct energy-windows
+of the fermions and bosons, the key scaling-dimension assignments are: 
+$[\mathbf{K}] = 1$ and $[k_d] = 1/2$. Examining the kinetic terms in 
+the action then reveals the engineering dimensions of
+$[\psi^{(n)}_\varsigma] = [\phi_\pm] = -7/4$. Substituting these values
+into the interaction vertex yields $[e] = 1/4$. This establishes $e$ 
+as a relevant operator and presages the emergence of a NFL, in direct 
+analogy with the systems analyzed in Refs.~\cite{Lee-Dalid, ips-uv-ir1, 
+ips-u1, ips-2kf}. To gain analytical control, we invoke dimensional 
+regularization, continuously varying the co-dimension of the FS as an 
+auxiliary mathematical tool. This procedure identifies the upper critical 
+dimension $d = d_c$, defined as the point at which the one-loop fermionic 
+self-energy acquires a logarithmic divergence in the Wilsonian cutoff 
+$\Lambda$, separating the NFL regime from marginal-Fermi-liquid behaviour.
+
+
+
+%%%%%%%%%%%%%%%%%%
+\begin{figure}[t!]
+\centering
+\includegraphics[width = 0.35 \textwidth]{figvk.png} 
+\caption{Representative parameters characterising the FS at valley $K_+$, shown 
+for a configuration in which all hot-spots exhibit positive curvature.}\label{figfs-cavity2}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+Ensuring that the theory remains analytic in momentum space (a 
+requirement equivalent to preserving locality in position space), when the 
+co-dimension is extended to generic values, necessitates the introduction 
+of two-component spinors as follows \cite{Lee-Dalid, ips-uv-ir1,ips-cavity}
+\begin{align}
+\Psi_1^T(k) = \left[\psi_{+}^{(1)}(k) \quad 
+\left\{\psi_{-}^{(1)}\right\}^\dagger(-k)\right]
+\text{ and }
+\Psi_2^T(k) = \left[\psi_{-}^{(2)}(k) \quad 
+\left\{\psi_{+}^{(2)}\right\}^\dagger(-k)\right],
+\end{align}
+together with their conjugates,
+\begin{align}
+\bar{\Psi}_n \equiv \Psi_n^\dagger\,\gamma_0 \quad \text{for } 
+n \in \{1, 2\}\,.
+\end{align}
+With these spinors in hand, we construct an effective action describing 
+the patches of the one-dimensional FS near the hot-spots, now embedded 
+in a $d$-dimensional momentum space \cite{Lee-Dalid, ips-uv-ir1, ips-u1, 
+ips-2kf, ips-fflo}. The resulting low-energy effective action reads,
+%%%%%%%%%%%%%%%%%%
+\begin{align}
+\label{eqs1}
+S  &=   \sum_n  \int_k \bar \Psi_n  (k) \,i
+\left [  \mathbf  \Gamma \cdot \mathbf  K  +  \gamma_{d-1} \, \delta_k^{(n)} \right  ] \Psi_n (k)  
+ +
+ \frac{1}{2}\int_k k_d^2 \,  \phi (k) \, \phi (-k) 
+ \nn & \hspace{ 0.5 cm } 
+- \left[ 
+\frac{ i\, e \, \mu^{x/2} } {2} 
+\int_{k} \int_q \phi (q) \,
+ \bar{\Psi}_1 (k+q) \, {\Psi}_2(-k) 
++ \text{h.c.} \right ] ,
+%%%%%
+\nn x &=  \frac{ 5 } {2} - d \,, \quad 
+\delta_k^{(1)} = k_{d-1} +  k_d^2 \,, \quad
+\delta_k^{(2)} = \upsilon \,  k_{d-1} + \kappa\, k_d^2 \,.
+\end{align}
+%%%%%%%%%%%%%%%%%
+The $(d-1)$-dimensional vector $\mathbf{K} \equiv (k_0, k_1, \ldots, 
+k_{d-2})$ assembles the frequency and the $(d-2)$ momentum components 
+introduced by extending the co-dimension. The original momentum 
+components along the $k_1$- and $k_2$-directions are relabelled as 
+$k_{d-1}$ and $k_d$, respectively. Adopting these notations implies that, in the
+$d$-dimensional momentum space, $\{k_1, \ldots, k_{d-1}\}$ spans the 
+$(d-1)$ directions perpendicular to the FS, while $k_d$ runs parallel 
+to it. The symbol $\boldsymbol{\Gamma} \equiv (\gamma_0, \gamma_1, 
+\ldots, \gamma_{d-2})$ denotes a $(d-1)$-dimensional vector of matrices 
+whose contraction with $\mathbf{K}$ enters the fermionic kinetic term. 
+For our purpose, it suffices to work with $2 \times 2$ Pauli 
+matrices, taking $\gamma_0 = \sigma_y$ and $\gamma_{d-1} = \sigma_x$, 
+since our ultimate goal is to analytically continue to $d = 2$, which is the 
+physical spatial-dimensionality of the system. A floating mass scale, 
+$\mu \sim \Lambda$, raised to the power $x/2$, is introduced to render 
+the coupling constant $e$ dimensionless.
+
+The kinetic parts of the action in Eq.~\eqref{eqs1} remain 
+invariant under the following scaling transformations:
+\begin{align}
+& \mathbf  K  =  \frac{\mathbf  K'}{b} \,, 
+\quad k_{ d-1 } =\frac{k_{ d-1 }'}{b} \,,
+\quad k_d = \frac{k_d'}{\sqrt{b}} \,,
+\nn &
+\Psi_n (k)  =  b^{ \frac{2 d + 3} {4}}  \, \Psi'_n (k') \,, \quad 
+\phi  (k) = b^{\frac{2 d + 3}{4}}  \, \phi' (k')\,.
+ \end{align}
+%%%%%%%%%%%%%%%%%%%%%% 
+This follows from the fact that $[\mathbf{K}] = 1$ and $[k_d] = 1/2$, 
+which are the defining characteristics of the patch coordinates. We note 
+that the fermions near the two hot-spots, which interact strongly with 
+the bosons, satisfy $|k_d| \gg k_{d-1}$, since any scattering event away 
+from the FS incurs a large energy-cost. In the bosonic kinetic term, only 
+the contribution proportional to $k_d^2$ is retained, as the part 
+involving $(\mathbf{K}^2 + k_{d-1}^2)$ is irrelevant under the scaling-relations written above.
+
+From Eq.~\eqref{eqs1}, the bare fermionic propagator is deduced to be
+\begin{align}
+\label{propf}
+G_n(k) \equiv \left\langle \Psi_n(k)\,\bar{\Psi}_n(k) \right\rangle_0
+= -\,i\,\frac{\boldsymbol{\Gamma} \cdot \mathbf{K} + 
+\gamma_{d-1}\,\delta_k^{(n)}}{\mathbf{K}^2 + \delta_k^2}\,.
+\end{align}
+Similarly, the bare bosonic propagator is given by $D_{(0)}(k) = 1/k_d^2$.
+
+The parameter $x$ establishes that the marginality of the coupling constant, 
+$e$, occurs at the upper critical dimension, $d_c = 5/2$. It also tells us that $e$ 
+behaves as a relevant (irrelevant) operator for $d < 5/2$ ($d > 5/2$). 
+The strategy is to construct a controlled perturbative 
+description of the interacting phase by working in $d = 5/2 - \epsilon$ 
+dimensions, treating $\epsilon$ as an expansion parameter. The physical 
+theory is then accessed by setting $\epsilon = 1/2$ 
+upon the implementation of a systematic order-by-order expansion in $\epsilon$.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{One-loop Feynman diagrams}
+\label{seconeloop}
+
+
+
+We now present the results for all Feynman diagrams contributing at 
+one-loop order, albeit with the loop-ordering for the fermionic self-energy and vertex corrections being dictated by considering the dressed bosonic propagator. This amounts to rearranging the perturbative expansion such that the one-loop bosonic self-energy
+is already included at the `zero'-th order.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{One-loop boson self-energy}
+\label{oneloopbos}
+
+We begin by computing the one-loop bosonic self-energy, which starts from the expression,
+%%%%%%%%%%%%%%%%
+\begin{align}
+\label{bosloop}
+\Pi_1 (q) & = - \frac{
+\left ( i \, e  \,\mu^{\frac {x} {2} } \right )^2} {2}
+ \int_k \mbox{Tr}
+\left[  G_1 (k+q)\, G_2 (k) \right] 
+%%%%%%%%%%
+\nn & = e^2 \, \mu^{x}  \int_k 
+\frac{\mathbf  K \cdot (\mathbf  K +{\boldsymbol Q}) + \delta_k^{(1)} \, \delta_{k+q}^{(2)}
+}
+{ \left [\mathbf  K^2 + \delta_k^2 \right ] 
+\left [(\mathbf  K +{\boldsymbol Q})^2 + \delta_{k+q}^2 \right ]}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\nn & = e^2 \, \mu^{x}  \int_k 
+\frac{\mathbf  K \cdot (\mathbf  K +{\boldsymbol Q}) 
++ \upsilon \,\delta_k^{(1)} \, 
+ \left \lbrace  k_{d-1} + q_{d-1} 
++  \frac{\kappa} {\upsilon} \left( k_d + q_d \right)^2 \right \rbrace
+}
+{ \upsilon^2
+\left [ \mathbf  K^2 + \delta_k^2 \right ] 
+\left [ \frac{(\mathbf  K +{\boldsymbol Q}) ^2 }
+{\upsilon^2} + 
+ \left \lbrace k_{d-1} + q_{d-1} 
++  \frac{\kappa} {\upsilon} 
+\left( k_d + q_d \right)^2  \right \rbrace^2 \right ]} \,.
+\end{align}
+%%%%%%%%%%%%%%%%
+Proceeding with the integration over $k_{d-1}$ then yields \cite{ips-cavity}
+%%%%%%%%%%%%%%%%%%%%%%%
+\begin{align}
+\label{eqpi0}
+\Pi_1 (q)  &  = \frac{e^2 \, \mu^{x}} {2} 
+\int \frac{ d k_{d} \, d\mathbf  K}{(2 \, \pi)^d} 
+\frac{ \left(  {\mathbf  K}
++ \frac{|\mathbf  K + {\boldsymbol Q}|} {\upsilon}  \right) 
+\; \left[ \,\mathbf  K \cdot (\mathbf  K +{\boldsymbol Q}) 
++ {\mathbf  K}\;  \frac{ |\mathbf  K +{\boldsymbol Q}|} {\upsilon}   \right]  
+}
+{ 
+\upsilon^2\, {\mathbf  K}\; \frac{ |\mathbf  K +{\boldsymbol Q}|} {\upsilon}
+\, 
+\left[ \left \lbrace 
+ q_{d-1} 
++  \frac{\kappa} {\upsilon} \left( k_d + q_d \right)^2 
+-k_d^2 \right \rbrace^2
+ + \left ( {\mathbf  K}
++\frac{ |\mathbf  K +{\boldsymbol Q}|} {\upsilon} \right)^2
+\right] }    \nn
+%%%%%%%%%%%%%%%%%%%%%%
+&  = \frac{e^2 \, \mu^{x}} {2} 
+\int \frac{ d k_{d} \, d\mathbf  K}{(2 \, \pi)^d} 
+\frac{ \left(  {\mathbf  K}
++ \frac{|\mathbf  K + {\boldsymbol Q}|} {\upsilon}  \right) 
+\; \left[ \,\mathbf  K \cdot (\mathbf  K +{\boldsymbol Q}) 
++ {\mathbf  K}\;\frac{ |\mathbf  K +{\boldsymbol Q}|} {\upsilon} \,  \right]  
+}
+{ \upsilon \, {\mathbf  K}\; |\mathbf  K +{\boldsymbol Q}|\,
+\left[ \Upsilon^2 (k,q) +  \left ( {\mathbf  K}
++\frac{ |\mathbf  K +{\boldsymbol Q}|} {\upsilon} \right)^2
+\right ] }  \,,
+%%%%%%%%%%%%%%%%%%%%%%
+\end{align}
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+where
+\begin{align}
+\Upsilon(q,k) =  \begin{cases}
+\left (1 - \frac {\kappa} {\upsilon} \right)
+\left [ k_d^2 - \frac {\upsilon \, e_q}
+{  \upsilon - \kappa  } \right ]
+%%%%%%%%%%%%%%%%%%% 
+& \text{ for } \upsilon \neq \kappa \\
+%%%%%%%%%%%%%%%
+ \delta_q^{(1)} + 2\, k_d \, q_d 
+& \text{ for } \upsilon = \kappa 
+\end{cases} \,,
+\end{align}
+and
+\begin{align}
+e_q = \frac {\kappa \,  q_d^2} 
+{\upsilon  - \kappa  }   \,
++ \,q_ {d-1} \,.
+\end{align}
+%%%%%%%%%%%%%%%%%%%%%%5
+
+In the special case where $\upsilon = \kappa$, this reduces to
+%%%%%%%%%%%%%%%%%%%%%%%
+\begin{align}
+\label{eqPi1}
+\Pi_1 (q)  & = \frac{e^2 \, \mu^{x}} {4} 
+\int  \frac{  \, d\mathbf  K}{(2 \, \pi)^d} 
+\int_{-\infty }^\infty dk_d \,
+\frac{ \left(  {\mathbf  K}
++ \frac{|\mathbf  K + {\boldsymbol Q}|} {\upsilon}  \right) 
+\; \left[ \,\mathbf  K \cdot (\mathbf  K +{\boldsymbol Q}) 
++ {\mathbf  K}\; |\mathbf  K +{\boldsymbol Q}| \,  \right]  
+}
+{\sqrt {|q_d |}\; \upsilon \, {\mathbf  K}\; |\mathbf  K +{\boldsymbol Q}|\,
+\left[   k_d^2 +  \left ( {\mathbf  K}
++\frac{ |\mathbf  K +{\boldsymbol Q}|} {\upsilon} \right)^2
+\right ] }   
+%%%%%%%%%%%%%
+ \nn & = \frac{e^2 \, \mu^{x}} { 8 \, |q_d| \, \upsilon } 
+\; I_1 (d, {\boldsymbol Q}) \, ,
+\end{align}
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+with
+\begin{align}
+\label{eqi1}
+I_1 (d, {\boldsymbol Q}) = \int  \frac{  \, d^{d-1}\mathbf  K}{(2 \, \pi)^{d-1} } 
+\left[ \frac{ \upsilon\,
+ \mathbf  K \cdot (\mathbf  K +{\boldsymbol Q}) }
+{ {\mathbf  K}\; |\mathbf  K +{\boldsymbol Q}|}
++ 1 \right ] . 
+ \end{align}
+
+
+When $\upsilon \neq \kappa$, we perform the change of variables, 
+$u = k_d^2$, which yields a Jacobian factor $1/(2\sqrt{u}) = 1/(2|k_d|)$. 
+Inspecting the denominator of the second factor in the integrand reveals 
+that the dominant contribution is concentrated near $u \sim e_q$ in the 
+regime $|\boldsymbol{Q}| \ll \kappa\,q_d^2$. Treating $e_q$ as positive 
+and noting that the typical energy scales enforce $q_d \gg q_{d-1}$, we 
+replace $|k_d|$ in the Jacobian by $\sqrt{\upsilon\,e_q/(\upsilon - \kappa)}$. 
+The integral then evaluates to \cite{ips-cavity}
+ \begin{align}
+\label{api}
+&\Pi_1 (q) = - \,\beta_d \, e^2 \, \mu^{x}  \,
+ \frac{  |{\boldsymbol Q}|^{ d - 1} }
+{ f(q)} \,, \quad
+f(q) = \begin{cases}
+\sqrt {\upsilon\,( \upsilon-\kappa) } 
+ \,\sqrt e_q\, \Theta(e_q)
+& \text{ for } \upsilon \neq \kappa \\
+%%%%%%%%%%%%%%%
+ 2\,|q_d| & \text{ for } \upsilon = \kappa \\
+\end{cases} \,,\nn
+ %%%%%%%%%%%%%%%%%
+&\beta_d = \frac{  \Gamma^2 \big (\frac{d} {2} \big )}
+{ 2^{d} \, \pi^{ \frac{d-1} {2} }\;
+| \cos \big (  \frac{\pi \,d} {2} \big ) |  
+\; \Gamma(\frac{d-1}{2}) \,\Gamma (d)} \,.
+\end{align}
+
+
+The bare bosonic propagator, $D_{(0)}(k)$, lacks any $\mathbf{K}$-dependence, 
+rendering loop integrals involving it divergent, unless one 
+performs a resummation that generates a dynamical dispersion along these 
+directions. We remedy this by dressing the propagator with the 
+lowest-order finite correction $\Pi_1(k)$ from the one-loop bosonic 
+self-energy, which scales as $|\mathbf{K}|^{d-1}/f(k)$, and incorporate 
+this correction into all subsequent loop computations. Operationally, 
+this means adopting the dressed propagator 
+$D_{(1)}(k) = \left[\left(D_{(0)}(k)\right)^{-1} - \Pi_1(k)\right]^{-1}$, 
+which effectively reorganizes the perturbative series by promoting the 
+$\mathbf{K}$-dependent finite piece of the one-loop bosonic self-energy 
+to zeroth order. The correction $\Pi_1(k)$ is none other than the 
+well-known \textit{Landau-damping} term, responsible for inducing the 
+distinctive $\text{sgn}(k_0)|k_0|^{2/3}$ frequency scaling in the 
+fermionic self-energy --- a universal hallmark of NFL physics at quantum 
+critical points in diverse strongly correlated systems
+\cite{max-isn, max-sdw, Lee-Dalid, ips-uv-ir1, ips-uv-ir2, ips-fflo, ips-u1}. 
+
+
+%%%%%%%%%%%%%%%%%
+\subsection{One-loop fermion self-energies}
+\label{secferm}
+
+
+Two distinct one-loop diagrams contribute to the fermionic self-energy, 
+which we compute separately below. Incorporating the dressed bosonic propagator,
+the corresponding starting expressions are:
+%%%%%%%%%%%%%%%%%%%
+\begin{align}
+\label{eqsigma1}
+\Sigma_1 (q) &= \frac{  \left (i\,e \, \mu^{\frac{x} {2} } \right )^2 }  {2} 
+\int_k  G_2 (q-k)\, D_{(1)} (k) 
+\nn & =   \frac{i \,e^2 \,  \mu^{x}} {2}  \int_k
+\frac{1 } {k_d^2
++   \beta_d \, e^2 \, \mu^{x} \,
+ \frac{  |{\mathbf K}|^{d- 1} } { f(k)} }
+  \,\frac{\gamma_{d-1} \, \delta_{q-k}^{(2)} 
++ \mathbf  \Gamma \cdot ({\boldsymbol  Q} -\mathbf  K)}
+{({\boldsymbol  Q} -\mathbf  K)^2 + \left[\delta_{q-k}^{(2)} \right]^2
+}  \, ,
+\end{align}
+and
+\begin{align}
+\label{eqsigma2}
+\Sigma_2 (q) &= \frac{ \left (i\,e \, \mu^{\frac{x} {2} } \right )^2  }  {2} 
+\int_k  G_1 (q-k)\, D_{(1)} (k) 
+\nn &  = 
+ \frac{i \,e^2 \,  \mu^{x}} {2}  \int_k
+\frac{1 } {k_d^2
++   \beta_d \, e^2 \, \mu^{x}  \,
+ \frac{  |{\mathbf K}|^{ d - 1} } { f(k)} } 
+\,\frac{\gamma_{d-1} \, \delta_{q-k}^{(1)} 
++ \mathbf  \Gamma \cdot ({\boldsymbol  Q} -\mathbf  K)}
+{({\boldsymbol  Q} -\mathbf  K)^2 + \left[\delta_{q-k}^{(1)} \right]^2 }  \, ,
+\end{align}
+where 
+\begin{align}
+\delta_{q-k}^{(2)} & = -\, \upsilon \, k_{d-1}
++ \delta_q^{(2)} + \kappa \left( k_d^2 - 2  \, q_d \, k_d \right)
+\nn & =  \upsilon
+\left [ q_{d-1} +
+\frac{  \kappa \, q_d^2   } 
+{\upsilon} + \frac{ \kappa} {\upsilon} 
+\left( k_d^2 - 2  \, q_d \, k_d \right) - \, k_{d-1}
+\right ].
+\end{align}
+%%%%%%%%%%%%%%
+Evaluating at $d = d_c - \epsilon$, the singular components of the 
+self-energy can be extracted as follows:
+\begin{enumerate}
+
+
+
+\item For $ \upsilon \neq \kappa $:
+%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{align}
+\Sigma_1 (q) & = -\, 
+ \frac{  {\mathcal U}_1 \,e^{\frac{4} {3}} 
+ }   { \epsilon}  \,
+\frac{ \left [ 
+\kappa  \, (2  \,\upsilon - \kappa)
+\right]^{\frac{1} {6}} }
+{\upsilon}
+\, i\left( \mathbf{\Gamma} \cdot \boldsymbol Q \right)
++\mathcal{O}\big(\epsilon^0\big) \,,\nn
+%%%%%%%%%%%%%%%%%%%%%
+\Sigma_2 (q) & = -\, 
+ \frac{  {\mathcal U}_1 \,e^{\frac{4} {3}} 
+ }   { \upsilon^{2/3} \, \epsilon}
+\, i\left( \mathbf{\Gamma} \cdot \boldsymbol Q \right)
++\mathcal{O}\big(\epsilon^0\big) \,,\quad
+%%%%%%%%%%%%%%%%%
+{\mathcal U}_1 = \frac {\left[
+\Gamma\big (\frac {1} {4} \big) \,
+\Gamma\big (\frac {5} {4} \big) \right ]^{1/3}
+} 
+{ 6 \times  {3}^{1/6} \, \pi^{4/3}} \,.
+\end{align}
+
+\item For $ \upsilon = \kappa $:
+%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{align}
+\Sigma_2 (q) =\upsilon \,\Sigma_1 (q)\,,\quad
+\Sigma_1 (q)  = -\, 
+ \frac{  {\mathcal U}_2 \,e^{\frac{4} {3}} 
+ }   { \upsilon \, \epsilon}
+\, i\left( \mathbf{\Gamma} \cdot \boldsymbol Q \right)
++\mathcal{O}\big(\epsilon^0\big) 
+\,,\quad
+%%%%%%%%%%%%%%%%
+{\mathcal U}_2 = \frac{2^{1/3}}
+{  3^{7/6} } \,.
+\end{align}
+
+
+\end{enumerate}
+In this expression, the logarithmic divergences that would emerge from 
+integrating out high-energy modes in a Wilsonian approach manifest 
+themselves as simple poles at $\epsilon = 0$ (within our dimensional 
+regularization framework).
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+\subsection{One-loop vertex-corrections}
+
+The one-loop fermion-boson vertex functions, $\Gamma_{12}(q,p)$ and 
+$\Gamma_{21}(q,p)$, are generically functions of the two external 
+frequency-momentum variables, $p$ and $q$. For the purpose of extracting 
+the leading-order singular behavior proportional to $1/\epsilon$, we need only 
+evaluate these vertices in the limit $p \rightarrow 0$, whereupon the 
+corresponding loop-integrals reduce to
+\begin{align}
+\Gamma_{n_1 n_2}(q,0) &= \frac{e^2\,\mu^{x}}{2} 
+\int_k G_{n_1}(k)\,G_{n_2}(k)\,D_{(1)}(k-q) \nonumber \\
+&= \frac{e^2\,\mu^{x}}{2} \int_k D_{(1)}(k-q)\,
+\frac{\delta_k^{(n_1)}\,\delta_k^{(n_2)} + \mathbf{K}^2 
+- \gamma_{d-1}\left(\boldsymbol{\Gamma}\cdot\mathbf{K}\right)
+\left[\delta_k^{(n_1)} + \delta_k^{(n_2)}\right]}
+{\left[\mathbf{K}^2 + \left\{\delta_k^{(n_1)}\right\}^2\right]
+\left[\mathbf{K}^2 + \left\{\delta_k^{(n_2)}\right\}^2\right]}\,.
+\end{align}
+Since $\Gamma_{12}(q,0) = \Gamma_{21}(q,0)$, it suffices to evaluate
+\begin{align}
+\label{eqgamint0}
+\Gamma_{12}(q,0) &= \frac{e^2\,\mu^{x}}{2} \int_k
+\frac{\delta_k^{(1)}\,\delta_k^{(2)} + \mathbf{K}^2 
+- \gamma_{d-1}\left(\boldsymbol{\Gamma}\cdot\mathbf{K}\right)
+\left[\delta_k^{(1)} + \delta_k^{(2)}\right]}
+{\left[\mathbf{K}^2 + \left\{\delta_k^{(1)}\right\}^2\right]
+\left[\mathbf{K}^2 + \left\{\delta_k^{(2)}\right\}^2\right]}\,.
+\end{align}
+The integral vanishes identically in the special case $\upsilon = \kappa$, 
+prompting us to concentrate on the generic situation where 
+$\upsilon \neq \kappa$. In both scenarios, however, the outcome is the 
+same: no singular contribution emerges.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+\section{RG flows for $\upsilon \neq  \kappa $}
+\label{secrg}
+
+
+In our QFT treatment, the action appearing in Eq.~\eqref{eqs1} is 
+designated as the \textit{physical action}, formulated at an energy 
+scale, $\mu \sim \Lambda$, comprising non-divergent physically-observable 
+quantities. Loop corrections, however, generate contributions that 
+exhibit either logarithmic or power-law divergences in $\Lambda$. We 
+regulate these ultraviolet singularities through renormalization, 
+implemented via dimensional regularization, a procedure in which 
+divergences re-emerge as poles in the parameter $\epsilon$ in the limit 
+$\epsilon \rightarrow 0$. Our computations have been carried out at 
+one-loop order. The calculations are conducted within the minimal 
+subtraction ($\mathrm{MS}$) renormalization scheme \cite{thooft, weinberg}, 
+wherein divergent contributions from loop diagrams are systematically 
+removed through the introduction of counterterms. We specifically employ 
+the modified minimal subtraction ($\overline{\mathrm{MS}}$) variant, 
+which absorbs not only the $1/\epsilon$ pole itself, but also the 
+universal finite piece proportional to $\epsilon^0$ that
+accompanies it.
+
+The \textit{counterterm action}, constructed to absorb the singular 
+contributions arising from quantum corrections, mirrors the structure of 
+the physical action in Eq.~\eqref{eqs1} and takes the explicit form,
+\begin{align}
+\label{actcount}
+S_{CT}  = &     \int_k \bar \Psi_1  (k) \,i
+\left [ A_1\, \mathbf  \Gamma \cdot \mathbf  K  + 
+\gamma_{d-1} \left( A_2 \, k_{d-1} + A_3\,k_d^2 \right)
+ \right  ] \Psi_1 (k)  
+ \nn & +  \int_k \bar \Psi_2  (k) \,i
+\left [ A_4 \, \mathbf  \Gamma \cdot \mathbf  K  +  \gamma_{d-1} \left(
+A_5 \, \upsilon \,k_{d-1} 
++ A_6 \, \kappa \, k_d^2  \right) \right  ] \Psi_2 (k)  
+%%%%%%%%%%%%%%%%%%%
+ \nn & + \frac{1}{2} \int_k A_7 \, k_d^2 \,  \phi (k) \, \phi(-k) 
+%%%%%%%%%%
+- \left[ \frac{ i\, e \, \mu^{x/2} } {2} 
+\int_{k} \int_q A_8 \, \phi (q) \,
+ \bar{\Psi}_1 (k+q) \, {\Psi}_2(-k) 
++ \text{h.c.} \right ].
+\end{align}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+The coefficients appearing in the counterterms are given by the power 
+series,
+\begin{align}
+A_{\zeta} = \sum_{n=1}^\infty \frac{Z^{(n)}_{\zeta}}{\epsilon^n} 
+\quad \text{with} \quad \zeta \in [1, 8]\,,
+\end{align}
+chosen so as to cancel the divergent contributions $\propto 1/\epsilon^n$ 
+arising from the loop-level Feynman diagrams. The $(d-1)$-dimensional 
+rotational invariance in the space perpendicular to the FS ensures that 
+each term in $\boldsymbol{\Gamma} \cdot \mathbf{K}$ is renormalized 
+identically.
+
+
+With these elements in hand, we formally subtract $S_{CT}$ from the 
+so-called \textit{bare} action,
+\begin{align}
+\label{actren}
+S_{\text{bare}} = & \sum_n \int_{k^B} \bar{\Psi}^B_n(k^B)
+\, i \left[\boldsymbol{\Gamma} \cdot \mathbf{K}^B 
++ \gamma_{d-1}\,\delta^{(n)}_{k^B}\right] \Psi^B_n(k^B)
++ \int_{k^B} \frac{\left(k^B_d\right)^2 
+\phi^B(k^B)\,\phi^B(-k^B)}{2} \nonumber \\
+& - \left[\frac{i\,e^B}{2} \int_{k^B} \int_{q^B} \phi^B(q^B)\,
+\bar{\Psi}^B_1(k^B+q^B)\,\gamma_{d-1}\,\Psi^B_2(-k^B) 
++ \text{h.c.}\right].
+\end{align}
+By construction, the resulting \textit{physical} effective action $S$ 
+contains only well-defined, non-divergent quantum parameters, whereas 
+$S_{\text{bare}}$ is formulated in terms of \textit{bare quantities} 
+that may diverge. Throughout, the superscript ``$B$'' designates bare 
+fields, couplings, frequencies, and momenta. This framework enables 
+physical observables to be extracted from renormalized coupling constants, 
+whose evolution is governed by RG flow equations --- differential 
+equations that track how the couplings vary as the floating energy scale 
+$\mu\,e^{-l}$ changes, or equivalently, as the logarithmic length scale 
+$l$ increases.
+
+The RG flow equations are derived by connecting the bare quantities to 
+their renormalized counterparts (those without the superscript ``$B$'') 
+through multiplicative $Z_\zeta$-factors:
+\begin{align}
+S_{\text{bare}} = S + S_{CT}\,, \quad Z_{\zeta} = 1 + A_{\zeta}\,,
+\end{align}
+\begin{align}
+&\mathbf{K}^B = \mathbf{K}\,, \quad
+k_{d-1}^B = \frac{Z_2}{Z_1}\,k_{d-1}\,, \quad
+k^B_d = \sqrt{\frac{Z_3}{Z_1}}\,k_d\,, \nonumber \\
+&\Psi_n^B(k^B) = Z_{\Psi_n}^{1/2}\,\Psi_n(k)\,, \quad
+\phi_{\pm}^B(k^B) = Z_{\phi}^{1/2}\,\phi_{\pm}\,,
+\end{align}
+and
+\begin{align}
+& Z_{\Psi_1} = Z_1\left(\frac{Z_1}{Z_2}\right)
+\sqrt{\frac{Z_1}{Z_3}}\,, \quad
+Z_{\Psi_2} = Z_4\left(\frac{Z_1}{Z_2}\right)
+\sqrt{\frac{Z_1}{Z_3}}\,, \quad
+Z_{\phi} = Z_7\left(\frac{Z_1}{Z_2}\right)
+\left(\frac{Z_1}{Z_3}\right)^{3/2}\,, \nonumber \\
+& \upsilon^B = \frac{Z_5}{Z_4}\left(\frac{Z_1}{Z_2}\right)\upsilon\,, \quad
+\kappa^B = \frac{Z_6}{Z_4}\left(\frac{Z_1}{Z_3}\right)\kappa\,, \quad
+e^B = Z_e\,e\,\mu^{\frac{\epsilon}{2}}\,, \quad
+Z_e = \frac{Z_8\,\sqrt{\frac{Z_1}{Z_2}}}
+{\left(\frac{Z_1}{Z_3}\right)^{1/4}\sqrt{Z_1\,Z_4\,Z_7}}\,.
+\end{align}
+%%%%%%%%%%%%%%%%%%%%%
+A gauge freedom exists that allows us to rescale fields and momenta 
+independently without altering the action. We fix this freedom by 
+imposing $\mathbf{K}^B = \mathbf{K}$, which amounts to measuring the 
+scaling dimensions of all other quantities relative to that of 
+$\mathbf{K}$. The result is the renormalized action $S$ --- also called 
+the Wilsonian effective action --- expressed entirely in terms of 
+renormalized, non-divergent parameters.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{RG-flow equations from one-loop diagrams}
+%%%%%%%%%%%%%%%%%
+
+
+Gathering our results from the calculations performed at one-loop order, the singular contributions yield
+\begin{align}
+\label{eqZvals}
+Z_1 &= 1 - \frac{\mathcal{U}_1\,e^{\frac{4}{3}}}{\epsilon}\,
+\frac{\left[\kappa\,(2\,\upsilon - \kappa)\right]^{\frac{1}{6}}}{\upsilon}\,, 
+\quad Z_4 = 1 - \frac{\mathcal{U}_1\,e^{\frac{4}{3}}}{\upsilon^{2/3}\,\epsilon}\,, 
+\nonumber \\
+Z_2 &= Z_3 = Z_5 = Z_6 = Z_7 = Z_8 = 1\,, \quad
+\mathcal{U}_1 = \frac{\left[\Gamma\!\left(\tfrac{1}{4}\right)
+\Gamma\!\left(\tfrac{5}{4}\right)\right]^{1/3}}
+{6 \times 3^{1/6}\,\pi^{4/3}}\,.
+\end{align}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+The fermionic sector is, in general, must be characterised by two independent 
+dynamical critical exponents,
+\begin{align}
+z = 1 + \frac{\partial \ln\!\left(\frac{Z_1}{Z_2}\right)}{\partial \ln \mu}\,, 
+\quad \tilde{z} = 1 + 
+\frac{\partial \ln\!\left(\frac{Z_1}{Z_3}\right)}{\partial \ln \mu}\,.
+\end{align}
+Since the one-loop calculation yields $Z_2 = Z_3 = 1$, which implies 
+$\tilde{z} = z$, we treat the two exponents as identical at this 
+order. Anomalous dimensions for the fermionic and bosonic fields are 
+defined through
+\begin{align}
+\eta_{\psi_n} = \frac{1}{2}\frac{\partial \ln Z_{\psi_n}}{\partial \ln \mu} 
+\quad \text{and} \quad
+\eta_\phi = \frac{1}{2}\frac{\partial \ln Z_\phi}{\partial \ln \mu}\,.
+\end{align}
+The beta-functions describing the RG flows of the three 
+coupling constants are
+\begin{align}
+\beta_e = \frac{de}{d\ln\mu}\,, \quad 
+\beta_\upsilon = \frac{d\upsilon}{d\ln\mu}\,, \quad 
+\beta_\kappa = \frac{d\kappa}{d\ln\mu}\,.
+\end{align}
+%%%%%%%%%%%%%%%%%%%%%
+The scale $\mu$ entered our formalism purely as a regularization device, 
+introduced to tame the ultraviolet divergences that arise in loop 
+integrals. Since it does not appear in the underlying microscopic theory, 
+physical quantities must be insensitive to its value, and consistency 
+demands that the bare parameters entering $S_{\text{bare}}$ likewise 
+exhibit no $\mu$-dependence. Enforcing this condition, along with the 
+requirement that the finite components of the renormalized quantities 
+take the form of systematic expansions in small $\epsilon$, we must parametrize
+the above quantities as
+\begin{align}
+\label{eqexp}
+& z = z^{(0)}\,, \quad
+\eta_{\psi_n} = \eta_{\psi_n}^{(0)} + \eta_{\psi_n}^{(1)}\,\epsilon\,, \quad
+\eta_\phi = \eta_\phi^{(0)} + \eta_\phi^{(1)}\,\epsilon\,, \nonumber \\
+& \beta_e = \beta_e^{(0)} + \beta_e^{(1)}\,\epsilon\,, \quad
+\beta_\upsilon = \beta_\upsilon^{(0)} + \beta_\upsilon^{(1)}\,\epsilon\,, \quad
+\beta_\kappa = \beta_\upsilon^{(0)} + \beta_\kappa^{(1)}\,\epsilon\,,
+\end{align}
+in the limit $\epsilon \rightarrow 0$. To arrive at the differential 
+equations governing the RG flow, we proceed through four 
+sequential steps: (1) imposing the condition 
+$\frac{d}{d\ln\mu}(\text{bare quantity}) = 0$; (2) substituting the 
+expressions from Eqs.~\eqref{eqZvals} and \eqref{eqexp}; (3) expanding 
+each equation in powers of $\epsilon$; and (4) matching coefficients of 
+regular powers of $\epsilon$ on both sides to determine all the 
+quantities in Eq.~\eqref{eqexp}. Carrying out this procedure yields
+\begin{align}
+& \beta_\upsilon^{(1)} = \beta_\kappa^{(1)} = \eta_{\psi_n}^{(1)} 
+= \eta_\phi^{(1)} = 0\,, \quad
+\beta_e^{(1)} = -\frac{e}{2}\,, \quad
+z = 1 + \beta_e^{(1)}\,\frac{\partial Z_1^{(1)}}{\partial e}\,, \nonumber \\
+& \beta_e^{(0)} = -\frac{e}{4}\left[3(z-1) + e\left(
+\frac{\partial Z_1^{(1)}}{\partial e} + \frac{\partial Z_4^{(1)}}{\partial e}
+\right)\right], \quad
+\beta_\upsilon^{(0)} = \upsilon\left(1 - z + \beta_e^{(1)}\,
+\frac{\partial Z_4^{(1)}}{\partial e}\right), \nonumber \\
+& \beta_\kappa^{(0)} = \kappa\left(1 - z + \beta_e^{(1)}\,
+\frac{\partial Z_4^{(1)}}{\partial e}\right), \quad
+\eta_{\psi_1}^{(0)} = \frac{3(z-1) + 2\,\beta_e^{(1)}\,
+\frac{\partial Z_1^{(1)}}{\partial e}}{4}\,, \nonumber \\
+& \eta_{\psi_2}^{(0)} = \frac{3(z-1) + 2\,\beta_e^{(1)}\,
+\frac{\partial Z_4^{(1)}}{\partial e}}{4}\,, \quad
+\eta_\phi^{(0)} = \frac{5(z-1)}{4}\,.
+\end{align}
+%%%%%%%%%%%%%%%%%%%%%%%%%
+Solving these equations yields
+%%%%%%%%%%%%%%%
+\begin{align}
+\label{eqbeta}
+& z = 1 + \frac{2\,\mathcal{U}_1\,\tilde{e}\,\kappa^{1/6}
+(2\,\upsilon - \kappa)^{1/6}}{3\,\upsilon}\,, \quad
+\eta_{\psi_1} = \frac{5\,\mathcal{U}_1\,\tilde{e}\,\kappa^{1/6}
+(2\,\upsilon - \kappa)^{1/6}}{6\,\upsilon}\,, \nonumber \\
+& \eta_{\psi_2} = \frac{\mathcal{U}_1\,\tilde{e}
+\left[2\,\upsilon^{1/3} + 3\,\kappa^{1/6}(2\,\upsilon - \kappa)^{1/6}\right]}
+{6\,\upsilon}\,, \quad
+\eta_\phi = \frac{5\,\mathcal{U}_1\,\tilde{e}\,\kappa^{1/6}
+(2\,\upsilon - \kappa)^{1/6}}{6\,\upsilon}\,, \nonumber \\
+& \frac{\beta_e}{e} = \frac{\mathcal{U}_1\,\tilde{e}
+\left[2\,\upsilon^{1/3} - \kappa^{1/6}(2\,\upsilon - \kappa)^{1/6}\right]}
+{6\,\upsilon} - \frac{\epsilon}{2}\,, \nonumber \\
+& \beta_\upsilon = \frac{2\,\mathcal{U}_1\,\tilde{e}
+\left[\upsilon^{1/3} - \kappa^{1/6}(2\,\upsilon - \kappa)^{1/6}\right]}{3}\,, 
+\quad
+\beta_\kappa = \frac{2\,\mathcal{U}_1\,\tilde{e}\,\kappa
+\left[\upsilon^{1/3} - \kappa^{1/6}(2\,\upsilon - \kappa)^{1/6}\right]}
+{3\,\upsilon}\,,
+\end{align}
+where $\tilde{e} = e^{4/3}$. To characterize the infrared physics, we 
+track the RG flows with respect to the logarithmic length scale $l$, 
+defined through the derivatives,
+\begin{align}
+\frac{ d e}{ d l} \equiv - \,\beta_e\,,\quad
+\frac{ d \upsilon} {d l} \equiv - \, \beta_\upsilon \,,\quad
+\frac{ d \kappa} {d l} \equiv - \,\beta_\kappa \,.
+\end{align}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+%%%%%%%%%%%%%%%% fixed points %%%%%%%%%%%%%%%%%
+\begin{figure}[t!]
+\centering
+\includegraphics[width=0.4 \textwidth]{sol1.png}
+\caption{Illustration of the relationshop between $\upsilon$ and $\kappa$, as dictated by the 
+trigonal-warping dispersion (dark pink trajectory) and the fixed-point 
+requirement $\kappa = \upsilon$ (dark cyan line). The dark pink 
+trajectory is constructed parametrically by varying the warping parameter 
+across the interval $\rho \in [10, 1500]$, with $\upsilon$ and $\kappa$ 
+evolving according to $\upsilon = (\rho - 1)/(\rho + 1)$ and 
+$\kappa = (\rho - 10)(\rho + 1)^2/[(\rho - 1)^2(\rho + 10)]$, 
+respectively.}\label{figsolns}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Nature of the interacting fixed points}
+ 
+We denote the fixed-point values of the coupling constants with a superscript 
+``$*$''. For a non-Gaussian fixed point (i.e., one with $\tilde{e} \neq 0$), 
+the last two expressions in Eq.~\eqref{eqbeta} require
+\begin{align}
+{\upsilon^*}^{1/3} = (\kappa^*)^{1/6}(2\,\upsilon^* - \kappa^*)^{1/6}
+\quad \Rightarrow \quad \kappa^* = \upsilon^*\,.
+\end{align}
+Inserting this into the condition $\beta_e = 0$ yields
+\begin{align}
+\tilde{e}^* = \frac{3\,(\upsilon^*)^{2/3}\,\epsilon}{\mathcal{U}_1}\,.
+\end{align}
+Rather than an isolated fixed point, this defines a fixed line in the 
+three-dimensional space $\{e, \upsilon, \kappa\}$, arising from the 
+continuous family of solutions parameterised by $\kappa^* = \upsilon^*$.
+
+For a trigonally-warped FS, the value of $\kappa$ corresponding to a 
+given $\upsilon$ is extracted from $\epsilon_{\varsigma,\mathbf{p},+}$ 
+[cf.\ Eq.~\eqref{twd}] by varying the warping parameter. Since the FS 
+contour scales as $\left[1 + \frac{\varsigma}{\rho}\cos(3\theta_p)\right]$, 
+one obtains the relations $\upsilon = \frac{\rho-1}{\rho+1}$ and 
+$\kappa = \frac{(\rho-10)(\rho+1)^2}{(\rho-1)^2(\rho+10)}$. A flat 
+patch (with $\kappa = 0$) occurs at $\rho = 10$, implying that for 
+$\upsilon < 9/11 \approx 0.818$, each FS develops a concave region at 
+the hot-spots labeled by superscript ``$(2)$'', corresponding to negative 
+$\kappa$. Since our analysis is restricted to convex FS patches, we work 
+exclusively in the regime $\upsilon \gtrsim 0.82$. Comparing the value 
+of $\kappa$ imposed by the trigonal-warping relation with that obtained 
+at the fixed point, we find that the fixed-point value consistently 
+exceeds the noninteracting FS value (see Fig.~\ref{figsolns}). Since 
+$\kappa = 0$ signifies a flat patch, larger $\kappa$ indicates stronger 
+curvature of the FS patch near the hot-spots labeled by superscript 
+``$(2)$''.
+
+To assess the stability of the fixed line, we consider, for a given 
+$\upsilon$, small deviations from the fixed-point values parameterized 
+by $\{\delta\tilde{e},\,\delta\kappa\}$. Substituting into the 
+expressions for $\frac{d\tilde{e}}{dl}$ (the negative of the beta 
+function for $\tilde{e}$, obtained from $\frac{de}{dl}$) and 
+$\frac{d\kappa}{dl}$, and linearizing in the deviation parameters, we 
+construct the stability matrix $\mathcal{M}$ from the coefficients of 
+$\{\delta\tilde{e},\,\delta\kappa\}$ in the two linearized equations. 
+The eigenvalues of $\mathcal{M}$ encode the stability of the fixed 
+point. For the non-Gaussian fixed points, the eigenvalue along the 
+$\tilde{e}$-direction is always negative, while it vanishes along the 
+$\kappa$-direction, indicating that the fixed point is stable with 
+respect to perturbations in $\tilde{e}$ but neutral along the 
+$\kappa$-axis. The same behavior emerges from the stability matrix 
+constructed using $\{\delta\tilde{e},\,\delta\upsilon\}$ when $\kappa$ 
+is held fixed.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+\section{RG flows for $\kappa = \upsilon $}
+\label{secrg2}
+
+
+When $\kappa = \upsilon$, the counterterm action assumes the simplified form
+\begin{align}
+\label{actcount2}
+S_{CT} = & \int_k \bar{\Psi}_1(k)\,i\left[A_1\,\boldsymbol{\Gamma}
+\cdot\mathbf{K} + \gamma_{d-1}\left(A_2\,k_{d-1} + 
+A_3\,k_d^2\right)\right]\Psi_1(k) \nonumber \\
+& + \int_k \bar{\Psi}_2(k)\,i\left[A_4\,\boldsymbol{\Gamma}
+\cdot\mathbf{K} + \gamma_{d-1}\,A_5\,\upsilon
+\left(k_{d-1} + k_d^2\right)\right]\Psi_2(k) \nonumber \\
+& + \frac{1}{2}\int_k A_7\,k_d^2\,\phi(k)\,\phi(-k)
+- \left[\frac{i\,e\,\mu^{x/2}}{2}\int_k\int_q A_8\,\phi(q)\,
+\bar{\Psi}_1(k+q)\,\Psi_2(-k) + \text{h.c.}\right],
+\end{align}
+with the one-loop renormalization constants reading
+\begin{align}
+\label{eqZvals}
+Z_1 &= 1 - \frac{\mathcal{U}_2\,e^{\frac{4}{3}}}{\upsilon\,\epsilon}\,, 
+\quad Z_4 = 1 - \frac{\mathcal{U}_2\,e^{\frac{4}{3}}}{\epsilon}\,, \quad
+Z_2 = Z_3 = Z_5 = Z_7 = Z_8 = 1\,, \quad
+\mathcal{U}_2 = \frac{2^{1/3}}{3^{7/6}}\,.
+\end{align}
+The resulting RG flow equations admit solutions of the form
+\begin{align}
+& z = 1 + \frac{2\,\mathcal{U}_2\,\tilde{e}}{3\,\upsilon}\,, \quad
+\eta_{\psi_1} = \frac{5\,\mathcal{U}_2\,\tilde{e}}{6\,\upsilon}\,, \quad
+\eta_{\psi_2} = \frac{\mathcal{U}_2\,\tilde{e}\,(3 + 2\,\upsilon)}
+{6\,\upsilon}\,, \nonumber \\
+\eta_\phi &= \frac{5\,\mathcal{U}_2\,\tilde{e}}{6\,\upsilon}\,, \quad
+\frac{\beta_e}{e} = \frac{\mathcal{U}_2\,\tilde{e}\,(2\,\upsilon - 1)}
+{6\,\upsilon} - \frac{\epsilon}{2}\,, \quad
+\beta_\upsilon = \frac{2\,\mathcal{U}_2\,\tilde{e}\,(\upsilon - 1)}{3}\,.
+\end{align}
+The zeros of the beta functions are located at $\upsilon^* = 1$ and 
+$\tilde{e}^* = 3\,\epsilon/\mathcal{U}_2$. Linearizing about this 
+fixed point, the stability matrix evaluates to 
+$\text{diag}(-\epsilon/2,\,-2\,\epsilon) + \mathcal{O}(\epsilon^2)$. 
+Both eigenvalues are negative, confirming that this is an infrared-stable 
+fixed point in the $\tilde{e}\,\upsilon$-plane. The condition 
+$\kappa = \upsilon = 1$ corresponds to circular FS patches, signaling 
+that the interaction with the CDW boson renormalizes the hot-spots 
+labeled ``$(2)$'' until they acquire the same local geometry as those 
+labeled ``$(1)$''.
+
+Returning to the more general situation where $\kappa \neq \upsilon$ 
+initially, we found that the infrared fixed points are characterized by 
+$\kappa^* = \upsilon^*$, which forces the RG trajectory into the 
+$\kappa = \upsilon$ subspace irrespective of the starting configuration. 
+In the deep infrared, all hot-spots are thus attracted to the 
+circular-patch fixed point --- hence, it collapses to the feature that governs 
+the system in the absence of trigonal-warping.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Conclusion}
+\label{secsum}
+
+This chapter has been devoted to investigating a quantum critical point 
+that emerges at the superradiant transition in a cavity QED set-up. 
+Taking as our starting point a honeycomb lattice doped away from 
+half-filling, with low-energy excitations described by Dirac cones, we 
+have identified the CDW wavevectors that connect hot-spots on the 
+resulting FSs, paying careful attention to the role of trigonal-warping 
+in shaping the FS geometry. With this framework in place, we sought to 
+establish rigorously the existence of the NFL phases anticipated by 
+earlier RPA treatments \cite{peng}. Employing a systematic perturbative 
+approach grounded in dimensional regularization and RG flow analysis, 
+we demonstrated that infrared-stable NFL fixed points do indeed arise 
+when the RG trajectories are examined along the direction of the coupling 
+constant $e$. The synthetic character of cavity QED platforms affords 
+remarkable flexibility in tuning electronic properties and suppressing 
+unwanted corrections, making them ideally suited for exploring strongly 
+correlated many-body physics through the deliberate manipulation of 
+light-matter coupling. Our results thus contribute to a broader program 
+aimed at establishing the viability of realizing and detecting NFL 
+phases in experimentally accessible cavity QED architectures.
+
+%\bibliographystyle{spphys.bst}
+%\bibliography{ref.bib}
+
+\begin{thebibliography}{10}
+\providecommand{\url}[1]{{#1}}
+\providecommand{\urlprefix}{URL }
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{DOI \discretionary{}{}{}#1}\else
+  \providecommand{\doi}{DOI \discretionary{}{}{}\begingroup
+  \urlstyle{rm}\Url}\fi
+
+\bibitem{jaksch}
+F.~Schlawin, D.~Jaksch, Phys. Rev. Lett. \textbf{123}, 133601 (2019).
+\newblock \doi{10.1103/PhysRevLett.123.133601}.
+\newblock
+  \urlprefix\url{https://link.aps.org/doi/10.1103/PhysRevLett.123.133601}
+
+\bibitem{kollath}
+A.~Sheikhan, C.~Kollath, Phys. Rev. A \textbf{99}, 053611 (2019).
+\newblock \doi{10.1103/PhysRevA.99.053611}.
+\newblock \urlprefix\url{https://link.aps.org/doi/10.1103/PhysRevA.99.053611}
+
+\bibitem{eckstein}
+J.~Li, M.~Eckstein, Phys. Rev. Lett. \textbf{125}, 217402 (2020).
+\newblock \doi{10.1103/PhysRevLett.125.217402}.
+\newblock
+  \urlprefix\url{https://link.aps.org/doi/10.1103/PhysRevLett.125.217402}
+
+\bibitem{farokh}
+F.~Mivehvar, H.~Ritsch, F.~Piazza, Phys. Rev. Lett. \textbf{122}, 113603
+  (2019).
+\newblock \doi{10.1103/PhysRevLett.122.113603}.
+\newblock
+  \urlprefix\url{https://link.aps.org/doi/10.1103/PhysRevLett.122.113603}
+
+\bibitem{demler}
+Y.~Ashida, A.m.c. \ifmmode \dot{I}\else \.{I}\fi{}mamo\ifmmode~\breve{g}\else
+  \u{g}\fi{}lu, J.~Faist, D.~Jaksch, A.~Cavalleri, E.~Demler, Phys. Rev. X
+  \textbf{10}, 041027 (2020).
+\newblock \doi{10.1103/PhysRevX.10.041027}.
+\newblock \urlprefix\url{https://link.aps.org/doi/10.1103/PhysRevX.10.041027}
+
+\bibitem{diehl}
+A.~{Chiocchetta}, D.~{Kiese}, C.P. {Zelle}, F.~{Piazza}, S.~{Diehl}, Nature
+  Communications \textbf{12}, 5901 (2021).
+\newblock \doi{10.1038/s41467-021-26076-3}
+
+\bibitem{ahana}
+A.~Chakraborty, F.~Piazza, Phys. Rev. Lett. \textbf{127}, 177002 (2021).
+\newblock \doi{10.1103/PhysRevLett.127.177002}.
+\newblock
+  \urlprefix\url{https://link.aps.org/doi/10.1103/PhysRevLett.127.177002}
+
+\bibitem{roux}
+K.~{Roux}, H.~{Konishi}, V.~{Helson}, J.P. {Brantut}, Nature Communications
+  \textbf{11}, 2974 (2020).
+\newblock \doi{10.1038/s41467-020-16767-8}
+
+\bibitem{piazza_qed}
+F.~{Mivehvar}, F.~{Piazza}, T.~{Donner}, H.~{Ritsch}, Advances in Physics
+  \textbf{70}(1), 1 (2021).
+\newblock \doi{10.1080/00018732.2021.1969727}
+
+\bibitem{zhang}
+X.~Zhang, Y.~Chen, Z.~Wu, J.~Wang, J.~Fan, S.~Deng, H.~Wu, Science
+  \textbf{373}(6561), 1359 (2021).
+\newblock \doi{10.1126/science.abd4385}.
+\newblock
+  \urlprefix\url{https://www.science.org/doi/abs/10.1126/science.abd4385}
+
+\bibitem{piazza_superrad}
+F.~Piazza, P.~Strack, Phys. Rev. Lett. \textbf{112}, 143003 (2014).
+\newblock \doi{10.1103/PhysRevLett.112.143003}.
+\newblock
+  \urlprefix\url{https://link.aps.org/doi/10.1103/PhysRevLett.112.143003}
+
+\bibitem{bhaseen}
+J.~Keeling, M.J. Bhaseen, B.D. Simons, Phys. Rev. Lett. \textbf{112}, 143002
+  (2014).
+\newblock \doi{10.1103/PhysRevLett.112.143002}.
+\newblock
+  \urlprefix\url{https://link.aps.org/doi/10.1103/PhysRevLett.112.143002}
+
+\bibitem{basko}
+P.~Nataf, T.~Champel, G.~Blatter, D.M. Basko, Phys. Rev. Lett. \textbf{123},
+  207402 (2019).
+\newblock \doi{10.1103/PhysRevLett.123.207402}.
+\newblock
+  \urlprefix\url{https://link.aps.org/doi/10.1103/PhysRevLett.123.207402}
+
+\bibitem{polini}
+G.M. Andolina, F.M.D. Pellegrino, V.~Giovannetti, A.H. MacDonald, M.~Polini,
+  Phys. Rev. B \textbf{100}, 121109 (2019).
+\newblock \doi{10.1103/PhysRevB.100.121109}.
+\newblock \urlprefix\url{https://link.aps.org/doi/10.1103/PhysRevB.100.121109}
+
+\bibitem{pascal}
+D.~Guerci, P.~Simon, C.~Mora, Phys. Rev. Lett. \textbf{125}, 257604 (2020).
+\newblock \doi{10.1103/PhysRevLett.125.257604}.
+\newblock
+  \urlprefix\url{https://link.aps.org/doi/10.1103/PhysRevLett.125.257604}
+
+\bibitem{peng}
+P.~Rao, F.~Piazza, Phys. Rev. Lett. \textbf{130}, 083603 (2023).
+\newblock \doi{10.1103/PhysRevLett.130.083603}.
+\newblock
+  \urlprefix\url{https://link.aps.org/doi/10.1103/PhysRevLett.130.083603}
+
+\bibitem{sentef}
+F.~Schlawin, D.M. Kennes, M.A. Sentef, Applied Physics Reviews \textbf{9}(1),
+  011312 (2022).
+\newblock \doi{10.1063/5.0083825}.
+\newblock \urlprefix\url{https://doi.org/10.1063/5.0083825}
+
+\bibitem{ref22cav}
+N.~Skribanowitz, I.P. Herman, J.C. MacGillivray, M.S. Feld, Phys. Rev. Lett.
+  \textbf{30}, 309 (1973).
+\newblock \doi{10.1103/PhysRevLett.30.309}.
+\newblock \urlprefix\url{https://link.aps.org/doi/10.1103/PhysRevLett.30.309}
+
+\bibitem{ref23cav}
+M.~Scheibner, T.~Schmidt, L.~Worschech, A.~Forchel, G.~Bacher, T.~Passow,
+  D.~Hommel, Nat. Phys. \textbf{3}(2), 106 (2007).
+\newblock \doi{10.1038/nphys494}.
+\newblock \urlprefix\url{https://doi.org/10.1038/nphys494}
+
+\bibitem{ref24cav}
+I.~{Timothy Noe}, G., J.H. {Kim}, J.~{Lee}, Y.~{Wang}, A.K. {W{\'o}jcik}, S.A.
+  {McGill}, D.H. {Reitze}, A.A. {Belyanin}, J.~{Kono}, Nat. Phys.
+  \textbf{8}(3), 219 (2012).
+\newblock \doi{10.1038/nphys2207}
+
+\bibitem{ref25cav}
+K.~{Baumann}, C.~{Guerlin}, F.~{Brennecke}, T.~{Esslinger}, Nature
+  \textbf{464}(7293), 1301 (2010).
+\newblock \doi{10.1038/nature09009}
+
+\bibitem{neto}
+A.H. Castro~Neto, F.~Guinea, N.M.R. Peres, K.S. Novoselov, A.K. Geim, Rev. Mod.
+  Phys. \textbf{81}, 109 (2009).
+\newblock \doi{10.1103/RevModPhys.81.109}.
+\newblock \urlprefix\url{https://link.aps.org/doi/10.1103/RevModPhys.81.109}
+
+\bibitem{maslov-dfl}
+P.~Sharma, A.~Principi, D.L. Maslov, Phys. Rev. B \textbf{104}, 045142 (2021).
+\newblock \doi{10.1103/PhysRevB.104.045142}.
+\newblock \urlprefix\url{https://link.aps.org/doi/10.1103/PhysRevB.104.045142}
+
+\bibitem{ando1998}
+T.~Ando, T.~Nakanishi, R.~Saito, Journal of the Physical Society of Japan
+  \textbf{67}(8), 2857 (1998).
+\newblock \doi{10.1143/JPSJ.67.2857}.
+\newblock \urlprefix\url{https://doi.org/10.1143/JPSJ.67.2857}
+
+\bibitem{dresselhaus}
+M.S. {Dresselhaus}, G.~{Dresselhaus}, Advances in Physics \textbf{51}(1), 1
+  (2002).
+\newblock \doi{10.1080/00018730110113644}
+
+\bibitem{levitov}
+Z.~{Dong}, P.A. {Lee}, L.~{Levitov}, arXiv e-prints  (2024)
+
+\bibitem{Lee-Dalid}
+D.~Dalidovich, S.S. Lee, Phys. Rev. B \textbf{88}, 245106 (2013).
+\newblock \doi{10.1103/PhysRevB.88.245106}
+
+\bibitem{ips-uv-ir1}
+I.~Mandal, S.S. Lee, Phys. Rev. B \textbf{92}, 035141 (2015).
+\newblock \doi{10.1103/PhysRevB.92.035141}
+
+\bibitem{ips-u1}
+I.~Mandal, Phys. Rev. Research \textbf{2}, 043277 (2020).
+\newblock \doi{10.1103/PhysRevResearch.2.043277}.
+\newblock
+  \urlprefix\url{https://link.aps.org/doi/10.1103/PhysRevResearch.2.043277}
+
+\bibitem{ips-rafael}
+I.~Mandal, R.M. Fernandes, Phys. Rev. B \textbf{107}, 125142 (2023).
+\newblock \doi{10.1103/PhysRevB.107.125142}.
+\newblock \urlprefix\url{https://link.aps.org/doi/10.1103/PhysRevB.107.125142}
+
+\bibitem{ips-fflo}
+D.~Pimenov, I.~Mandal, F.~Piazza, M.~Punk, Phys. Rev. B \textbf{98}, 024510
+  (2018).
+\newblock \doi{10.1103/PhysRevB.98.024510}
+
+\bibitem{ips-2kf}
+I.~Mandal, Nucl. Phys. B \textbf{1005}, 116586 (2024).
+\newblock \doi{10.1016/j.nuclphysb.2024.116586}
+
+\bibitem{ips-cavity}
+I.~{Mandal}, Ann. Phys. \textbf{474}, 169925 (2025).
+\newblock \doi{10.1016/j.aop.2025.169925}
+
+\bibitem{max-isn}
+M.A. Metlitski, S.~Sachdev, Phys. Rev. B \textbf{82}, 075127 (2010).
+\newblock \doi{10.1103/PhysRevB.82.075127}
+
+\bibitem{max-sdw}
+M.A. Metlitski, S.~Sachdev, Phys. Rev. B \textbf{82}, 075128 (2010).
+\newblock \doi{10.1103/PhysRevB.82.075128}
+
+\bibitem{ips-uv-ir2}
+I.~Mandal, Eur. Phys. J. B \textbf{89}(12), 278 (2016).
+\newblock \doi{10.1140/epjb/e2016-70509-4}
+
+\bibitem{thooft}
+G.~'t~Hooft, Nucl. Phys. B \textbf{61}, 455 (1973).
+\newblock \doi{https://doi.org/10.1016/0550-3213(73)90376-3}
+
+\bibitem{weinberg}
+S.~Weinberg, Phys. Rev. D \textbf{8}, 3497 (1973).
+\newblock \doi{10.1103/PhysRevD.8.3497}
+
+\end{thebibliography}
+
